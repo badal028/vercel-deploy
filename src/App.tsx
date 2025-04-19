@@ -34,7 +34,6 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { keyframes } from '@emotion/react';
-import { Helmet } from 'react-helmet';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { Analytics } from '@vercel/analytics/react';
@@ -257,41 +256,6 @@ function LandingPage() {
 
   return (
     <>
-      <Helmet>
-        <title>VirtNum Pro | Premium Virtual Numbers for Telegram & WhatsApp</title>
-        <meta name="description" content="Get instant virtual numbers for Telegram, WhatsApp, Instagram, Gmail & LinkedIn. ✓ Instant Delivery ✓ 24/7 Support ✓ Secure Payment ✓ Best Prices. Buy virtual numbers now!" />
-        <meta name="keywords" content="buy virtual number, virtual number service, telegram number, whatsapp number, instagram account, gmail account, linkedin services, virtual phone number, online number, temporary number" />
-        <meta property="og:title" content="VirtNum Pro | Premium Virtual Numbers" />
-        <meta property="og:description" content="Get instant virtual numbers for all your needs. Instant delivery, 24/7 support, and secure payment options. Best virtual number service provider." />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/logo.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="VirtNum Pro | Virtual Number Services" />
-        <meta name="twitter:description" content="Get instant virtual numbers for Telegram, WhatsApp & more. Instant delivery & 24/7 support." />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://[your-domain].vercel.app/" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <link rel="apple-touch-icon" href="/logo192.png" />
-        <meta name="theme-color" content="#2563EB" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "VirtNum Pro",
-              "description": "Get instant virtual numbers for Telegram, WhatsApp, Instagram, Gmail & LinkedIn",
-              "url": "https://[your-domain].vercel.app/",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://[your-domain].vercel.app/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }
-          `}
-        </script>
-      </Helmet>
-
       <Box sx={{ 
         minHeight: '100vh',
         background: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)',
@@ -1441,15 +1405,15 @@ function VirtualNumberPage() {
 
 function App() {
   return (
-    <Router>
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/buy" element={<VirtualNumberPage />} />
         </Routes>
         <Analytics />
-      </ThemeProvider>
-    </Router>
+      </Router>
+    </ThemeProvider>
   );
 }
 
