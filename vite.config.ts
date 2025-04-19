@@ -6,10 +6,12 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['react-helmet'],
+      external: ['@vercel/analytics/react', 'framer-motion', 'react-helmet-async'],
       output: {
         globals: {
-          'react-helmet': 'ReactHelmet'
+          '@vercel/analytics/react': 'VercelAnalytics',
+          'framer-motion': 'FramerMotion',
+          'react-helmet-async': 'ReactHelmetAsync'
         }
       }
     }
