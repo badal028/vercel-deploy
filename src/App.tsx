@@ -37,6 +37,8 @@ import { keyframes } from '@emotion/react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { Analytics } from '@vercel/analytics/react';
+import SendIcon from '@mui/icons-material/Send';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 
 const float = keyframes`
   0% {
@@ -694,97 +696,61 @@ function VirtualNumberPage() {
         py: 4,
         position: 'relative'
       }}>
-        {/* Floating Payment Buttons */}
-        <Box sx={{ 
-          position: 'fixed', 
-          right: { xs: 10, sm: 20 }, 
-          top: { xs: 10, sm: 20 }, 
-          display: 'flex', 
-          flexDirection: 'column',
-          gap: 2, 
-          zIndex: 1000
-        }}>
-          {/* Payment Button */}
-          <Tooltip title="Click to send payment screenshot" arrow placement="left">
-            <Box
-              onClick={handlePayment}
+        {/* Floating Payment Buttons - Visible only on medium and larger screens */}
+        <Box
+          sx={{
+            position: 'fixed',
+            right: 24,
+            top: 24,
+            display: { xs: 'none', sm: 'flex' },
+            flexDirection: 'column',
+            gap: 2,
+            zIndex: 1000,
+          }}
+        >
+          <Tooltip title="Click here if you have already made the payment">
+            <Button
+              variant="contained"
+              color="primary"
+              startIcon={<SendIcon />}
+              onClick={() => window.open('https://wa.me/919876543210?text=I%20have%20made%20the%20payment%20for%20the%20service', '_blank')}
               sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: 'white',
-                padding: { xs: '8px', sm: '12px', md: '12px 24px' },
-                borderRadius: '30px',
-                boxShadow: '0 4px 12px rgba(108, 99, 255, 0.2)',
-                animation: `${float} 3s ease-in-out infinite`,
-                width: { xs: '40px', sm: '48px', md: '220px' },
-                height: { xs: '40px', sm: '48px', md: 'auto' },
-                cursor: 'pointer',
+                borderRadius: 2,
+                px: 3,
+                py: 2,
+                fontSize: '1rem',
+                whiteSpace: 'nowrap',
+                minWidth: '200px',
+                boxShadow: 3,
                 '&:hover': {
-                  boxShadow: '0 6px 16px rgba(108, 99, 255, 0.3)',
-                  transform: 'translateY(-2px)',
-                }
+                  boxShadow: 6,
+                },
               }}
             >
-              <PaidIcon sx={{ 
-                fontSize: { xs: '1.5rem', sm: '1.75rem', md: '1.75rem' },
-                color: 'primary.main'
-              }} />
-              <Typography 
-                variant="body1" 
-                sx={{ 
-                  display: { xs: 'none', sm: 'none', md: 'block' },
-                  fontWeight: 600,
-                  color: 'primary.main',
-                  whiteSpace: 'nowrap',
-                  ml: 1
-                }}
-              >
-                Click here if you paid
-              </Typography>
-            </Box>
+              Click here if you paid
+            </Button>
           </Tooltip>
-
-          {/* Not Able to Pay Button */}
-          <Tooltip title="Contact support for alternative payment methods" arrow placement="left">
-            <Box
-              onClick={() => window.location.href = "https://wa.me/918154994406?text=I%20need%20alternative%20payment%20method"}
+          <Tooltip title="Contact us for alternative payment methods">
+            <Button
+              variant="contained"
+              color="secondary"
+              startIcon={<SupportAgentIcon />}
+              onClick={() => window.open('https://wa.me/919876543210?text=I%20need%20help%20with%20payment', '_blank')}
               sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: 'white',
-                padding: { xs: '8px', sm: '12px', md: '12px 24px' },
-                borderRadius: '30px',
-                boxShadow: '0 4px 12px rgba(255, 101, 132, 0.2)',
-                animation: `${float} 3s ease-in-out infinite`,
-                animationDelay: '0.5s',
-                width: { xs: '40px', sm: '48px', md: '220px' },
-                height: { xs: '40px', sm: '48px', md: 'auto' },
-                cursor: 'pointer',
+                borderRadius: 2,
+                px: 3,
+                py: 2,
+                fontSize: '1rem',
+                whiteSpace: 'nowrap',
+                minWidth: '200px',
+                boxShadow: 3,
                 '&:hover': {
-                  boxShadow: '0 6px 16px rgba(255, 101, 132, 0.3)',
-                  transform: 'translateY(-2px)',
-                }
+                  boxShadow: 6,
+                },
               }}
             >
-              <BuildIcon sx={{ 
-                fontSize: { xs: '1.5rem', sm: '1.75rem', md: '1.75rem' },
-                color: 'secondary.main'
-              }} />
-              <Typography 
-                variant="body1" 
-                sx={{ 
-                  display: { xs: 'none', sm: 'none', md: 'block' },
-                  fontWeight: 600,
-                  color: 'secondary.main',
-                  whiteSpace: 'nowrap',
-                  ml: 1
-                }}
-              >
-                Not able to pay?
-              </Typography>
-            </Box>
+              Not able to pay?
+            </Button>
           </Tooltip>
         </Box>
 
@@ -1378,7 +1344,7 @@ function VirtualNumberPage() {
               </Paper>
             )}
 
-            <Box sx={{ mt: 4, textAlign: 'center' }}>
+            <Box sx={{ mt: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 2 }}>
               <Button
                 variant="outlined"
                 color="secondary"
@@ -1395,6 +1361,49 @@ function VirtualNumberPage() {
               >
                 Need Customization?
               </Button>
+
+              {/* Mobile Payment Buttons - Visible only on small screens */}
+              <Box sx={{ display: { xs: 'flex', sm: 'none' }, flexDirection: 'column', gap: 2 }}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  startIcon={<SendIcon />}
+                  onClick={() => window.open('https://wa.me/919876543210?text=I%20have%20made%20the%20payment%20for%20the%20service', '_blank')}
+                  sx={{
+                    borderRadius: 2,
+                    px: 2,
+                    py: 1.5,
+                    fontSize: '0.875rem',
+                    whiteSpace: 'nowrap',
+                    boxShadow: 3,
+                    '&:hover': {
+                      boxShadow: 6,
+                    },
+                  }}
+                >
+                  Click here if you paid
+                </Button>
+
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  startIcon={<SupportAgentIcon />}
+                  onClick={() => window.open('https://wa.me/919876543210?text=I%20need%20help%20with%20payment', '_blank')}
+                  sx={{
+                    borderRadius: 2,
+                    px: 2,
+                    py: 1.5,
+                    fontSize: '0.875rem',
+                    whiteSpace: 'nowrap',
+                    boxShadow: 3,
+                    '&:hover': {
+                      boxShadow: 6,
+                    },
+                  }}
+                >
+                  Not able to pay?
+                </Button>
+              </Box>
             </Box>
           </Paper>
         </Container>
