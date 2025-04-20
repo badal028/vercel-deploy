@@ -5,19 +5,6 @@
       "destination": "/index.html"
     }
   ],
-  "redirects": [
-    {
-      "source": "www.virtnumbers.com",
-      "destination": "https://virtnumbers.com",
-      "permanent": true
-    }
-  ],
-  "routes": [
-    {
-      "src": "/sitemap.xml",
-      "dest": "/sitemap.xml"
-    }
-  ],
   "headers": [
     {
       "source": "/sitemap.xml",
@@ -27,6 +14,13 @@
           "value": "application/xml"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/www.virtnumbers.com",
+      "destination": "https://virtnumbers.com",
+      "permanent": true
     }
   ]
 } 
