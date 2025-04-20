@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    sourcemap: true,
+    sourcemap: false,
     outDir: 'dist',
     assetsDir: 'assets',
     minify: 'terser',
@@ -13,6 +13,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
+          mui: ['@mui/material', '@mui/icons-material', '@emotion/react', '@emotion/styled'],
         },
       },
     },
@@ -22,5 +23,8 @@ export default defineConfig({
   },
   preview: {
     port: 3000,
+  },
+  optimizeDeps: {
+    include: ['@mui/material', '@mui/icons-material', '@emotion/react', '@emotion/styled'],
   },
 })
