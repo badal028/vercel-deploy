@@ -26,6 +26,7 @@ import {
   SelectChangeEvent
 } from '@mui/material'
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import BuildIcon from '@mui/icons-material/Build';
 import PaidIcon from '@mui/icons-material/Paid';
@@ -258,6 +259,10 @@ function LandingPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Buy Virtual Numbers for Telegram & WhatsApp | Instant Delivery | VirtNumbers</title>
+        <meta name="description" content="Buy Premium Virtual Numbers for Telegram, WhatsApp & Social Media ✓ Instant Delivery ✓ 24/7 Support ✓ Secure Payment ✓ 100% Guaranteed Numbers | VirtNumbers" />
+      </Helmet>
       <Box sx={{ 
         minHeight: '100vh',
         background: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)',
@@ -689,740 +694,748 @@ function VirtualNumberPage() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <Box sx={{ 
-        minHeight: '100vh',
-        background: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)',
-        py: 4,
-        position: 'relative'
-      }}>
-        {/* Floating Payment Buttons - Visible only on medium and larger screens */}
-        <Box
-          sx={{
-            position: 'fixed',
-            right: 24,
-            top: 24,
-            display: { xs: 'none', sm: 'flex' },
-            flexDirection: 'column',
-            gap: 2,
-            zIndex: 1000,
-          }}
-        >
-          <Tooltip title="Click here if you have already made the payment">
-            <Button
-              variant="contained"
-              color="primary"
-              startIcon={<SendIcon />}
-              onClick={() => window.open('https://wa.me/919876543210?text=I%20have%20made%20the%20payment%20for%20the%20service', '_blank')}
-              sx={{
-                borderRadius: 2,
-                px: 3,
-                py: 2,
-                fontSize: '1rem',
-                whiteSpace: 'nowrap',
-                minWidth: '200px',
-                boxShadow: 3,
-                '&:hover': {
-                  boxShadow: 6,
-                },
-              }}
-            >
-              Click here if you paid
-            </Button>
-          </Tooltip>
-          <Tooltip title="Contact us for alternative payment methods">
-            <Button
-              variant="contained"
-              color="secondary"
-              startIcon={<SupportAgentIcon />}
-              onClick={() => window.open('https://wa.me/919876543210?text=I%20need%20help%20with%20payment', '_blank')}
-              sx={{
-                borderRadius: 2,
-                px: 3,
-                py: 2,
-                fontSize: '1rem',
-                whiteSpace: 'nowrap',
-                minWidth: '200px',
-                boxShadow: 3,
-                '&:hover': {
-                  boxShadow: 6,
-                },
-              }}
-            >
-              Not able to pay?
-            </Button>
-          </Tooltip>
-        </Box>
-
-        <Container maxWidth="md" sx={{ 
-          px: { xs: 0, sm: 3 },
-          pb: { xs: 4, sm: 4 }
+    <>
+      <Helmet>
+        <title>Buy Virtual Numbers - Select Your Service | VirtNumbers</title>
+        <meta name="description" content="Choose from our premium virtual numbers for Telegram, WhatsApp, Instagram, Gmail & LinkedIn. Instant activation with 24/7 support." />
+      </Helmet>
+      <ThemeProvider theme={theme}>
+        <Box sx={{ 
+          minHeight: '100vh',
+          background: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)',
+          py: 4,
+          position: 'relative'
         }}>
-          <Box sx={{ 
-            mb: { xs: 4, sm: 6 },
-            textAlign: 'center',
-            position: 'relative'
-          }}>
-            <Typography 
-              variant="h1" 
-              sx={{ 
-                color: 'primary.main',
-                mb: { xs: 1.5, sm: 2 },
-                textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
-                fontSize: { xs: '1.75rem', sm: '2.25rem', md: '3rem' },
-                fontWeight: 700,
-                lineHeight: 1.2
-              }}
-            >
-              VirtNum Pro Services
-            </Typography>
-            <Typography 
-              variant="h5" 
-              sx={{ 
-                color: 'text.secondary',
-                maxWidth: '600px',
-                mx: 'auto',
-                mb: { xs: 2.5, sm: 4 },
-                fontSize: { xs: '0.875rem', sm: '1rem', md: '1.25rem' },
-                lineHeight: { xs: 1.4, sm: 1.6 },
-                px: { xs: 2, sm: 0 }
-              }}
-            >
-              Get Premium Virtual Numbers with Instant Delivery
-            </Typography>
-          </Box>
-
-          <Paper 
-            elevation={0} 
-            sx={{ 
-              borderRadius: 3,
-              overflow: 'hidden',
-              background: 'rgba(255, 255, 255, 0.9)',
-              backdropFilter: 'blur(10px)',
-              boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
-              p: { xs: 2, sm: 3, md: 4 }
+          {/* Floating Payment Buttons - Visible only on medium and larger screens */}
+          <Box
+            sx={{
+              position: 'fixed',
+              right: 24,
+              top: 24,
+              display: { xs: 'none', sm: 'flex' },
+              flexDirection: 'column',
+              gap: 2,
+              zIndex: 1000,
             }}
           >
-            {/* Mobile Category Selection */}
+            <Tooltip title="Click here if you have already made the payment">
+              <Button
+                variant="contained"
+                color="primary"
+                startIcon={<SendIcon />}
+                onClick={() => window.open('https://wa.me/919876543210?text=I%20have%20made%20the%20payment%20for%20the%20service', '_blank')}
+                sx={{
+                  borderRadius: 2,
+                  px: 3,
+                  py: 2,
+                  fontSize: '1rem',
+                  whiteSpace: 'nowrap',
+                  minWidth: '200px',
+                  boxShadow: 3,
+                  '&:hover': {
+                    boxShadow: 6,
+                  },
+                }}
+              >
+                Click here if you paid
+              </Button>
+            </Tooltip>
+            <Tooltip title="Contact us for alternative payment methods">
+              <Button
+                variant="contained"
+                color="secondary"
+                startIcon={<SupportAgentIcon />}
+                onClick={() => window.open('https://wa.me/919876543210?text=I%20need%20help%20with%20payment', '_blank')}
+                sx={{
+                  borderRadius: 2,
+                  px: 3,
+                  py: 2,
+                  fontSize: '1rem',
+                  whiteSpace: 'nowrap',
+                  minWidth: '200px',
+                  boxShadow: 3,
+                  '&:hover': {
+                    boxShadow: 6,
+                  },
+                }}
+              >
+                Not able to pay?
+              </Button>
+            </Tooltip>
+          </Box>
+
+          <Container maxWidth="md" sx={{ 
+            px: { xs: 0, sm: 3 },
+            pb: { xs: 4, sm: 4 }
+          }}>
             <Box sx={{ 
-              display: { xs: 'block', sm: 'none' },
-              mb: 2,
-              position: 'relative',
-              '&::after': {
-                content: '""',
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                right: 0,
-                height: '1px',
-                background: 'linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent)'
-              }
+              mb: { xs: 4, sm: 6 },
+              textAlign: 'center',
+              position: 'relative'
             }}>
-              <Typography variant="subtitle1" sx={{ 
-                mb: 1.5, 
-                fontWeight: 600, 
-                color: 'text.secondary',
-                fontSize: '0.875rem'
-              }}>
-                Select Category
+              <Typography 
+                variant="h1" 
+                sx={{ 
+                  color: 'primary.main',
+                  mb: { xs: 1.5, sm: 2 },
+                  textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
+                  fontSize: { xs: '1.75rem', sm: '2.25rem', md: '3rem' },
+                  fontWeight: 700,
+                  lineHeight: 1.2
+                }}
+              >
+                VirtNum Pro Services
               </Typography>
-              <Box sx={{ 
-                display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: 1,
-                pb: 2
-              }}>
-                {[
-                  { icon: <TelegramIcon />, label: 'Telegram', color: '#0088cc' },
-                  { icon: <WhatsAppIcon />, label: 'WhatsApp', color: '#25D366' },
-                  { icon: <InstagramIcon />, label: 'Instagram', color: '#E4405F' },
-                  { icon: <EmailIcon />, label: 'Gmail', color: '#EA4335' },
-                  { icon: <LinkedInIcon />, label: 'LinkedIn', color: '#0077B5' }
-                ].map((item, index) => (
-                  <Box
-                    key={index}
-                    onClick={(e) => handleTabChange(e, index)}
-                    sx={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      p: 1,
-                      borderRadius: 2,
-                      cursor: 'pointer',
-                      transition: 'all 0.2s',
-                      backgroundColor: tabValue === index ? 'rgba(0,0,0,0.05)' : 'transparent',
-                      border: tabValue === index ? `2px solid ${item.color}` : '2px solid transparent',
-                      '&:hover': {
-                        backgroundColor: 'rgba(0,0,0,0.05)',
-                        transform: 'translateY(-2px)'
-                      }
-                    }}
-                  >
-                    <Box sx={{ 
-                      width: 32, 
-                      height: 32, 
-                      borderRadius: '50%', 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      justifyContent: 'center',
-                      backgroundColor: tabValue === index ? item.color : 'rgba(0,0,0,0.05)',
-                      color: tabValue === index ? 'white' : item.color,
-                      mb: 0.5,
-                      transition: 'all 0.2s',
-                      '& svg': {
-                        fontSize: '1.25rem'
-                      }
-                    }}>
-                      {item.icon}
-                    </Box>
-                    <Typography variant="caption" sx={{ 
-                      fontWeight: 600,
-                      color: tabValue === index ? 'text.primary' : 'text.secondary',
-                      textAlign: 'center',
-                      fontSize: '0.7rem',
-                      lineHeight: 1.2
-                    }}>
-                      {item.label}
-                    </Typography>
-                  </Box>
-                ))}
-              </Box>
+              <Typography 
+                variant="h5" 
+                sx={{ 
+                  color: 'text.secondary',
+                  maxWidth: '600px',
+                  mx: 'auto',
+                  mb: { xs: 2.5, sm: 4 },
+                  fontSize: { xs: '0.875rem', sm: '1rem', md: '1.25rem' },
+                  lineHeight: { xs: 1.4, sm: 1.6 },
+                  px: { xs: 2, sm: 0 }
+                }}
+              >
+                Get Premium Virtual Numbers with Instant Delivery
+              </Typography>
             </Box>
 
-            {/* Desktop Category Selection */}
-            <Tabs 
-              value={tabValue} 
-              onChange={handleTabChange} 
-              centered
-              sx={{
-                display: { xs: 'none', sm: 'block' },
-                borderBottom: 1,
-                borderColor: 'divider',
-                mb: 4,
-                '& .MuiTab-root': {
-                  fontSize: { sm: '0.875rem', md: '1rem' },
-                  fontWeight: 600,
-                  minHeight: { sm: 48, md: 60 },
-                  textTransform: 'none',
-                  '&.Mui-selected': {
-                    color: 'primary.main',
-                  },
-                  '& .MuiSvgIcon-root': {
-                    fontSize: { sm: '1.5rem', md: '1.75rem' }
-                  }
-                },
+            <Paper 
+              elevation={0} 
+              sx={{ 
+                borderRadius: 3,
+                overflow: 'hidden',
+                background: 'rgba(255, 255, 255, 0.9)',
+                backdropFilter: 'blur(10px)',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+                p: { xs: 2, sm: 3, md: 4 }
               }}
             >
-              <Tab 
-                icon={<TelegramIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#0088cc' }} />} 
-                label="Telegram" 
-              />
-              <Tab 
-                icon={<WhatsAppIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#25D366' }} />} 
-                label="WhatsApp"
-              />
-              <Tab 
-                icon={<InstagramIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#E4405F' }} />} 
-                label="Instagram"
-              />
-              <Tab 
-                icon={<EmailIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#EA4335' }} />} 
-                label="Gmail"
-              />
-              <Tab 
-                icon={<LinkedInIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#0077B5' }} />} 
-                label="LinkedIn"
-              />
-            </Tabs>
-
-            <FormControl fullWidth sx={{ mb: 4 }}>
-              <InputLabel id="service-select-label" sx={{
-                fontSize: { xs: '0.875rem', sm: '1rem' },
-                transform: { xs: 'translate(8px, 8px)', sm: 'translate(14px, 16px)' },
-                '&.Mui-focused, &.MuiFormLabel-filled': {
-                  transform: { xs: 'translate(14px, -9px) scale(0.75)', sm: 'translate(14px, -9px) scale(0.75)' }
+              {/* Mobile Category Selection */}
+              <Box sx={{ 
+                display: { xs: 'block', sm: 'none' },
+                mb: 2,
+                position: 'relative',
+                '&::after': {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  height: '1px',
+                  background: 'linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent)'
                 }
-              }}>Select Service</InputLabel>
-              <Select
-                labelId="service-select-label"
-                id="service-select"
-                value={selectedService?.id || ''}
-                onChange={handleServiceSelect}
-                label="Select Service"
+              }}>
+                <Typography variant="subtitle1" sx={{ 
+                  mb: 1.5, 
+                  fontWeight: 600, 
+                  color: 'text.secondary',
+                  fontSize: '0.875rem'
+                }}>
+                  Select Category
+                </Typography>
+                <Box sx={{ 
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(3, 1fr)',
+                  gap: 1,
+                  pb: 2
+                }}>
+                  {[
+                    { icon: <TelegramIcon />, label: 'Telegram', color: '#0088cc' },
+                    { icon: <WhatsAppIcon />, label: 'WhatsApp', color: '#25D366' },
+                    { icon: <InstagramIcon />, label: 'Instagram', color: '#E4405F' },
+                    { icon: <EmailIcon />, label: 'Gmail', color: '#EA4335' },
+                    { icon: <LinkedInIcon />, label: 'LinkedIn', color: '#0077B5' }
+                  ].map((item, index) => (
+                    <Box
+                      key={index}
+                      onClick={(e) => handleTabChange(e, index)}
+                      sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        p: 1,
+                        borderRadius: 2,
+                        cursor: 'pointer',
+                        transition: 'all 0.2s',
+                        backgroundColor: tabValue === index ? 'rgba(0,0,0,0.05)' : 'transparent',
+                        border: tabValue === index ? `2px solid ${item.color}` : '2px solid transparent',
+                        '&:hover': {
+                          backgroundColor: 'rgba(0,0,0,0.05)',
+                          transform: 'translateY(-2px)'
+                        }
+                      }}
+                    >
+                      <Box sx={{ 
+                        width: 32, 
+                        height: 32, 
+                        borderRadius: '50%', 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'center',
+                        backgroundColor: tabValue === index ? item.color : 'rgba(0,0,0,0.05)',
+                        color: tabValue === index ? 'white' : item.color,
+                        mb: 0.5,
+                        transition: 'all 0.2s',
+                        '& svg': {
+                          fontSize: '1.25rem'
+                        }
+                      }}>
+                        {item.icon}
+                      </Box>
+                      <Typography variant="caption" sx={{ 
+                        fontWeight: 600,
+                        color: tabValue === index ? 'text.primary' : 'text.secondary',
+                        textAlign: 'center',
+                        fontSize: '0.7rem',
+                        lineHeight: 1.2
+                      }}>
+                        {item.label}
+                      </Typography>
+                    </Box>
+                  ))}
+                </Box>
+              </Box>
+
+              {/* Desktop Category Selection */}
+              <Tabs 
+                value={tabValue} 
+                onChange={handleTabChange} 
+                centered
                 sx={{
-                  '& .MuiSelect-select': {
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: { xs: 1, sm: 2 },
-                    py: { xs: 1, sm: 1.5 },
-                    px: { xs: 1, sm: 2 },
-                    fontSize: { xs: '0.875rem', sm: '1rem' },
-                    height: { xs: '20px', sm: '25px' }
+                  display: { xs: 'none', sm: 'block' },
+                  borderBottom: 1,
+                  borderColor: 'divider',
+                  mb: 4,
+                  '& .MuiTab-root': {
+                    fontSize: { sm: '0.875rem', md: '1rem' },
+                    fontWeight: 600,
+                    minHeight: { sm: 48, md: 60 },
+                    textTransform: 'none',
+                    '&.Mui-selected': {
+                      color: 'primary.main',
+                    },
+                    '& .MuiSvgIcon-root': {
+                      fontSize: { sm: '1.5rem', md: '1.75rem' }
+                    }
                   },
-                  '& .MuiOutlinedInput-notchedOutline': {
-                    fontSize: { xs: '0.875rem', sm: '1rem' }
-                  },
-                  height: { xs: '40px', sm: '56px' },
-                  '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                    borderColor: 'primary.main'
-                  }
                 }}
-                MenuProps={{
-                  PaperProps: {
-                    sx: {
-                      mt: 0.5,
-                      '& .MuiMenuItem-root': {
-                        py: { xs: 0.5, sm: 1.5 },
-                        px: { xs: 1, sm: 2 },
-                        minHeight: { xs: 'auto', sm: '48px' }
+              >
+                <Tab 
+                  icon={<TelegramIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#0088cc' }} />} 
+                  label="Telegram" 
+                />
+                <Tab 
+                  icon={<WhatsAppIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#25D366' }} />} 
+                  label="WhatsApp"
+                />
+                <Tab 
+                  icon={<InstagramIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#E4405F' }} />} 
+                  label="Instagram"
+                />
+                <Tab 
+                  icon={<EmailIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#EA4335' }} />} 
+                  label="Gmail"
+                />
+                <Tab 
+                  icon={<LinkedInIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#0077B5' }} />} 
+                  label="LinkedIn"
+                />
+              </Tabs>
+
+              <FormControl fullWidth sx={{ mb: 4 }}>
+                <InputLabel id="service-select-label" sx={{
+                  fontSize: { xs: '0.875rem', sm: '1rem' },
+                  transform: { xs: 'translate(8px, 8px)', sm: 'translate(14px, 16px)' },
+                  '&.Mui-focused, &.MuiFormLabel-filled': {
+                    transform: { xs: 'translate(14px, -9px) scale(0.75)', sm: 'translate(14px, -9px) scale(0.75)' }
+                  }
+                }}>Select Service</InputLabel>
+                <Select
+                  labelId="service-select-label"
+                  id="service-select"
+                  value={selectedService?.id || ''}
+                  onChange={handleServiceSelect}
+                  label="Select Service"
+                  sx={{
+                    '& .MuiSelect-select': {
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: { xs: 1, sm: 2 },
+                      py: { xs: 1, sm: 1.5 },
+                      px: { xs: 1, sm: 2 },
+                      fontSize: { xs: '0.875rem', sm: '1rem' },
+                      height: { xs: '20px', sm: '25px' }
+                    },
+                    '& .MuiOutlinedInput-notchedOutline': {
+                      fontSize: { xs: '0.875rem', sm: '1rem' }
+                    },
+                    height: { xs: '40px', sm: '56px' },
+                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                      borderColor: 'primary.main'
+                    }
+                  }}
+                  MenuProps={{
+                    PaperProps: {
+                      sx: {
+                        mt: 0.5,
+                        '& .MuiMenuItem-root': {
+                          py: { xs: 0.5, sm: 1.5 },
+                          px: { xs: 1, sm: 2 },
+                          minHeight: { xs: 'auto', sm: '48px' }
+                        }
                       }
                     }
-                  }
-                }}
-                renderValue={(selected) => {
-                  if (!selected) return null;
-                  
-                  const option = tabValue === 0 
-                    ? telegramOptions.find(opt => opt.id === selected)
-                    : tabValue === 1 ? whatsappOptions.find(opt => opt.id === selected)
-                    : tabValue === 2 ? instagramOptions.find(opt => opt.id === selected)
-                    : tabValue === 3 ? gmailOptions.find(opt => opt.id === selected)
-                    : linkedinOptions.find(opt => opt.id === selected);
-                  
-                  return (
-                    <Box sx={{ 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      gap: { xs: 1, sm: 2 },
-                      width: '100%',
-                      overflow: 'hidden'
-                    }}>
-                      {tabValue === 0 ? <TelegramIcon sx={{ 
-                        color: '#0088cc',
-                        flexShrink: 0,
-                        fontSize: { xs: '1.25rem', sm: '1.5rem' }
-                      }} />
-                        : tabValue === 1 ? <WhatsAppIcon sx={{ 
-                          color: '#25D366',
-                          flexShrink: 0,
-                          fontSize: { xs: '1.25rem', sm: '1.5rem' }
-                        }} />
-                        : tabValue === 2 ? <InstagramIcon sx={{ 
-                          color: '#E4405F',
-                          flexShrink: 0,
-                          fontSize: { xs: '1.25rem', sm: '1.5rem' }
-                        }} />
-                        : tabValue === 3 ? <EmailIcon sx={{ 
-                          color: '#EA4335',
-                          flexShrink: 0,
-                          fontSize: { xs: '1.25rem', sm: '1.5rem' }
-                        }} />
-                        : <LinkedInIcon sx={{ 
-                          color: '#0077B5',
-                          flexShrink: 0,
-                          fontSize: { xs: '1.25rem', sm: '1.5rem' }
-                        }} />}
-                      <Box sx={{ 
-                        minWidth: 0,
-                        overflow: 'hidden',
-                        flex: 1
-                      }}>
-                        <Typography 
-                          variant="body1" 
-                          sx={{ 
-                            fontWeight: 600,
-                            whiteSpace: 'nowrap',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            fontSize: { xs: '0.813rem', sm: '1rem' }
-                          }}
-                        >
-                          {option?.name}
-                        </Typography>
-                        <Typography 
-                          variant="body2" 
-                          color="text.secondary"
-                          sx={{
-                            fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                            whiteSpace: 'nowrap'
-                          }}
-                        >
-                          ₹{option?.price}
-                        </Typography>
-                      </Box>
-                    </Box>
-                  );
-                }}
-              >
-                {tabValue === 0 ? (
-                  telegramOptions.map((option) => (
-                    <MenuItem key={option.id} value={option.id}>
+                  }}
+                  renderValue={(selected) => {
+                    if (!selected) return null;
+                    
+                    const option = tabValue === 0 
+                      ? telegramOptions.find(opt => opt.id === selected)
+                      : tabValue === 1 ? whatsappOptions.find(opt => opt.id === selected)
+                      : tabValue === 2 ? instagramOptions.find(opt => opt.id === selected)
+                      : tabValue === 3 ? gmailOptions.find(opt => opt.id === selected)
+                      : linkedinOptions.find(opt => opt.id === selected);
+                    
+                    return (
                       <Box sx={{ 
                         display: 'flex', 
-                        alignItems: 'flex-start',
+                        alignItems: 'center', 
                         gap: { xs: 1, sm: 2 },
-                        width: '100%'
+                        width: '100%',
+                        overflow: 'hidden'
                       }}>
-                        <TelegramIcon sx={{ 
-                          fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
+                        {tabValue === 0 ? <TelegramIcon sx={{ 
                           color: '#0088cc',
-                          mt: { xs: 0.25, sm: 0 }
+                          flexShrink: 0,
+                          fontSize: { xs: '1.25rem', sm: '1.5rem' }
                         }} />
-                        <Box sx={{ flex: 1, minWidth: 0 }}>
-                          <Typography variant="body1" sx={{ 
-                            fontWeight: 600, 
-                            fontSize: { xs: '0.813rem', sm: '1rem' },
-                            lineHeight: { xs: 1.2, sm: 1.5 },
-                            wordBreak: 'break-word'
-                          }}>
-                            {option.name}
+                          : tabValue === 1 ? <WhatsAppIcon sx={{ 
+                            color: '#25D366',
+                            flexShrink: 0,
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' }
+                          }} />
+                          : tabValue === 2 ? <InstagramIcon sx={{ 
+                            color: '#E4405F',
+                            flexShrink: 0,
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' }
+                          }} />
+                          : tabValue === 3 ? <EmailIcon sx={{ 
+                            color: '#EA4335',
+                            flexShrink: 0,
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' }
+                          }} />
+                          : <LinkedInIcon sx={{ 
+                            color: '#0077B5',
+                            flexShrink: 0,
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' }
+                          }} />}
+                        <Box sx={{ 
+                          minWidth: 0,
+                          overflow: 'hidden',
+                          flex: 1
+                        }}>
+                          <Typography 
+                            variant="body1" 
+                            sx={{ 
+                              fontWeight: 600,
+                              whiteSpace: 'nowrap',
+                              overflow: 'hidden',
+                              textOverflow: 'ellipsis',
+                              fontSize: { xs: '0.813rem', sm: '1rem' }
+                            }}
+                          >
+                            {option?.name}
                           </Typography>
-                          <Typography variant="body2" color="text.secondary" sx={{ 
-                            fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                            lineHeight: { xs: 1.2, sm: 1.5 }
-                          }}>
-                            ₹{option.price}
+                          <Typography 
+                            variant="body2" 
+                            color="text.secondary"
+                            sx={{
+                              fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                              whiteSpace: 'nowrap'
+                            }}
+                          >
+                            ₹{option?.price}
                           </Typography>
                         </Box>
                       </Box>
-                    </MenuItem>
-                  ))
-                ) : tabValue === 1 ? (
-                  whatsappOptions.map((option) => (
-                    <MenuItem key={option.id} value={option.id}>
-                      <Box sx={{ 
-                        display: 'flex', 
-                        alignItems: 'flex-start',
-                        gap: { xs: 1, sm: 2 },
-                        width: '100%'
-                      }}>
-                        <WhatsAppIcon sx={{ 
-                          fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
-                          color: '#25D366',
-                          mt: { xs: 0.25, sm: 0 }
-                        }} />
-                        <Box sx={{ flex: 1, minWidth: 0 }}>
-                          <Typography variant="body1" sx={{ 
-                            fontWeight: 600, 
-                            fontSize: { xs: '0.813rem', sm: '1rem' },
-                            lineHeight: { xs: 1.2, sm: 1.5 },
-                            wordBreak: 'break-word'
-                          }}>
-                            {option.name}
-                          </Typography>
-                          <Typography variant="body2" color="text.secondary" sx={{ 
-                            fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                            lineHeight: { xs: 1.2, sm: 1.5 }
-                          }}>
-                            ₹{option.price}
-                          </Typography>
+                    );
+                  }}
+                >
+                  {tabValue === 0 ? (
+                    telegramOptions.map((option) => (
+                      <MenuItem key={option.id} value={option.id}>
+                        <Box sx={{ 
+                          display: 'flex', 
+                          alignItems: 'flex-start',
+                          gap: { xs: 1, sm: 2 },
+                          width: '100%'
+                        }}>
+                          <TelegramIcon sx={{ 
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
+                            color: '#0088cc',
+                            mt: { xs: 0.25, sm: 0 }
+                          }} />
+                          <Box sx={{ flex: 1, minWidth: 0 }}>
+                            <Typography variant="body1" sx={{ 
+                              fontWeight: 600, 
+                              fontSize: { xs: '0.813rem', sm: '1rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 },
+                              wordBreak: 'break-word'
+                            }}>
+                              {option.name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary" sx={{ 
+                              fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 }
+                            }}>
+                              ₹{option.price}
+                            </Typography>
+                          </Box>
                         </Box>
-                      </Box>
-                    </MenuItem>
-                  ))
-                ) : tabValue === 2 ? (
-                  instagramOptions.map((option) => (
-                    <MenuItem key={option.id} value={option.id}>
-                      <Box sx={{ 
-                        display: 'flex', 
-                        alignItems: 'flex-start',
-                        gap: { xs: 1, sm: 2 },
-                        width: '100%'
-                      }}>
-                        <InstagramIcon sx={{ 
-                          fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
-                          color: '#E4405F',
-                          mt: { xs: 0.25, sm: 0 }
-                        }} />
-                        <Box sx={{ flex: 1, minWidth: 0 }}>
-                          <Typography variant="body1" sx={{ 
-                            fontWeight: 600, 
-                            fontSize: { xs: '0.813rem', sm: '1rem' },
-                            lineHeight: { xs: 1.2, sm: 1.5 },
-                            wordBreak: 'break-word'
-                          }}>
-                            {option.name}
-                          </Typography>
-                          <Typography variant="body2" color="text.secondary" sx={{ 
-                            fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                            lineHeight: { xs: 1.2, sm: 1.5 }
-                          }}>
-                            ₹{option.price}
-                          </Typography>
+                      </MenuItem>
+                    ))
+                  ) : tabValue === 1 ? (
+                    whatsappOptions.map((option) => (
+                      <MenuItem key={option.id} value={option.id}>
+                        <Box sx={{ 
+                          display: 'flex', 
+                          alignItems: 'flex-start',
+                          gap: { xs: 1, sm: 2 },
+                          width: '100%'
+                        }}>
+                          <WhatsAppIcon sx={{ 
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
+                            color: '#25D366',
+                            mt: { xs: 0.25, sm: 0 }
+                          }} />
+                          <Box sx={{ flex: 1, minWidth: 0 }}>
+                            <Typography variant="body1" sx={{ 
+                              fontWeight: 600, 
+                              fontSize: { xs: '0.813rem', sm: '1rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 },
+                              wordBreak: 'break-word'
+                            }}>
+                              {option.name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary" sx={{ 
+                              fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 }
+                            }}>
+                              ₹{option.price}
+                            </Typography>
+                          </Box>
                         </Box>
-                      </Box>
-                    </MenuItem>
-                  ))
-                ) : tabValue === 3 ? (
-                  gmailOptions.map((option) => (
-                    <MenuItem key={option.id} value={option.id}>
-                      <Box sx={{ 
-                        display: 'flex', 
-                        alignItems: 'flex-start',
-                        gap: { xs: 1, sm: 2 },
-                        width: '100%'
-                      }}>
-                        <EmailIcon sx={{ 
-                          fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
-                          color: '#EA4335',
-                          mt: { xs: 0.25, sm: 0 }
-                        }} />
-                        <Box sx={{ flex: 1, minWidth: 0 }}>
-                          <Typography variant="body1" sx={{ 
-                            fontWeight: 600, 
-                            fontSize: { xs: '0.813rem', sm: '1rem' },
-                            lineHeight: { xs: 1.2, sm: 1.5 },
-                            wordBreak: 'break-word'
-                          }}>
-                            {option.name}
-                          </Typography>
-                          <Typography variant="body2" color="text.secondary" sx={{ 
-                            fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                            lineHeight: { xs: 1.2, sm: 1.5 }
-                          }}>
-                            ₹{option.price}
-                          </Typography>
+                      </MenuItem>
+                    ))
+                  ) : tabValue === 2 ? (
+                    instagramOptions.map((option) => (
+                      <MenuItem key={option.id} value={option.id}>
+                        <Box sx={{ 
+                          display: 'flex', 
+                          alignItems: 'flex-start',
+                          gap: { xs: 1, sm: 2 },
+                          width: '100%'
+                        }}>
+                          <InstagramIcon sx={{ 
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
+                            color: '#E4405F',
+                            mt: { xs: 0.25, sm: 0 }
+                          }} />
+                          <Box sx={{ flex: 1, minWidth: 0 }}>
+                            <Typography variant="body1" sx={{ 
+                              fontWeight: 600, 
+                              fontSize: { xs: '0.813rem', sm: '1rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 },
+                              wordBreak: 'break-word'
+                            }}>
+                              {option.name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary" sx={{ 
+                              fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 }
+                            }}>
+                              ₹{option.price}
+                            </Typography>
+                          </Box>
                         </Box>
-                      </Box>
-                    </MenuItem>
-                  ))
-                ) : (
-                  linkedinOptions.map((option) => (
-                    <MenuItem key={option.id} value={option.id}>
-                      <Box sx={{ 
-                        display: 'flex', 
-                        alignItems: 'flex-start',
-                        gap: { xs: 1, sm: 2 },
-                        width: '100%'
-                      }}>
-                        <LinkedInIcon sx={{ 
-                          fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
-                          color: '#0077B5',
-                          mt: { xs: 0.25, sm: 0 }
-                        }} />
-                        <Box sx={{ flex: 1, minWidth: 0 }}>
-                          <Typography variant="body1" sx={{ 
-                            fontWeight: 600, 
-                            fontSize: { xs: '0.813rem', sm: '1rem' },
-                            lineHeight: { xs: 1.2, sm: 1.5 },
-                            wordBreak: 'break-word'
-                          }}>
-                            {option.name}
-                          </Typography>
-                          <Typography variant="body2" color="text.secondary" sx={{ 
-                            fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                            lineHeight: { xs: 1.2, sm: 1.5 }
-                          }}>
-                            ₹{option.price}
-                          </Typography>
+                      </MenuItem>
+                    ))
+                  ) : tabValue === 3 ? (
+                    gmailOptions.map((option) => (
+                      <MenuItem key={option.id} value={option.id}>
+                        <Box sx={{ 
+                          display: 'flex', 
+                          alignItems: 'flex-start',
+                          gap: { xs: 1, sm: 2 },
+                          width: '100%'
+                        }}>
+                          <EmailIcon sx={{ 
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
+                            color: '#EA4335',
+                            mt: { xs: 0.25, sm: 0 }
+                          }} />
+                          <Box sx={{ flex: 1, minWidth: 0 }}>
+                            <Typography variant="body1" sx={{ 
+                              fontWeight: 600, 
+                              fontSize: { xs: '0.813rem', sm: '1rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 },
+                              wordBreak: 'break-word'
+                            }}>
+                              {option.name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary" sx={{ 
+                              fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 }
+                            }}>
+                              ₹{option.price}
+                            </Typography>
+                          </Box>
                         </Box>
-                      </Box>
-                    </MenuItem>
-                  ))
-                )}
-              </Select>
-            </FormControl>
+                      </MenuItem>
+                    ))
+                  ) : (
+                    linkedinOptions.map((option) => (
+                      <MenuItem key={option.id} value={option.id}>
+                        <Box sx={{ 
+                          display: 'flex', 
+                          alignItems: 'flex-start',
+                          gap: { xs: 1, sm: 2 },
+                          width: '100%'
+                        }}>
+                          <LinkedInIcon sx={{ 
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
+                            color: '#0077B5',
+                            mt: { xs: 0.25, sm: 0 }
+                          }} />
+                          <Box sx={{ flex: 1, minWidth: 0 }}>
+                            <Typography variant="body1" sx={{ 
+                              fontWeight: 600, 
+                              fontSize: { xs: '0.813rem', sm: '1rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 },
+                              wordBreak: 'break-word'
+                            }}>
+                              {option.name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary" sx={{ 
+                              fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 }
+                            }}>
+                              ₹{option.price}
+                            </Typography>
+                          </Box>
+                        </Box>
+                      </MenuItem>
+                    ))
+                  )}
+                </Select>
+              </FormControl>
 
-            {selectedService && (
-              <Card 
-                sx={{ 
-                  mb: 4,
-                  background: 'linear-gradient(145deg, #ffffff, #f8f9fa)',
-                }}
-              >
-                <CardContent>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
-                    {tabValue === 0 ? (
-                      <Avatar sx={{ bgcolor: 'primary.light', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
-                        <TelegramIcon />
-                      </Avatar>
-                    ) : tabValue === 1 ? (
-                      <Avatar sx={{ bgcolor: 'success.light', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
-                        <WhatsAppIcon />
-                      </Avatar>
-                    ) : tabValue === 2 ? (
-                      <Avatar sx={{ bgcolor: 'secondary.light', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
-                        <InstagramIcon />
-                      </Avatar>
-                    ) : tabValue === 3 ? (
-                      <Avatar sx={{ bgcolor: 'error.light', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
-                        <EmailIcon />
-                      </Avatar>
-                    ) : (
-                      <Avatar sx={{ bgcolor: '#0077B5', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
-                        <LinkedInIcon />
-                      </Avatar>
-                    )}
-                    <Box>
-                      <Typography variant="h6" sx={{ fontWeight: 600, fontSize: { xs: '1rem', sm: '1.1rem' } }}>
-                        {selectedService.name}
-                      </Typography>
-                      <Chip 
-                        label={`₹${selectedService.price}`} 
-                        color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : "primary"}
-                        sx={{ 
-                          mt: 1,
-                          backgroundColor: tabValue === 4 ? '#0077B5' : undefined,
-                          '&:hover': {
-                            backgroundColor: tabValue === 4 ? '#006097' : undefined,
-                          }
-                        }}
-                      />
+              {selectedService && (
+                <Card 
+                  sx={{ 
+                    mb: 4,
+                    background: 'linear-gradient(145deg, #ffffff, #f8f9fa)',
+                  }}
+                >
+                  <CardContent>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
+                      {tabValue === 0 ? (
+                        <Avatar sx={{ bgcolor: 'primary.light', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
+                          <TelegramIcon />
+                        </Avatar>
+                      ) : tabValue === 1 ? (
+                        <Avatar sx={{ bgcolor: 'success.light', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
+                          <WhatsAppIcon />
+                        </Avatar>
+                      ) : tabValue === 2 ? (
+                        <Avatar sx={{ bgcolor: 'secondary.light', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
+                          <InstagramIcon />
+                        </Avatar>
+                      ) : tabValue === 3 ? (
+                        <Avatar sx={{ bgcolor: 'error.light', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
+                          <EmailIcon />
+                        </Avatar>
+                      ) : (
+                        <Avatar sx={{ bgcolor: '#0077B5', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
+                          <LinkedInIcon />
+                        </Avatar>
+                      )}
+                      <Box>
+                        <Typography variant="h6" sx={{ fontWeight: 600, fontSize: { xs: '1rem', sm: '1.1rem' } }}>
+                          {selectedService.name}
+                        </Typography>
+                        <Chip 
+                          label={`₹${selectedService.price}`} 
+                          color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : "primary"}
+                          sx={{ 
+                            mt: 1,
+                            backgroundColor: tabValue === 4 ? '#0077B5' : undefined,
+                            '&:hover': {
+                              backgroundColor: tabValue === 4 ? '#006097' : undefined,
+                            }
+                          }}
+                        />
+                      </Box>
                     </Box>
+                  </CardContent>
+                  <CardActions>
+                    <Button
+                      fullWidth
+                      variant="contained"
+                      color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : "primary"}
+                      onClick={handleSubmit}
+                      sx={{ 
+                        py: 1.5,
+                        fontSize: { xs: '0.9rem', sm: '1rem' },
+                        backgroundColor: tabValue === 4 ? '#0077B5' : undefined,
+                        '&:hover': {
+                          backgroundColor: tabValue === 4 ? '#006097' : undefined,
+                        }
+                      }}
+                    >
+                      Get QR Code
+                    </Button>
+                  </CardActions>
+                </Card>
+              )}
+
+              {showQR && (
+                <Paper 
+                  elevation={0}
+                  sx={{ 
+                    p: { xs: 2, sm: 3, md: 4 }, 
+                    borderRadius: 3,
+                    background: 'linear-gradient(145deg, #ffffff, #f8f9fa)',
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
+                  }}
+                >
+                  <Typography variant="h5" gutterBottom align="center" sx={{ fontWeight: 600, fontSize: { xs: '1.1rem', sm: '1.25rem' } }}>
+                    Scan QR Code
+                  </Typography>
+                  <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
+                    <img 
+                      src="https://wertrends.s3.eu-north-1.amazonaws.com/QR.jpg" 
+                      alt="QR Code" 
+                      style={{ 
+                        maxWidth: '100%', 
+                        height: 'auto',
+                        borderRadius: 12,
+                        boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
+                      }}
+                    />
                   </Box>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    fullWidth
-                    variant="contained"
-                    color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : "primary"}
-                    onClick={handleSubmit}
-                    sx={{ 
-                      py: 1.5,
-                      fontSize: { xs: '0.9rem', sm: '1rem' },
-                      backgroundColor: tabValue === 4 ? '#0077B5' : undefined,
-                      '&:hover': {
-                        backgroundColor: tabValue === 4 ? '#006097' : undefined,
-                      }
-                    }}
-                  >
-                    Get QR Code
-                  </Button>
-                </CardActions>
-              </Card>
-            )}
+                  
+                  {!paymentDone ? (
+                    <Button
+                      variant="contained"
+                      color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : "primary"}
+                      fullWidth
+                      onClick={handlePayment}
+                      startIcon={tabValue === 0 ? <TelegramIcon /> : tabValue === 1 ? <WhatsAppIcon /> : tabValue === 2 ? <InstagramIcon /> : tabValue === 3 ? <EmailIcon /> : <LinkedInIcon />}
+                      sx={{ 
+                        py: 1.5,
+                        fontSize: { xs: '0.9rem', sm: '1rem' },
+                        backgroundColor: tabValue === 4 ? '#0077B5' : undefined,
+                        '&:hover': {
+                          backgroundColor: tabValue === 4 ? '#006097' : undefined,
+                        }
+                      }}
+                    >
+                      I Have Made Payment
+                    </Button>
+                  ) : (
+                    <Alert severity="info" sx={{ mt: 2 }}>
+                      Please send the QR code screenshot and payment proof to the WhatsApp number. You will receive your virtual number shortly.
+                    </Alert>
+                  )}
+                </Paper>
+              )}
 
-            {showQR && (
-              <Paper 
-                elevation={0}
-                sx={{ 
-                  p: { xs: 2, sm: 3, md: 4 }, 
-                  borderRadius: 3,
-                  background: 'linear-gradient(145deg, #ffffff, #f8f9fa)',
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
-                }}
-              >
-                <Typography variant="h5" gutterBottom align="center" sx={{ fontWeight: 600, fontSize: { xs: '1.1rem', sm: '1.25rem' } }}>
-                  Scan QR Code
-                </Typography>
-                <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
-                  <img 
-                    src="https://wertrends.s3.eu-north-1.amazonaws.com/QR.jpg" 
-                    alt="QR Code" 
-                    style={{ 
-                      maxWidth: '100%', 
-                      height: 'auto',
-                      borderRadius: 12,
-                      boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
-                    }}
-                  />
-                </Box>
-                
-                {!paymentDone ? (
-                  <Button
-                    variant="contained"
-                    color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : "primary"}
-                    fullWidth
-                    onClick={handlePayment}
-                    startIcon={tabValue === 0 ? <TelegramIcon /> : tabValue === 1 ? <WhatsAppIcon /> : tabValue === 2 ? <InstagramIcon /> : tabValue === 3 ? <EmailIcon /> : <LinkedInIcon />}
-                    sx={{ 
-                      py: 1.5,
-                      fontSize: { xs: '0.9rem', sm: '1rem' },
-                      backgroundColor: tabValue === 4 ? '#0077B5' : undefined,
-                      '&:hover': {
-                        backgroundColor: tabValue === 4 ? '#006097' : undefined,
-                      }
-                    }}
-                  >
-                    I Have Made Payment
-                  </Button>
-                ) : (
-                  <Alert severity="info" sx={{ mt: 2 }}>
-                    Please send the QR code screenshot and payment proof to the WhatsApp number. You will receive your virtual number shortly.
-                  </Alert>
-                )}
-              </Paper>
-            )}
-
-            <Box sx={{ mt: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 2 }}>
-              <Button
-                variant="outlined"
-                color="secondary"
-                onClick={handleCustomization}
-                startIcon={<BuildIcon />}
-                sx={{ 
-                  borderRadius: 2,
-                  borderWidth: 2,
-                  fontSize: { xs: '0.9rem', sm: '1rem' },
-                  '&:hover': {
-                    borderWidth: 2,
-                  }
-                }}
-              >
-                Need Customization?
-              </Button>
-
-              {/* Mobile Payment Buttons - Visible only on small screens */}
-              <Box sx={{ display: { xs: 'flex', sm: 'none' }, flexDirection: 'column', gap: 2 }}>
+              <Box sx={{ mt: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 2 }}>
                 <Button
-                  variant="contained"
-                  color="primary"
-                  startIcon={<SendIcon />}
-                  onClick={() => window.open('https://wa.me/919876543210?text=I%20have%20made%20the%20payment%20for%20the%20service', '_blank')}
-                  sx={{
-                    borderRadius: 2,
-                    px: 2,
-                    py: 1.5,
-                    fontSize: '0.875rem',
-                    whiteSpace: 'nowrap',
-                    boxShadow: 3,
-                    '&:hover': {
-                      boxShadow: 6,
-                    },
-                  }}
-                >
-                  Click here if you paid
-                </Button>
-
-                <Button
-                  variant="contained"
+                  variant="outlined"
                   color="secondary"
-                  startIcon={<SupportAgentIcon />}
-                  onClick={() => window.open('https://wa.me/919876543210?text=I%20need%20help%20with%20payment', '_blank')}
-                  sx={{
+                  onClick={handleCustomization}
+                  startIcon={<BuildIcon />}
+                  sx={{ 
                     borderRadius: 2,
-                    px: 2,
-                    py: 1.5,
-                    fontSize: '0.875rem',
-                    whiteSpace: 'nowrap',
-                    boxShadow: 3,
+                    borderWidth: 2,
+                    fontSize: { xs: '0.9rem', sm: '1rem' },
                     '&:hover': {
-                      boxShadow: 6,
-                    },
+                      borderWidth: 2,
+                    }
                   }}
                 >
-                  Not able to pay?
+                  Need Customization?
                 </Button>
+
+                {/* Mobile Payment Buttons - Visible only on small screens */}
+                <Box sx={{ display: { xs: 'flex', sm: 'none' }, flexDirection: 'column', gap: 2 }}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    startIcon={<SendIcon />}
+                    onClick={() => window.open('https://wa.me/919876543210?text=I%20have%20made%20the%20payment%20for%20the%20service', '_blank')}
+                    sx={{
+                      borderRadius: 2,
+                      px: 2,
+                      py: 1.5,
+                      fontSize: '0.875rem',
+                      whiteSpace: 'nowrap',
+                      boxShadow: 3,
+                      '&:hover': {
+                        boxShadow: 6,
+                      },
+                    }}
+                  >
+                    Click here if you paid
+                  </Button>
+
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    startIcon={<SupportAgentIcon />}
+                    onClick={() => window.open('https://wa.me/919876543210?text=I%20need%20help%20with%20payment', '_blank')}
+                    sx={{
+                      borderRadius: 2,
+                      px: 2,
+                      py: 1.5,
+                      fontSize: '0.875rem',
+                      whiteSpace: 'nowrap',
+                      boxShadow: 3,
+                      '&:hover': {
+                        boxShadow: 6,
+                      },
+                    }}
+                  >
+                    Not able to pay?
+                  </Button>
+                </Box>
               </Box>
-            </Box>
-          </Paper>
-        </Container>
-      </Box>
-    </ThemeProvider>
+            </Paper>
+          </Container>
+        </Box>
+      </ThemeProvider>
+    </>
   )
 }
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/buy" element={<VirtualNumberPage />} />
-        </Routes>
-        <Analytics />
-      </Router>
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/buy" element={<VirtualNumberPage />} />
+          </Routes>
+          <Analytics />
+        </Router>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }
 
