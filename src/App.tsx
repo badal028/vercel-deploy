@@ -262,6 +262,8 @@ function LandingPage() {
       <Helmet>
         <title>Buy Virtual Numbers for Telegram & WhatsApp | Instant Delivery | VirtNumbers</title>
         <meta name="description" content="Buy Premium Virtual Numbers for Telegram, WhatsApp & Social Media ✓ Instant Delivery ✓ 24/7 Support ✓ Secure Payment ✓ 100% Guaranteed Numbers | VirtNumbers" />
+        <link rel="icon" href="/logo.ico" />
+        <link rel="shortcut icon" href="/logo.ico" type="image/x-icon" />
       </Helmet>
       <Box sx={{ 
         minHeight: '100vh',
@@ -698,6 +700,8 @@ function VirtualNumberPage() {
       <Helmet>
         <title>Buy Virtual Numbers - Select Your Service | VirtNumbers</title>
         <meta name="description" content="Choose from our premium virtual numbers for Telegram, WhatsApp, Instagram, Gmail & LinkedIn. Instant activation with 24/7 support." />
+        <link rel="icon" href="/logo.ico" />
+        <link rel="shortcut icon" href="/logo.ico" type="image/x-icon" />
       </Helmet>
       <ThemeProvider theme={theme}>
         <Box sx={{ 
