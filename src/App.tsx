@@ -262,8 +262,31 @@ function LandingPage() {
       <Helmet>
         <title>Buy Virtual Numbers for Telegram & WhatsApp | Instant Delivery | VirtNumbers</title>
         <meta name="description" content="Buy Premium Virtual Numbers for Telegram, WhatsApp & Social Media ✓ Instant Delivery ✓ 24/7 Support ✓ Secure Payment ✓ 100% Guaranteed Numbers | VirtNumbers" />
+        
+        {/* Primary keyword meta tags */}
+        <meta name="keywords" content="virtual number for telegram, virtual number for whatsapp, telegram virtual number, whatsapp virtual number, buy telegram number, buy whatsapp number" />
+        
+        {/* Additional SEO meta tags for main keywords */}
+        <meta property="article:tag" content="virtual number for telegram" />
+        <meta property="article:tag" content="virtual number for whatsapp" />
+        
+        {/* Existing meta tags */}
         <link rel="icon" href="/logo.ico" />
         <link rel="shortcut icon" href="/logo.ico" type="image/x-icon" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://virtnumbers.com/" />
+        <meta property="og:title" content="Buy Virtual Numbers for Telegram & WhatsApp | VirtNumbers" />
+        <meta property="og:description" content="Premium Virtual Numbers for Telegram, WhatsApp & Social Media ✓ Instant Delivery ✓ 24/7 Support" />
+        <meta property="og:image" content="/logo.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://virtnumbers.com/" />
+        <meta property="twitter:title" content="Buy Virtual Numbers for Telegram & WhatsApp | VirtNumbers" />
+        <meta property="twitter:description" content="Premium Virtual Numbers for Telegram, WhatsApp & Social Media ✓ Instant Delivery ✓ 24/7 Support" />
+        <meta property="twitter:image" content="/logo.png" />
       </Helmet>
       <Box sx={{ 
         minHeight: '100vh',
@@ -660,15 +683,19 @@ function VirtualNumberPage() {
   const [selectedCrypto, setSelectedCrypto] = useState<string>('');
 
   const cryptoOptions = [
-    { id: 'btc', name: 'Bitcoin', address: 'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh' },
-    { id: 'eth', name: 'Ethereum', address: '0x71C7656EC7ab88b098defB751B7401B5f6d8976F' },
-    { id: 'usdt', name: 'USDT (TRC20)', address: 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t' },
+    { id: 'btc', name: 'Bitcoin (BTC Network)', address: '36naVHYeASp1kNprCsHh47ZWVpqrVXiB14' },
+    { id: 'usdt_erc20', name: 'USDT (ERC20 Network)', address: '0xe3695356229c7b6577d082578fb30dc5665e8d99' },
+    { id: 'usdt_trc20', name: 'USDT (TRC20 Network)', address: 'TCoE3zPbUEMmNaYKY3ZT5ngAFoUsq1kBKT' },
+    { id: 'usdt_bep20', name: 'USDT (BEP20 Network)', address: '0x8093bd3339a55bd16239844a2c00149f5c6d1af0' },
+    { id: 'trx', name: 'TRX (TRC20 Network)', address: 'TCoE3zPbUEMmNaYKY3ZT5ngAFoUsq1kBKT' },
+    { id: 'ltc', name: 'Litecoin (LTC Network)', address: 'MDEth7fMzAPhRYhJ8Kk93a8HpJb6bPQUeK' }
   ];
 
-  // Convert INR to USD (using approximate rate)
-  const convertToUSD = (inrAmount: number) => {
+  // Convert INR to USD (using approximate rate) and add $1 extra for crypto and PayPal
+  const convertToUSD = (inrAmount: number, isExtra: boolean = false) => {
     const exchangeRate = 0.012; // Approximate rate (1 INR = 0.012 USD)
-    return (inrAmount * exchangeRate).toFixed(2);
+    const baseAmount = inrAmount * exchangeRate;
+    return isExtra ? (baseAmount + 1).toFixed(2) : baseAmount.toFixed(2);
   };
 
   // Add useEffect to scroll to top
@@ -725,6 +752,20 @@ function VirtualNumberPage() {
         <meta name="description" content="Choose from our premium virtual numbers for Telegram, WhatsApp, Instagram, Gmail & LinkedIn. Instant activation with 24/7 support." />
         <link rel="icon" href="/logo.ico" />
         <link rel="shortcut icon" href="/logo.ico" type="image/x-icon" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://virtnumbers.com/buy" />
+        <meta property="og:title" content="Buy Virtual Numbers - Select Your Service | VirtNumbers" />
+        <meta property="og:description" content="Choose from our premium virtual numbers for Telegram, WhatsApp, Instagram, Gmail & LinkedIn. Instant activation with 24/7 support." />
+        <meta property="og:image" content="/logo.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://virtnumbers.com/buy" />
+        <meta property="twitter:title" content="Buy Virtual Numbers - Select Your Service | VirtNumbers" />
+        <meta property="twitter:description" content="Choose from our premium virtual numbers for Telegram, WhatsApp, Instagram, Gmail & LinkedIn. Instant activation with 24/7 support." />
+        <meta property="twitter:image" content="/logo.png" />
       </Helmet>
       <ThemeProvider theme={theme}>
         <Box sx={{ 
@@ -1385,7 +1426,7 @@ function VirtualNumberPage() {
                   {selectedPaymentMethod === 'paypal' && (
                     <>
                       <Typography variant="h5" gutterBottom align="center" sx={{ fontWeight: 600, fontSize: { xs: '1.1rem', sm: '1.25rem' } }}>
-                        Pay ${convertToUSD(selectedService?.price || 0)} via PayPal
+                        Pay ${convertToUSD(selectedService?.price || 0, true)} via PayPal
                       </Typography>
                       <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
                         <Button
@@ -1410,8 +1451,13 @@ function VirtualNumberPage() {
                         Pay via Crypto
                       </Typography>
                       <Typography variant="body1" align="center" color="text.secondary" sx={{ mb: 3 }}>
-                        Amount: ₹{selectedService?.price} (≈ ${convertToUSD(selectedService?.price || 0)})
+                        Amount: ₹{selectedService?.price} (≈ ${convertToUSD(selectedService?.price || 0, true)})
                       </Typography>
+                      <Alert severity="info" sx={{ mb: 3 }}>
+                        <Typography variant="body2">
+                          Note: Network fees and deductions will be handled by you. We need to receive the exact amount mentioned above to process your order.
+                        </Typography>
+                      </Alert>
                       <FormControl fullWidth sx={{ mb: 3 }}>
                         <InputLabel>Select Cryptocurrency</InputLabel>
                         <Select
