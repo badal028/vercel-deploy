@@ -656,6 +656,20 @@ function VirtualNumberPage() {
   const [showQR, setShowQR] = useState(false);
   const [paymentDone, setPaymentDone] = useState(false);
   const [tabValue, setTabValue] = useState(0);
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState<string>('');
+  const [selectedCrypto, setSelectedCrypto] = useState<string>('');
+
+  const cryptoOptions = [
+    { id: 'btc', name: 'Bitcoin', address: 'bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh' },
+    { id: 'eth', name: 'Ethereum', address: '0x71C7656EC7ab88b098defB751B7401B5f6d8976F' },
+    { id: 'usdt', name: 'USDT (TRC20)', address: 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t' },
+  ];
+
+  // Convert INR to USD (using approximate rate)
+  const convertToUSD = (inrAmount: number) => {
+    const exchangeRate = 0.012; // Approximate rate (1 INR = 0.012 USD)
+    return (inrAmount * exchangeRate).toFixed(2);
+  };
 
   // Add useEffect to scroll to top
   useEffect(() => {
@@ -678,6 +692,15 @@ function VirtualNumberPage() {
       : tabValue === 3 ? gmailOptions.find(opt => opt.id === selectedId)
       : linkedinOptions.find(opt => opt.id === selectedId);
     setSelectedService(service || null);
+  };
+
+  const handlePaymentMethodSelect = (method: string) => {
+    setSelectedPaymentMethod(method);
+    setShowQR(true);
+  };
+
+  const handleCryptoSelect = (event: SelectChangeEvent<string>) => {
+    setSelectedCrypto(event.target.value);
   };
 
   const handleSubmit = () => {
@@ -727,7 +750,7 @@ function VirtualNumberPage() {
                 variant="contained"
                 color="primary"
                 startIcon={<SendIcon />}
-                onClick={() => window.open('https://wa.me/919876543210?text=I%20have%20made%20the%20payment%20for%20the%20service', '_blank')}
+                onClick={() => window.open('https://wa.me/918154994406?text=I%20have%20made%20the%20payment%20for%20the%20service', '_blank')}
                 sx={{
                   borderRadius: 2,
                   px: 3,
@@ -749,7 +772,7 @@ function VirtualNumberPage() {
                 variant="contained"
                 color="secondary"
                 startIcon={<SupportAgentIcon />}
-                onClick={() => window.open('https://wa.me/919876543210?text=I%20need%20help%20with%20payment', '_blank')}
+                onClick={() => window.open('https://wa.me/918154994406?text=I%20need%20help%20with%20payment', '_blank')}
                 sx={{
                   borderRadius: 2,
                   px: 3,
@@ -1285,22 +1308,45 @@ function VirtualNumberPage() {
                       </Box>
                     </Box>
                   </CardContent>
-                  <CardActions>
+                  <CardActions sx={{ flexDirection: 'column', gap: 2, p: 2 }}>
                     <Button
                       fullWidth
                       variant="contained"
-                      color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : "primary"}
-                      onClick={handleSubmit}
+                      color="primary"
+                      onClick={() => handlePaymentMethodSelect('upi')}
+                      startIcon={<PaidIcon />}
                       sx={{ 
                         py: 1.5,
                         fontSize: { xs: '0.9rem', sm: '1rem' },
-                        backgroundColor: tabValue === 4 ? '#0077B5' : undefined,
-                        '&:hover': {
-                          backgroundColor: tabValue === 4 ? '#006097' : undefined,
-                        }
                       }}
                     >
-                      Get QR Code
+                      Pay via UPI
+                    </Button>
+                    <Button
+                      fullWidth
+                      variant="contained"
+                      color="secondary"
+                      onClick={() => handlePaymentMethodSelect('paypal')}
+                      startIcon={<PaidIcon />}
+                      sx={{ 
+                        py: 1.5,
+                        fontSize: { xs: '0.9rem', sm: '1rem' },
+                      }}
+                    >
+                      Pay via PayPal
+                    </Button>
+                    <Button
+                      fullWidth
+                      variant="contained"
+                      color="info"
+                      onClick={() => handlePaymentMethodSelect('crypto')}
+                      startIcon={<PaidIcon />}
+                      sx={{ 
+                        py: 1.5,
+                        fontSize: { xs: '0.9rem', sm: '1rem' },
+                      }}
+                    >
+                      Pay via Crypto
                     </Button>
                   </CardActions>
                 </Card>
@@ -1316,22 +1362,93 @@ function VirtualNumberPage() {
                     boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
                   }}
                 >
-                  <Typography variant="h5" gutterBottom align="center" sx={{ fontWeight: 600, fontSize: { xs: '1.1rem', sm: '1.25rem' } }}>
-                    Scan QR Code
-                  </Typography>
-                  <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
-                    <img 
-                      src="https://wertrends.s3.eu-north-1.amazonaws.com/QR.jpg" 
-                      alt="QR Code" 
-                      style={{ 
-                        maxWidth: '100%', 
-                        height: 'auto',
-                        borderRadius: 12,
-                        boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
-                      }}
-                    />
-                  </Box>
-                  
+                  {selectedPaymentMethod === 'upi' && (
+                    <>
+                      <Typography variant="h5" gutterBottom align="center" sx={{ fontWeight: 600, fontSize: { xs: '1.1rem', sm: '1.25rem' } }}>
+                        Pay ₹{selectedService?.price} via UPI
+                      </Typography>
+                      <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
+                        <img 
+                          src="https://wertrends.s3.eu-north-1.amazonaws.com/QR.jpg" 
+                          alt="UPI QR Code" 
+                          style={{ 
+                            maxWidth: '100%', 
+                            height: 'auto',
+                            borderRadius: 12,
+                            boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
+                          }}
+                        />
+                      </Box>
+                    </>
+                  )}
+
+                  {selectedPaymentMethod === 'paypal' && (
+                    <>
+                      <Typography variant="h5" gutterBottom align="center" sx={{ fontWeight: 600, fontSize: { xs: '1.1rem', sm: '1.25rem' } }}>
+                        Pay ${convertToUSD(selectedService?.price || 0)} via PayPal
+                      </Typography>
+                      <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
+                        <Button
+                          variant="contained"
+                          color="primary"
+                          onClick={() => window.open('https://paypal.me/BadalPrajapati?country.x=IN&locale.x=en_GB', '_blank')}
+                          sx={{ 
+                            py: 1.5,
+                            px: 4,
+                            fontSize: { xs: '0.9rem', sm: '1rem' },
+                          }}
+                        >
+                          Open PayPal
+                        </Button>
+                      </Box>
+                    </>
+                  )}
+
+                  {selectedPaymentMethod === 'crypto' && (
+                    <>
+                      <Typography variant="h5" gutterBottom align="center" sx={{ fontWeight: 600, fontSize: { xs: '1.1rem', sm: '1.25rem' } }}>
+                        Pay via Crypto
+                      </Typography>
+                      <Typography variant="body1" align="center" color="text.secondary" sx={{ mb: 3 }}>
+                        Amount: ₹{selectedService?.price} (≈ ${convertToUSD(selectedService?.price || 0)})
+                      </Typography>
+                      <FormControl fullWidth sx={{ mb: 3 }}>
+                        <InputLabel>Select Cryptocurrency</InputLabel>
+                        <Select
+                          value={selectedCrypto}
+                          onChange={handleCryptoSelect}
+                          label="Select Cryptocurrency"
+                        >
+                          {cryptoOptions.map((option) => (
+                            <MenuItem key={option.id} value={option.id}>
+                              {option.name}
+                            </MenuItem>
+                          ))}
+                        </Select>
+                      </FormControl>
+                      {selectedCrypto && (
+                        <Box sx={{ mb: 3 }}>
+                          <Typography variant="body2" color="text.secondary" gutterBottom>
+                            Send {cryptoOptions.find(opt => opt.id === selectedCrypto)?.name} to:
+                          </Typography>
+                          <Paper 
+                            elevation={0}
+                            sx={{ 
+                              p: 2,
+                              backgroundColor: 'rgba(0,0,0,0.02)',
+                              borderRadius: 1,
+                              wordBreak: 'break-all'
+                            }}
+                          >
+                            <Typography variant="body1">
+                              {cryptoOptions.find(opt => opt.id === selectedCrypto)?.address}
+                            </Typography>
+                          </Paper>
+                        </Box>
+                      )}
+                    </>
+                  )}
+
                   {!paymentDone ? (
                     <Button
                       variant="contained"
@@ -1352,7 +1469,7 @@ function VirtualNumberPage() {
                     </Button>
                   ) : (
                     <Alert severity="info" sx={{ mt: 2 }}>
-                      Please send the QR code screenshot and payment proof to the WhatsApp number. You will receive your virtual number shortly.
+                      Please send the payment proof to the WhatsApp number. You will receive your virtual number shortly.
                     </Alert>
                   )}
                 </Paper>
@@ -1382,7 +1499,7 @@ function VirtualNumberPage() {
                     variant="contained"
                     color="primary"
                     startIcon={<SendIcon />}
-                    onClick={() => window.open('https://wa.me/919876543210?text=I%20have%20made%20the%20payment%20for%20the%20service', '_blank')}
+                    onClick={() => window.open('https://wa.me/918154994406?text=I%20have%20made%20the%20payment%20for%20the%20service', '_blank')}
                     sx={{
                       borderRadius: 2,
                       px: 2,
@@ -1402,7 +1519,7 @@ function VirtualNumberPage() {
                     variant="contained"
                     color="secondary"
                     startIcon={<SupportAgentIcon />}
-                    onClick={() => window.open('https://wa.me/919876543210?text=I%20need%20help%20with%20payment', '_blank')}
+                    onClick={() => window.open('https://wa.me/918154994406?text=I%20need%20help%20with%20payment', '_blank')}
                     sx={{
                       borderRadius: 2,
                       px: 2,
