@@ -41,6 +41,7 @@ import { Analytics } from '@vercel/analytics/react';
 import SendIcon from '@mui/icons-material/Send';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import canvaIcon from './assets/canva-icon.png';
+import netflixIcon from './assets/netflix.png';
 
 const float = keyframes`
   0% {
@@ -85,6 +86,7 @@ interface ServiceOption {
   name: string;
   price: number;
   icon?: string;
+  duration?: string;
 }
 
 const telegramOptions: ServiceOption[] = [
@@ -122,13 +124,20 @@ const canvaOptions: ServiceOption[] = [
   { id: 'trusted', name: 'Canva Trusted Account with Email', price: 400 }
 ];
 
+const netflixOptions: ServiceOption[] = [
+  { id: 'netflix-1year', name: '1 Year Netflix Premium 4K UHD', price: 4500, duration: 'year' },
+  { id: 'netflix-6month', name: '6 Months Netflix Premium 4K UHD', price: 3000, duration: '6 months' },
+  { id: 'netflix-3month', name: '3 Months Netflix Premium 4K UHD', price: 1800, duration: '3 months' }
+];
+
 const serviceOptions = [
-  { id: 'telegram', name: 'Telegram', icon: <TelegramIcon />, options: telegramOptions },
-  { id: 'whatsapp', name: 'WhatsApp', icon: <WhatsAppIcon />, options: whatsappOptions },
-  { id: 'instagram', name: 'Instagram', icon: <InstagramIcon />, options: instagramOptions },
-  { id: 'gmail', name: 'Gmail', icon: <EmailIcon />, options: gmailOptions },
-  { id: 'linkedin', name: 'LinkedIn', icon: <LinkedInIcon />, options: linkedinOptions },
-  { id: 'canva', name: 'Canva', icon: <img src={canvaIcon} alt="Canva" style={{ width: '24px', height: '24px' }} />, options: canvaOptions },
+  { id: 'netflix', name: 'Netflix', icon: <img src={netflixIcon} alt="Netflix" style={{ width: '24px', height: '24px' }} />, options: netflixOptions, value: 6 },
+  { id: 'telegram', name: 'Telegram', icon: <TelegramIcon />, options: telegramOptions, value: 0 },
+  { id: 'whatsapp', name: 'WhatsApp', icon: <WhatsAppIcon />, options: whatsappOptions, value: 1 },
+  { id: 'instagram', name: 'Instagram', icon: <InstagramIcon />, options: instagramOptions, value: 2 },
+  { id: 'gmail', name: 'Gmail', icon: <EmailIcon />, options: gmailOptions, value: 3 },
+  { id: 'linkedin', name: 'LinkedIn', icon: <LinkedInIcon />, options: linkedinOptions, value: 4 },
+  { id: 'canva', name: 'Canva', icon: <img src={canvaIcon} alt="Canva" style={{ width: '24px', height: '24px' }} />, options: canvaOptions, value: 5 }
 ];
 
 // Create a custom theme
@@ -277,15 +286,20 @@ function LandingPage() {
   return (
     <>
       <Helmet>
-        <title>Buy Virtual Numbers for Telegram & WhatsApp | Instant Delivery | VirtNumbers</title>
-        <meta name="description" content="Buy Premium Virtual Numbers for Telegram, WhatsApp & Social Media ✓ Instant Delivery ✓ 24/7 Support ✓ Secure Payment ✓ 100% Guaranteed Numbers | VirtNumbers" />
+        <title>Buy Virtual Numbers, Canva Pro & Netflix Premium | Best Prices | VirtNumbers</title>
+        <meta name="description" content="Premium Virtual Numbers for Telegram & WhatsApp (₹500+) ✓ Canva Pro (₹2500/year) ✓ Netflix Premium 4K UHD (₹4500/year) ✓ Instagram, Gmail & LinkedIn Services ✓ Instant Delivery ✓ 24/7 Support" />
         
         {/* Primary keyword meta tags */}
-        <meta name="keywords" content="virtual number for telegram, virtual number for whatsapp, telegram virtual number, whatsapp virtual number, buy telegram number, buy whatsapp number" />
+        <meta name="keywords" content="virtual number for telegram, virtual number for whatsapp, telegram virtual number, whatsapp virtual number, buy telegram number, buy whatsapp number, buy canva pro cheap, netflix premium 4k uhd, instagram verification number, gmail verification, linkedin verification" />
         
         {/* Additional SEO meta tags for main keywords */}
         <meta property="article:tag" content="virtual number for telegram" />
         <meta property="article:tag" content="virtual number for whatsapp" />
+        <meta property="article:tag" content="buy canva pro cheap" />
+        <meta property="article:tag" content="buy netflix premium cheap" />
+        <meta property="article:tag" content="instagram verification number" />
+        <meta property="article:tag" content="gmail verification number" />
+        <meta property="article:tag" content="linkedin verification number" />
         
         {/* Existing meta tags */}
         <link rel="icon" href="/logo.ico" />
@@ -294,15 +308,15 @@ function LandingPage() {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://virtnumbers.com/" />
-        <meta property="og:title" content="Buy Virtual Numbers for Telegram & WhatsApp | VirtNumbers" />
-        <meta property="og:description" content="Premium Virtual Numbers for Telegram, WhatsApp & Social Media ✓ Instant Delivery ✓ 24/7 Support" />
+        <meta property="og:title" content="Buy Virtual Numbers, Canva Pro & Netflix Premium | VirtNumbers" />
+        <meta property="og:description" content="Premium Virtual Numbers for Telegram & WhatsApp ✓ Canva Pro & Netflix Premium ✓ Instagram, Gmail & LinkedIn Services ✓ Best Prices ✓ Instant Delivery ✓ 24/7 Support" />
         <meta property="og:image" content="/logo.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://virtnumbers.com/" />
-        <meta property="twitter:title" content="Buy Virtual Numbers for Telegram & WhatsApp | VirtNumbers" />
-        <meta property="twitter:description" content="Premium Virtual Numbers for Telegram, WhatsApp & Social Media ✓ Instant Delivery ✓ 24/7 Support" />
+        <meta property="twitter:title" content="Buy Virtual Numbers, Canva Pro & Netflix Premium | VirtNumbers" />
+        <meta property="twitter:description" content="Premium Virtual Numbers for Telegram & WhatsApp ✓ Canva Pro & Netflix Premium ✓ Instagram, Gmail & LinkedIn Services ✓ Best Prices ✓ Instant Delivery ✓ 24/7 Support" />
         <meta property="twitter:image" content="/logo.png" />
       </Helmet>
       <Box sx={{ 
@@ -735,7 +749,9 @@ function VirtualNumberPage() {
       : tabValue === 2 ? instagramOptions.find(opt => opt.id === selectedId)
       : tabValue === 3 ? gmailOptions.find(opt => opt.id === selectedId)
       : tabValue === 4 ? linkedinOptions.find(opt => opt.id === selectedId)
-      : canvaOptions.find(opt => opt.id === selectedId);
+      : tabValue === 5 ? canvaOptions.find(opt => opt.id === selectedId)
+      : tabValue === 6 ? netflixOptions.find(opt => opt.id === selectedId)
+      : null;
     setSelectedService(service || null);
   };
 
@@ -770,23 +786,23 @@ function VirtualNumberPage() {
   return (
     <>
       <Helmet>
-        <title>Buy Virtual Numbers - Select Your Service | VirtNumbers</title>
-        <meta name="description" content="Choose from our premium virtual numbers for Telegram, WhatsApp, Instagram, Gmail & LinkedIn. Instant activation with 24/7 support." />
+        <title>Buy Virtual Numbers - Telegram, WhatsApp & More | VirtNumbers</title>
+        <meta name="description" content="Premium Virtual Numbers for Telegram (₹500+) & WhatsApp (₹800+) ✓ Canva Pro & Netflix Premium ✓ Instagram, Gmail & LinkedIn Services ✓ Instant Activation ✓ 24/7 Support" />
         <link rel="icon" href="/logo.ico" />
         <link rel="shortcut icon" href="/logo.ico" type="image/x-icon" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://virtnumbers.com/buy" />
-        <meta property="og:title" content="Buy Virtual Numbers - Select Your Service | VirtNumbers" />
-        <meta property="og:description" content="Choose from our premium virtual numbers for Telegram, WhatsApp, Instagram, Gmail & LinkedIn. Instant activation with 24/7 support." />
+        <meta property="og:title" content="Buy Virtual Numbers - Telegram, WhatsApp & More | VirtNumbers" />
+        <meta property="og:description" content="Premium Virtual Numbers for Telegram & WhatsApp ✓ Canva Pro & Netflix Premium ✓ Instagram, Gmail & LinkedIn Services ✓ Instant Activation ✓ 24/7 Support" />
         <meta property="og:image" content="/logo.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://virtnumbers.com/buy" />
-        <meta property="twitter:title" content="Buy Virtual Numbers - Select Your Service | VirtNumbers" />
-        <meta property="twitter:description" content="Choose from our premium virtual numbers for Telegram, WhatsApp, Instagram, Gmail & LinkedIn. Instant activation with 24/7 support." />
+        <meta property="twitter:title" content="Buy Virtual Numbers - Telegram, WhatsApp & More | VirtNumbers" />
+        <meta property="twitter:description" content="Premium Virtual Numbers for Telegram & WhatsApp ✓ Canva Pro & Netflix Premium ✓ Instagram, Gmail & LinkedIn Services ✓ Instant Activation ✓ 24/7 Support" />
         <meta property="twitter:image" content="/logo.png" />
       </Helmet>
       <ThemeProvider theme={theme}>
@@ -938,7 +954,8 @@ function VirtualNumberPage() {
                     { icon: <InstagramIcon />, label: 'Instagram', color: '#E4405F', value: 2 },
                     { icon: <EmailIcon />, label: 'Gmail', color: '#EA4335', value: 3 },
                     { icon: <LinkedInIcon />, label: 'LinkedIn', color: '#0077B5', value: 4 },
-                    { icon: <img src={canvaIcon} alt="Canva" style={{ width: '24px', height: '24px' }} />, label: 'Canva', color: '#00C4CC', value: 5 }
+                    { icon: <img src={canvaIcon} alt="Canva" style={{ width: '24px', height: '24px' }} />, label: 'Canva', color: '#00C4CC', value: 5 },
+                    { icon: <img src={netflixIcon} alt="Netflix" style={{ width: '24px', height: '24px' }} />, label: 'Netflix', color: '#FF0000', value: 6 }
                   ].map((item) => (
                     <Box
                       key={item.value}
@@ -1045,6 +1062,11 @@ function VirtualNumberPage() {
                   label="Canva"
                   value={5}
                 />
+                <Tab 
+                  icon={<img src={netflixIcon} alt="Netflix" style={{ width: '24px', height: '24px' }} />} 
+                  label="Netflix"
+                  value={6}
+                />
               </Tabs>
 
               <FormControl fullWidth sx={{ mb: 4 }}>
@@ -1100,7 +1122,9 @@ function VirtualNumberPage() {
                       : tabValue === 2 ? instagramOptions.find(opt => opt.id === selected)
                       : tabValue === 3 ? gmailOptions.find(opt => opt.id === selected)
                       : tabValue === 4 ? linkedinOptions.find(opt => opt.id === selected)
-                      : canvaOptions.find(opt => opt.id === selected);
+                      : tabValue === 5 ? canvaOptions.find(opt => opt.id === selected)
+                      : tabValue === 6 ? netflixOptions.find(opt => opt.id === selected)
+                      : null;
                     
                     return (
                       <Box sx={{ 
@@ -1130,7 +1154,18 @@ function VirtualNumberPage() {
                             flexShrink: 0,
                             fontSize: { xs: '1.25rem', sm: '1.5rem' }
                           }} />
-                          : <img src={canvaIcon} alt="Canva" style={{ 
+                          : tabValue === 4 ? <LinkedInIcon sx={{ 
+                            color: '#0077B5',
+                            flexShrink: 0,
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' }
+                          }} />
+                          : tabValue === 5 ? <img src={canvaIcon} alt="Canva" style={{ 
+                            width: '1.25rem', 
+                            height: '1.5rem', 
+                            flexShrink: 0,
+                            objectFit: 'contain'
+                          }} />
+                          : <img src={netflixIcon} alt="Netflix" style={{ 
                             width: '1.25rem', 
                             height: '1.5rem', 
                             flexShrink: 0,
@@ -1333,7 +1368,7 @@ function VirtualNumberPage() {
                         </Box>
                       </MenuItem>
                     ))
-                  ) : (
+                  ) : tabValue === 5 ? (
                     canvaOptions.map((option) => (
                       <MenuItem key={option.id} value={option.id}>
                         <Box sx={{ 
@@ -1345,6 +1380,43 @@ function VirtualNumberPage() {
                           <img 
                             src={canvaIcon} 
                             alt="Canva" 
+                            style={{ 
+                              width: '1.25rem',
+                              height: '1.5rem',
+                              marginTop: '2px'
+                            }} 
+                          />
+                          <Box sx={{ flex: 1, minWidth: 0 }}>
+                            <Typography variant="body1" sx={{ 
+                              fontWeight: 600, 
+                              fontSize: { xs: '0.813rem', sm: '1rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 },
+                              wordBreak: 'break-word'
+                            }}>
+                              {option.name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary" sx={{ 
+                              fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 }
+                            }}>
+                              {getCurrencySymbol(tabValue)}{option.price}
+                            </Typography>
+                          </Box>
+                        </Box>
+                      </MenuItem>
+                    ))
+                  ) : (
+                    netflixOptions.map((option) => (
+                      <MenuItem key={option.id} value={option.id}>
+                        <Box sx={{ 
+                          display: 'flex', 
+                          alignItems: 'flex-start',
+                          gap: { xs: 1, sm: 2 },
+                          width: '100%'
+                        }}>
+                          <img 
+                            src={netflixIcon} 
+                            alt="Netflix" 
                             style={{ 
                               width: '1.25rem',
                               height: '1.5rem',
@@ -1399,9 +1471,17 @@ function VirtualNumberPage() {
                         <Avatar sx={{ bgcolor: 'error.light', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
                           <EmailIcon />
                         </Avatar>
-                      ) : (
+                      ) : tabValue === 4 ? (
                         <Avatar sx={{ bgcolor: '#0077B5', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
+                          <LinkedInIcon />
+                        </Avatar>
+                      ) : tabValue === 5 ? (
+                        <Avatar sx={{ bgcolor: '#00C4CC', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
                           <img src={canvaIcon} alt="Canva" style={{ width: '1.25rem', height: '1.5rem' }} />
+                        </Avatar>
+                      ) : (
+                        <Avatar sx={{ bgcolor: '#FF0000', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
+                          <img src={netflixIcon} alt="Netflix" style={{ width: '1.25rem', height: '1.5rem' }} />
                         </Avatar>
                       )}
                       <Box>
@@ -1410,12 +1490,12 @@ function VirtualNumberPage() {
                         </Typography>
                         <Chip 
                           label={`${getCurrencySymbol(tabValue)}${selectedService.price}`} 
-                          color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : "primary"}
+                          color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : tabValue === 4 ? "primary" : tabValue === 5 ? "secondary" : "primary"}
                           sx={{ 
                             mt: 1,
-                            backgroundColor: tabValue === 4 ? '#0077B5' : tabValue === 5 ? '#00C4CC' : undefined,
+                            backgroundColor: tabValue === 5 ? '#00C4CC' : tabValue === 6 ? '#FF0000' : undefined,
                             '&:hover': {
-                              backgroundColor: tabValue === 4 ? '#006097' : tabValue === 5 ? '#00B4B4' : undefined,
+                              backgroundColor: tabValue === 5 ? '#00B4B4' : tabValue === 6 ? '#FF0000' : undefined,
                             }
                           }}
                         />
@@ -1577,16 +1657,16 @@ function VirtualNumberPage() {
                   {!paymentDone ? (
                     <Button
                       variant="contained"
-                      color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : "primary"}
+                      color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : tabValue === 4 ? "primary" : tabValue === 5 ? "secondary" : "primary"}
                       fullWidth
                       onClick={handlePayment}
-                      startIcon={tabValue === 0 ? <TelegramIcon /> : tabValue === 1 ? <WhatsAppIcon /> : tabValue === 2 ? <InstagramIcon /> : tabValue === 3 ? <EmailIcon /> : <img src={canvaIcon} alt="Canva" style={{ width: '1.25rem', height: '1.5rem' }} />}
+                      startIcon={tabValue === 0 ? <TelegramIcon /> : tabValue === 1 ? <WhatsAppIcon /> : tabValue === 2 ? <InstagramIcon /> : tabValue === 3 ? <EmailIcon /> : tabValue === 4 ? <LinkedInIcon /> : tabValue === 5 ? <img src={canvaIcon} alt="Canva" style={{ width: '1.25rem', height: '1.5rem' }} /> : <img src={netflixIcon} alt="Netflix" style={{ width: '1.25rem', height: '1.5rem' }} />}
                       sx={{ 
                         py: 1.5,
                         fontSize: { xs: '0.9rem', sm: '1rem' },
-                        backgroundColor: tabValue === 4 ? '#0077B5' : undefined,
+                        backgroundColor: tabValue === 5 ? '#00C4CC' : undefined,
                         '&:hover': {
-                          backgroundColor: tabValue === 4 ? '#006097' : undefined,
+                          backgroundColor: tabValue === 5 ? '#00B4B4' : undefined,
                         }
                       }}
                     >
