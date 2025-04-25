@@ -40,6 +40,7 @@ import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { Analytics } from '@vercel/analytics/react';
 import SendIcon from '@mui/icons-material/Send';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import canvaIcon from './assets/canva-icon.png';
 
 const float = keyframes`
   0% {
@@ -112,6 +113,22 @@ const gmailOptions: ServiceOption[] = [
 const linkedinOptions: ServiceOption[] = [
   { id: 'old', name: '1-3 Week Old LinkedIn', price: 500 },
   { id: 'followers', name: '500 LinkedIn Followers & Connections (Real)', price: 4000 },
+];
+
+const canvaOptions: ServiceOption[] = [
+  { id: 'pro_2year', name: 'Canva Pro 2 Year Subscription', price: 3000 },
+  { id: 'pro_1year', name: 'Canva Pro 1 Year Subscription', price: 2500 },
+  { id: 'pro_1month', name: 'Canva Pro One Month to Your Account', price: 450 },
+  { id: 'trusted', name: 'Canva Trusted Account with Email', price: 400 }
+];
+
+const serviceOptions = [
+  { id: 'telegram', name: 'Telegram', icon: <TelegramIcon />, options: telegramOptions },
+  { id: 'whatsapp', name: 'WhatsApp', icon: <WhatsAppIcon />, options: whatsappOptions },
+  { id: 'instagram', name: 'Instagram', icon: <InstagramIcon />, options: instagramOptions },
+  { id: 'gmail', name: 'Gmail', icon: <EmailIcon />, options: gmailOptions },
+  { id: 'linkedin', name: 'LinkedIn', icon: <LinkedInIcon />, options: linkedinOptions },
+  { id: 'canva', name: 'Canva', icon: <img src={canvaIcon} alt="Canva" style={{ width: '24px', height: '24px' }} />, options: canvaOptions },
 ];
 
 // Create a custom theme
@@ -717,7 +734,8 @@ function VirtualNumberPage() {
       : tabValue === 1 ? whatsappOptions.find(opt => opt.id === selectedId)
       : tabValue === 2 ? instagramOptions.find(opt => opt.id === selectedId)
       : tabValue === 3 ? gmailOptions.find(opt => opt.id === selectedId)
-      : linkedinOptions.find(opt => opt.id === selectedId);
+      : tabValue === 4 ? linkedinOptions.find(opt => opt.id === selectedId)
+      : canvaOptions.find(opt => opt.id === selectedId);
     setSelectedService(service || null);
   };
 
@@ -744,6 +762,10 @@ function VirtualNumberPage() {
   const handleCustomization = () => {
     window.location.href = "https://wa.me/918154994406?text=I%20need%20customization%20for%20virtual%20number";
   }
+
+  const getCurrencySymbol = (tabValue: number) => {
+    return '₹';
+  };
 
   return (
     <>
@@ -911,15 +933,16 @@ function VirtualNumberPage() {
                   pb: 2
                 }}>
                   {[
-                    { icon: <TelegramIcon />, label: 'Telegram', color: '#0088cc' },
-                    { icon: <WhatsAppIcon />, label: 'WhatsApp', color: '#25D366' },
-                    { icon: <InstagramIcon />, label: 'Instagram', color: '#E4405F' },
-                    { icon: <EmailIcon />, label: 'Gmail', color: '#EA4335' },
-                    { icon: <LinkedInIcon />, label: 'LinkedIn', color: '#0077B5' }
-                  ].map((item, index) => (
+                    { icon: <TelegramIcon />, label: 'Telegram', color: '#0088cc', value: 0 },
+                    { icon: <WhatsAppIcon />, label: 'WhatsApp', color: '#25D366', value: 1 },
+                    { icon: <InstagramIcon />, label: 'Instagram', color: '#E4405F', value: 2 },
+                    { icon: <EmailIcon />, label: 'Gmail', color: '#EA4335', value: 3 },
+                    { icon: <LinkedInIcon />, label: 'LinkedIn', color: '#0077B5', value: 4 },
+                    { icon: <img src={canvaIcon} alt="Canva" style={{ width: '24px', height: '24px' }} />, label: 'Canva', color: '#00C4CC', value: 5 }
+                  ].map((item) => (
                     <Box
-                      key={index}
-                      onClick={(e) => handleTabChange(e, index)}
+                      key={item.value}
+                      onClick={(e) => handleTabChange(e as any, item.value)}
                       sx={{
                         display: 'flex',
                         flexDirection: 'column',
@@ -928,8 +951,8 @@ function VirtualNumberPage() {
                         borderRadius: 2,
                         cursor: 'pointer',
                         transition: 'all 0.2s',
-                        backgroundColor: tabValue === index ? 'rgba(0,0,0,0.05)' : 'transparent',
-                        border: tabValue === index ? `2px solid ${item.color}` : '2px solid transparent',
+                        backgroundColor: tabValue === item.value ? 'rgba(0,0,0,0.05)' : 'transparent',
+                        border: tabValue === item.value ? `2px solid ${item.color}` : '2px solid transparent',
                         '&:hover': {
                           backgroundColor: 'rgba(0,0,0,0.05)',
                           transform: 'translateY(-2px)'
@@ -943,8 +966,8 @@ function VirtualNumberPage() {
                         display: 'flex', 
                         alignItems: 'center', 
                         justifyContent: 'center',
-                        backgroundColor: tabValue === index ? item.color : 'rgba(0,0,0,0.05)',
-                        color: tabValue === index ? 'white' : item.color,
+                        backgroundColor: tabValue === item.value ? item.color : 'rgba(0,0,0,0.05)',
+                        color: tabValue === item.value ? 'white' : item.color,
                         mb: 0.5,
                         transition: 'all 0.2s',
                         '& svg': {
@@ -955,7 +978,7 @@ function VirtualNumberPage() {
                       </Box>
                       <Typography variant="caption" sx={{ 
                         fontWeight: 600,
-                        color: tabValue === index ? 'text.primary' : 'text.secondary',
+                        color: tabValue === item.value ? 'text.primary' : 'text.secondary',
                         textAlign: 'center',
                         fontSize: '0.7rem',
                         lineHeight: 1.2
@@ -990,26 +1013,37 @@ function VirtualNumberPage() {
                     }
                   },
                 }}
+                aria-label="service categories"
               >
                 <Tab 
                   icon={<TelegramIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#0088cc' }} />} 
                   label="Telegram" 
+                  value={0}
                 />
                 <Tab 
                   icon={<WhatsAppIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#25D366' }} />} 
                   label="WhatsApp"
+                  value={1}
                 />
                 <Tab 
                   icon={<InstagramIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#E4405F' }} />} 
                   label="Instagram"
+                  value={2}
                 />
                 <Tab 
                   icon={<EmailIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#EA4335' }} />} 
                   label="Gmail"
+                  value={3}
                 />
                 <Tab 
                   icon={<LinkedInIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#0077B5' }} />} 
                   label="LinkedIn"
+                  value={4}
+                />
+                <Tab 
+                  icon={<img src={canvaIcon} alt="Canva" style={{ width: '24px', height: '24px' }} />} 
+                  label="Canva"
+                  value={5}
                 />
               </Tabs>
 
@@ -1065,7 +1099,8 @@ function VirtualNumberPage() {
                       : tabValue === 1 ? whatsappOptions.find(opt => opt.id === selected)
                       : tabValue === 2 ? instagramOptions.find(opt => opt.id === selected)
                       : tabValue === 3 ? gmailOptions.find(opt => opt.id === selected)
-                      : linkedinOptions.find(opt => opt.id === selected);
+                      : tabValue === 4 ? linkedinOptions.find(opt => opt.id === selected)
+                      : canvaOptions.find(opt => opt.id === selected);
                     
                     return (
                       <Box sx={{ 
@@ -1095,10 +1130,11 @@ function VirtualNumberPage() {
                             flexShrink: 0,
                             fontSize: { xs: '1.25rem', sm: '1.5rem' }
                           }} />
-                          : <LinkedInIcon sx={{ 
-                            color: '#0077B5',
+                          : <img src={canvaIcon} alt="Canva" style={{ 
+                            width: '1.25rem', 
+                            height: '1.5rem', 
                             flexShrink: 0,
-                            fontSize: { xs: '1.25rem', sm: '1.5rem' }
+                            objectFit: 'contain'
                           }} />}
                         <Box sx={{ 
                           minWidth: 0,
@@ -1159,7 +1195,7 @@ function VirtualNumberPage() {
                               fontSize: { xs: '0.75rem', sm: '0.875rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 }
                             }}>
-                              ₹{option.price}
+                              {getCurrencySymbol(tabValue)}{option.price}
                             </Typography>
                           </Box>
                         </Box>
@@ -1192,7 +1228,7 @@ function VirtualNumberPage() {
                               fontSize: { xs: '0.75rem', sm: '0.875rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 }
                             }}>
-                              ₹{option.price}
+                              {getCurrencySymbol(tabValue)}{option.price}
                             </Typography>
                           </Box>
                         </Box>
@@ -1225,7 +1261,7 @@ function VirtualNumberPage() {
                               fontSize: { xs: '0.75rem', sm: '0.875rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 }
                             }}>
-                              ₹{option.price}
+                              {getCurrencySymbol(tabValue)}{option.price}
                             </Typography>
                           </Box>
                         </Box>
@@ -1258,13 +1294,13 @@ function VirtualNumberPage() {
                               fontSize: { xs: '0.75rem', sm: '0.875rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 }
                             }}>
-                              ₹{option.price}
+                              {getCurrencySymbol(tabValue)}{option.price}
                             </Typography>
                           </Box>
                         </Box>
                       </MenuItem>
                     ))
-                  ) : (
+                  ) : tabValue === 4 ? (
                     linkedinOptions.map((option) => (
                       <MenuItem key={option.id} value={option.id}>
                         <Box sx={{ 
@@ -1291,7 +1327,44 @@ function VirtualNumberPage() {
                               fontSize: { xs: '0.75rem', sm: '0.875rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 }
                             }}>
-                              ₹{option.price}
+                              {getCurrencySymbol(tabValue)}{option.price}
+                            </Typography>
+                          </Box>
+                        </Box>
+                      </MenuItem>
+                    ))
+                  ) : (
+                    canvaOptions.map((option) => (
+                      <MenuItem key={option.id} value={option.id}>
+                        <Box sx={{ 
+                          display: 'flex', 
+                          alignItems: 'flex-start',
+                          gap: { xs: 1, sm: 2 },
+                          width: '100%'
+                        }}>
+                          <img 
+                            src={canvaIcon} 
+                            alt="Canva" 
+                            style={{ 
+                              width: '1.25rem',
+                              height: '1.5rem',
+                              marginTop: '2px'
+                            }} 
+                          />
+                          <Box sx={{ flex: 1, minWidth: 0 }}>
+                            <Typography variant="body1" sx={{ 
+                              fontWeight: 600, 
+                              fontSize: { xs: '0.813rem', sm: '1rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 },
+                              wordBreak: 'break-word'
+                            }}>
+                              {option.name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary" sx={{ 
+                              fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                              lineHeight: { xs: 1.2, sm: 1.5 }
+                            }}>
+                              {getCurrencySymbol(tabValue)}{option.price}
                             </Typography>
                           </Box>
                         </Box>
@@ -1328,7 +1401,7 @@ function VirtualNumberPage() {
                         </Avatar>
                       ) : (
                         <Avatar sx={{ bgcolor: '#0077B5', width: { xs: 40, sm: 48 }, height: { xs: 40, sm: 48 } }}>
-                          <LinkedInIcon />
+                          <img src={canvaIcon} alt="Canva" style={{ width: '1.25rem', height: '1.5rem' }} />
                         </Avatar>
                       )}
                       <Box>
@@ -1336,13 +1409,13 @@ function VirtualNumberPage() {
                           {selectedService.name}
                         </Typography>
                         <Chip 
-                          label={`₹${selectedService.price}`} 
+                          label={`${getCurrencySymbol(tabValue)}${selectedService.price}`} 
                           color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : "primary"}
                           sx={{ 
                             mt: 1,
-                            backgroundColor: tabValue === 4 ? '#0077B5' : undefined,
+                            backgroundColor: tabValue === 4 ? '#0077B5' : tabValue === 5 ? '#00C4CC' : undefined,
                             '&:hover': {
-                              backgroundColor: tabValue === 4 ? '#006097' : undefined,
+                              backgroundColor: tabValue === 4 ? '#006097' : tabValue === 5 ? '#00B4B4' : undefined,
                             }
                           }}
                         />
@@ -1428,6 +1501,9 @@ function VirtualNumberPage() {
                       <Typography variant="h5" gutterBottom align="center" sx={{ fontWeight: 600, fontSize: { xs: '1.1rem', sm: '1.25rem' } }}>
                         Pay ${convertToUSD(selectedService?.price || 0, true)} via PayPal
                       </Typography>
+                      <Typography variant="body2" color="text.secondary" align="center" sx={{ mb: 2 }}>
+                        (Includes $1 processing fee)
+                      </Typography>
                       <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
                         <Button
                           variant="contained"
@@ -1450,8 +1526,11 @@ function VirtualNumberPage() {
                       <Typography variant="h5" gutterBottom align="center" sx={{ fontWeight: 600, fontSize: { xs: '1.1rem', sm: '1.25rem' } }}>
                         Pay via Crypto
                       </Typography>
-                      <Typography variant="body1" align="center" color="text.secondary" sx={{ mb: 3 }}>
+                      <Typography variant="body1" align="center" color="text.secondary" sx={{ mb: 1 }}>
                         Amount: ₹{selectedService?.price} (≈ ${convertToUSD(selectedService?.price || 0, true)})
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary" align="center" sx={{ mb: 3 }}>
+                        (Includes $1 processing fee)
                       </Typography>
                       <Alert severity="info" sx={{ mb: 3 }}>
                         <Typography variant="body2">
@@ -1501,7 +1580,7 @@ function VirtualNumberPage() {
                       color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : "primary"}
                       fullWidth
                       onClick={handlePayment}
-                      startIcon={tabValue === 0 ? <TelegramIcon /> : tabValue === 1 ? <WhatsAppIcon /> : tabValue === 2 ? <InstagramIcon /> : tabValue === 3 ? <EmailIcon /> : <LinkedInIcon />}
+                      startIcon={tabValue === 0 ? <TelegramIcon /> : tabValue === 1 ? <WhatsAppIcon /> : tabValue === 2 ? <InstagramIcon /> : tabValue === 3 ? <EmailIcon /> : <img src={canvaIcon} alt="Canva" style={{ width: '1.25rem', height: '1.5rem' }} />}
                       sx={{ 
                         py: 1.5,
                         fontSize: { xs: '0.9rem', sm: '1rem' },
