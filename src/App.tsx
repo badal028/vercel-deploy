@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { 
-  Container, 
-  Typography, 
+import {
+  Container,
+  Typography,
   Select,
   MenuItem,
   Button,
@@ -125,9 +125,8 @@ const canvaOptions: ServiceOption[] = [
 ];
 
 const netflixOptions: ServiceOption[] = [
-  { id: 'netflix-1year', name: '1 Year Netflix Premium 4K UHD', price: 4500, duration: 'year' },
-  { id: 'netflix-6month', name: '6 Months Netflix Premium 4K UHD', price: 3000, duration: '6 months' },
-  { id: 'netflix-3month', name: '3 Months Netflix Premium 4K UHD', price: 1800, duration: '3 months' }
+  { id: 'netflix-lifetime', name: 'Lifetime Netflix Premium + Amazon Prime', price: 100, duration: 'lifetime' },
+
 ];
 
 const serviceOptions = [
@@ -246,12 +245,12 @@ const theme = createTheme({
 function LandingPage() {
   const navigate = useNavigate();
   const { scrollYProgress } = useScroll();
-  
+
   // Improved animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
@@ -288,10 +287,10 @@ function LandingPage() {
       <Helmet>
         <title>Buy Virtual Numbers, Canva Pro & Netflix Premium | Best Prices | VirtNumbers</title>
         <meta name="description" content="Premium Virtual Numbers for Telegram & WhatsApp (₹500+) ✓ Canva Pro (₹2500/year) ✓ Netflix Premium 4K UHD (₹4500/year) ✓ Instagram, Gmail & LinkedIn Services ✓ Instant Delivery ✓ 24/7 Support" />
-        
+
         {/* Primary keyword meta tags */}
         <meta name="keywords" content="virtual number for telegram, virtual number for whatsapp, telegram virtual number, whatsapp virtual number, buy telegram number, buy whatsapp number, buy canva pro cheap, netflix premium 4k uhd, instagram verification number, gmail verification, linkedin verification" />
-        
+
         {/* Additional SEO meta tags for main keywords */}
         <meta property="article:tag" content="virtual number for telegram" />
         <meta property="article:tag" content="virtual number for whatsapp" />
@@ -300,11 +299,11 @@ function LandingPage() {
         <meta property="article:tag" content="instagram verification number" />
         <meta property="article:tag" content="gmail verification number" />
         <meta property="article:tag" content="linkedin verification number" />
-        
+
         {/* Existing meta tags */}
         <link rel="icon" href="/logo.ico" />
         <link rel="shortcut icon" href="/logo.ico" type="image/x-icon" />
-        
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://virtnumbers.com/" />
@@ -319,7 +318,7 @@ function LandingPage() {
         <meta property="twitter:description" content="Premium Virtual Numbers for Telegram & WhatsApp ✓ Canva Pro & Netflix Premium ✓ Instagram, Gmail & LinkedIn Services ✓ Best Prices ✓ Instant Delivery ✓ 24/7 Support" />
         <meta property="twitter:image" content="/logo.png" />
       </Helmet>
-      <Box sx={{ 
+      <Box sx={{
         minHeight: '100vh',
         background: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)',
         py: { xs: 6, md: 8 },
@@ -332,7 +331,7 @@ function LandingPage() {
             animate="visible"
             variants={fadeInUp}
           >
-            <Box sx={{ 
+            <Box sx={{
               textAlign: 'center',
               mb: { xs: 8, md: 12 },
               position: 'relative',
@@ -348,9 +347,9 @@ function LandingPage() {
                 borderRadius: '2px'
               }
             }}>
-              <Typography 
-                variant="h1" 
-                sx={{ 
+              <Typography
+                variant="h1"
+                sx={{
                   color: 'primary.main',
                   mb: 3,
                   textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
@@ -361,9 +360,9 @@ function LandingPage() {
               >
                 VirtNum Pro
               </Typography>
-              <Typography 
-                variant="h5" 
-                sx={{ 
+              <Typography
+                variant="h5"
+                sx={{
                   color: 'text.secondary',
                   maxWidth: '800px',
                   mx: 'auto',
@@ -404,9 +403,9 @@ function LandingPage() {
             viewport={{ once: true, margin: "-50px" }}
             variants={staggerContainer}
           >
-            <Typography 
-              variant="h2" 
-              sx={{ 
+            <Typography
+              variant="h2"
+              sx={{
                 textAlign: 'center',
                 mb: { xs: 4, sm: 6 },
                 color: 'primary.main',
@@ -417,16 +416,16 @@ function LandingPage() {
             >
               Why Choose Our Service?
             </Typography>
-            <Box sx={{ 
-              display: 'flex', 
+            <Box sx={{
+              display: 'flex',
               flexDirection: { xs: 'column', md: 'row' },
               gap: { xs: 3, sm: 4, md: 6 },
               mb: { xs: 6, sm: 8, md: 12 }
             }}>
               <motion.div variants={scaleIn} style={{ flex: 1 }}>
-                <Paper 
+                <Paper
                   elevation={0}
-                  sx={{ 
+                  sx={{
                     p: { xs: 2, sm: 3, md: 4 },
                     height: '100%',
                     minHeight: { xs: 'auto', md: '400px' },
@@ -441,9 +440,9 @@ function LandingPage() {
                     }
                   }}
                 >
-                  <Typography variant="h4" sx={{ 
-                    mb: { xs: 2, sm: 3 }, 
-                    color: 'primary.main', 
+                  <Typography variant="h4" sx={{
+                    mb: { xs: 2, sm: 3 },
+                    color: 'primary.main',
                     fontSize: { xs: '1.25rem', sm: '1.5rem' },
                     fontWeight: 600
                   }}>
@@ -491,9 +490,9 @@ function LandingPage() {
                 </Paper>
               </motion.div>
               <motion.div variants={scaleIn} style={{ flex: 1 }}>
-                <Paper 
+                <Paper
                   elevation={0}
-                  sx={{ 
+                  sx={{
                     p: { xs: 2, sm: 3, md: 4 },
                     height: '100%',
                     minHeight: { xs: 'auto', md: '400px' },
@@ -508,9 +507,9 @@ function LandingPage() {
                     }
                   }}
                 >
-                  <Typography variant="h4" sx={{ 
-                    mb: { xs: 2, sm: 3 }, 
-                    color: 'primary.main', 
+                  <Typography variant="h4" sx={{
+                    mb: { xs: 2, sm: 3 },
+                    color: 'primary.main',
                     fontSize: { xs: '1.25rem', sm: '1.5rem' },
                     fontWeight: 600
                   }}>
@@ -574,9 +573,9 @@ function LandingPage() {
             viewport={{ once: true, margin: "-50px" }}
             variants={staggerContainer}
           >
-            <Typography 
-              variant="h2" 
-              sx={{ 
+            <Typography
+              variant="h2"
+              sx={{
                 textAlign: 'center',
                 mb: { xs: 6, md: 8 },
                 color: 'primary.main',
@@ -585,16 +584,16 @@ function LandingPage() {
             >
               Frequently Asked Questions
             </Typography>
-            <Box sx={{ 
-              display: 'flex', 
+            <Box sx={{
+              display: 'flex',
               flexDirection: { xs: 'column', md: 'row' },
               gap: { xs: 4, md: 6 },
               mb: { xs: 8, md: 12 }
             }}>
               <motion.div variants={fadeInUp} style={{ flex: 1 }}>
-                <Paper 
+                <Paper
                   elevation={0}
-                  sx={{ 
+                  sx={{
                     p: { xs: 3, md: 4 },
                     height: '100%',
                     minHeight: { xs: 'auto', md: '300px' },
@@ -620,9 +619,9 @@ function LandingPage() {
                 </Paper>
               </motion.div>
               <motion.div variants={fadeInUp} style={{ flex: 1 }}>
-                <Paper 
+                <Paper
                   elevation={0}
-                  sx={{ 
+                  sx={{
                     p: { xs: 3, md: 4 },
                     height: '100%',
                     minHeight: { xs: 'auto', md: '300px' },
@@ -657,13 +656,13 @@ function LandingPage() {
             viewport={{ once: true, margin: "-50px" }}
             variants={fadeInUp}
           >
-            <Box sx={{ 
+            <Box sx={{
               textAlign: 'center',
               mb: { xs: 6, md: 8 }
             }}>
-              <Typography 
-                variant="h3" 
-                sx={{ 
+              <Typography
+                variant="h3"
+                sx={{
                   mb: 4,
                   color: 'primary.main',
                   fontSize: { xs: '1.75rem', md: '2.25rem' }
@@ -743,15 +742,15 @@ function VirtualNumberPage() {
 
   const handleServiceSelect = (event: SelectChangeEvent<string>) => {
     const selectedId = event.target.value;
-    const service = tabValue === 0 
+    const service = tabValue === 0
       ? telegramOptions.find(opt => opt.id === selectedId)
       : tabValue === 1 ? whatsappOptions.find(opt => opt.id === selectedId)
-      : tabValue === 2 ? instagramOptions.find(opt => opt.id === selectedId)
-      : tabValue === 3 ? gmailOptions.find(opt => opt.id === selectedId)
-      : tabValue === 4 ? linkedinOptions.find(opt => opt.id === selectedId)
-      : tabValue === 5 ? canvaOptions.find(opt => opt.id === selectedId)
-      : tabValue === 6 ? netflixOptions.find(opt => opt.id === selectedId)
-      : null;
+        : tabValue === 2 ? instagramOptions.find(opt => opt.id === selectedId)
+          : tabValue === 3 ? gmailOptions.find(opt => opt.id === selectedId)
+            : tabValue === 4 ? linkedinOptions.find(opt => opt.id === selectedId)
+              : tabValue === 5 ? canvaOptions.find(opt => opt.id === selectedId)
+                : tabValue === 6 ? netflixOptions.find(opt => opt.id === selectedId)
+                  : null;
     setSelectedService(service || null);
   };
 
@@ -790,7 +789,7 @@ function VirtualNumberPage() {
         <meta name="description" content="Premium Virtual Numbers for Telegram (₹500+) & WhatsApp (₹800+) ✓ Canva Pro & Netflix Premium ✓ Instagram, Gmail & LinkedIn Services ✓ Instant Activation ✓ 24/7 Support" />
         <link rel="icon" href="/logo.ico" />
         <link rel="shortcut icon" href="/logo.ico" type="image/x-icon" />
-        
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://virtnumbers.com/buy" />
@@ -806,7 +805,7 @@ function VirtualNumberPage() {
         <meta property="twitter:image" content="/logo.png" />
       </Helmet>
       <ThemeProvider theme={theme}>
-        <Box sx={{ 
+        <Box sx={{
           minHeight: '100vh',
           background: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)',
           py: 4,
@@ -870,18 +869,18 @@ function VirtualNumberPage() {
             </Tooltip>
           </Box>
 
-          <Container maxWidth="md" sx={{ 
+          <Container maxWidth="md" sx={{
             px: { xs: 0, sm: 3 },
             pb: { xs: 4, sm: 4 }
           }}>
-            <Box sx={{ 
+            <Box sx={{
               mb: { xs: 4, sm: 6 },
               textAlign: 'center',
               position: 'relative'
             }}>
-              <Typography 
-                variant="h1" 
-                sx={{ 
+              <Typography
+                variant="h1"
+                sx={{
                   color: 'primary.main',
                   mb: { xs: 1.5, sm: 2 },
                   textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
@@ -892,9 +891,9 @@ function VirtualNumberPage() {
               >
                 VirtNum Pro Services
               </Typography>
-              <Typography 
-                variant="h5" 
-                sx={{ 
+              <Typography
+                variant="h5"
+                sx={{
                   color: 'text.secondary',
                   maxWidth: '600px',
                   mx: 'auto',
@@ -908,9 +907,9 @@ function VirtualNumberPage() {
               </Typography>
             </Box>
 
-            <Paper 
-              elevation={0} 
-              sx={{ 
+            <Paper
+              elevation={0}
+              sx={{
                 borderRadius: 3,
                 overflow: 'hidden',
                 background: 'rgba(255, 255, 255, 0.9)',
@@ -920,7 +919,7 @@ function VirtualNumberPage() {
               }}
             >
               {/* Mobile Category Selection */}
-              <Box sx={{ 
+              <Box sx={{
                 display: { xs: 'block', sm: 'none' },
                 mb: 2,
                 position: 'relative',
@@ -934,15 +933,15 @@ function VirtualNumberPage() {
                   background: 'linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent)'
                 }
               }}>
-                <Typography variant="subtitle1" sx={{ 
-                  mb: 1.5, 
-                  fontWeight: 600, 
+                <Typography variant="subtitle1" sx={{
+                  mb: 1.5,
+                  fontWeight: 600,
                   color: 'text.secondary',
                   fontSize: '0.875rem'
                 }}>
                   Select Category
                 </Typography>
-                <Box sx={{ 
+                <Box sx={{
                   display: 'grid',
                   gridTemplateColumns: 'repeat(3, 1fr)',
                   gap: 1,
@@ -976,12 +975,12 @@ function VirtualNumberPage() {
                         }
                       }}
                     >
-                      <Box sx={{ 
-                        width: 32, 
-                        height: 32, 
-                        borderRadius: '50%', 
-                        display: 'flex', 
-                        alignItems: 'center', 
+                      <Box sx={{
+                        width: 32,
+                        height: 32,
+                        borderRadius: '50%',
+                        display: 'flex',
+                        alignItems: 'center',
                         justifyContent: 'center',
                         backgroundColor: tabValue === item.value ? item.color : 'rgba(0,0,0,0.05)',
                         color: tabValue === item.value ? 'white' : item.color,
@@ -993,7 +992,7 @@ function VirtualNumberPage() {
                       }}>
                         {item.icon}
                       </Box>
-                      <Typography variant="caption" sx={{ 
+                      <Typography variant="caption" sx={{
                         fontWeight: 600,
                         color: tabValue === item.value ? 'text.primary' : 'text.secondary',
                         textAlign: 'center',
@@ -1008,9 +1007,9 @@ function VirtualNumberPage() {
               </Box>
 
               {/* Desktop Category Selection */}
-              <Tabs 
-                value={tabValue} 
-                onChange={handleTabChange} 
+              <Tabs
+                value={tabValue}
+                onChange={handleTabChange}
                 centered
                 sx={{
                   display: { xs: 'none', sm: 'block' },
@@ -1032,38 +1031,38 @@ function VirtualNumberPage() {
                 }}
                 aria-label="service categories"
               >
-                <Tab 
-                  icon={<TelegramIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#0088cc' }} />} 
-                  label="Telegram" 
+                <Tab
+                  icon={<TelegramIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#0088cc' }} />}
+                  label="Telegram"
                   value={0}
                 />
-                <Tab 
-                  icon={<WhatsAppIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#25D366' }} />} 
+                <Tab
+                  icon={<WhatsAppIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#25D366' }} />}
                   label="WhatsApp"
                   value={1}
                 />
-                <Tab 
-                  icon={<InstagramIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#E4405F' }} />} 
+                <Tab
+                  icon={<InstagramIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#E4405F' }} />}
                   label="Instagram"
                   value={2}
                 />
-                <Tab 
-                  icon={<EmailIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#EA4335' }} />} 
+                <Tab
+                  icon={<EmailIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#EA4335' }} />}
                   label="Gmail"
                   value={3}
                 />
-                <Tab 
-                  icon={<LinkedInIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#0077B5' }} />} 
+                <Tab
+                  icon={<LinkedInIcon sx={{ fontSize: { xs: 24, sm: 28 }, color: '#0077B5' }} />}
                   label="LinkedIn"
                   value={4}
                 />
-                <Tab 
-                  icon={<img src={canvaIcon} alt="Canva" style={{ width: '24px', height: '24px' }} />} 
+                <Tab
+                  icon={<img src={canvaIcon} alt="Canva" style={{ width: '24px', height: '24px' }} />}
                   label="Canva"
                   value={5}
                 />
-                <Tab 
-                  icon={<img src={netflixIcon} alt="Netflix" style={{ width: '24px', height: '24px' }} />} 
+                <Tab
+                  icon={<img src={netflixIcon} alt="Netflix" style={{ width: '24px', height: '24px' }} />}
                   label="Netflix"
                   value={6}
                 />
@@ -1115,70 +1114,70 @@ function VirtualNumberPage() {
                   }}
                   renderValue={(selected) => {
                     if (!selected) return null;
-                    
-                    const option = tabValue === 0 
+
+                    const option = tabValue === 0
                       ? telegramOptions.find(opt => opt.id === selected)
                       : tabValue === 1 ? whatsappOptions.find(opt => opt.id === selected)
-                      : tabValue === 2 ? instagramOptions.find(opt => opt.id === selected)
-                      : tabValue === 3 ? gmailOptions.find(opt => opt.id === selected)
-                      : tabValue === 4 ? linkedinOptions.find(opt => opt.id === selected)
-                      : tabValue === 5 ? canvaOptions.find(opt => opt.id === selected)
-                      : tabValue === 6 ? netflixOptions.find(opt => opt.id === selected)
-                      : null;
-                    
+                        : tabValue === 2 ? instagramOptions.find(opt => opt.id === selected)
+                          : tabValue === 3 ? gmailOptions.find(opt => opt.id === selected)
+                            : tabValue === 4 ? linkedinOptions.find(opt => opt.id === selected)
+                              : tabValue === 5 ? canvaOptions.find(opt => opt.id === selected)
+                                : tabValue === 6 ? netflixOptions.find(opt => opt.id === selected)
+                                  : null;
+
                     return (
-                      <Box sx={{ 
-                        display: 'flex', 
-                        alignItems: 'center', 
+                      <Box sx={{
+                        display: 'flex',
+                        alignItems: 'center',
                         gap: { xs: 1, sm: 2 },
                         width: '100%',
                         overflow: 'hidden'
                       }}>
-                        {tabValue === 0 ? <TelegramIcon sx={{ 
+                        {tabValue === 0 ? <TelegramIcon sx={{
                           color: '#0088cc',
                           flexShrink: 0,
                           fontSize: { xs: '1.25rem', sm: '1.5rem' }
                         }} />
-                          : tabValue === 1 ? <WhatsAppIcon sx={{ 
+                          : tabValue === 1 ? <WhatsAppIcon sx={{
                             color: '#25D366',
                             flexShrink: 0,
                             fontSize: { xs: '1.25rem', sm: '1.5rem' }
                           }} />
-                          : tabValue === 2 ? <InstagramIcon sx={{ 
-                            color: '#E4405F',
-                            flexShrink: 0,
-                            fontSize: { xs: '1.25rem', sm: '1.5rem' }
-                          }} />
-                          : tabValue === 3 ? <EmailIcon sx={{ 
-                            color: '#EA4335',
-                            flexShrink: 0,
-                            fontSize: { xs: '1.25rem', sm: '1.5rem' }
-                          }} />
-                          : tabValue === 4 ? <LinkedInIcon sx={{ 
-                            color: '#0077B5',
-                            flexShrink: 0,
-                            fontSize: { xs: '1.25rem', sm: '1.5rem' }
-                          }} />
-                          : tabValue === 5 ? <img src={canvaIcon} alt="Canva" style={{ 
-                            width: '1.25rem', 
-                            height: '1.5rem', 
-                            flexShrink: 0,
-                            objectFit: 'contain'
-                          }} />
-                          : <img src={netflixIcon} alt="Netflix" style={{ 
-                            width: '1.25rem', 
-                            height: '1.5rem', 
-                            flexShrink: 0,
-                            objectFit: 'contain'
-                          }} />}
-                        <Box sx={{ 
+                            : tabValue === 2 ? <InstagramIcon sx={{
+                              color: '#E4405F',
+                              flexShrink: 0,
+                              fontSize: { xs: '1.25rem', sm: '1.5rem' }
+                            }} />
+                              : tabValue === 3 ? <EmailIcon sx={{
+                                color: '#EA4335',
+                                flexShrink: 0,
+                                fontSize: { xs: '1.25rem', sm: '1.5rem' }
+                              }} />
+                                : tabValue === 4 ? <LinkedInIcon sx={{
+                                  color: '#0077B5',
+                                  flexShrink: 0,
+                                  fontSize: { xs: '1.25rem', sm: '1.5rem' }
+                                }} />
+                                  : tabValue === 5 ? <img src={canvaIcon} alt="Canva" style={{
+                                    width: '1.25rem',
+                                    height: '1.5rem',
+                                    flexShrink: 0,
+                                    objectFit: 'contain'
+                                  }} />
+                                    : <img src={netflixIcon} alt="Netflix" style={{
+                                      width: '1.25rem',
+                                      height: '1.5rem',
+                                      flexShrink: 0,
+                                      objectFit: 'contain'
+                                    }} />}
+                        <Box sx={{
                           minWidth: 0,
                           overflow: 'hidden',
                           flex: 1
                         }}>
-                          <Typography 
-                            variant="body1" 
-                            sx={{ 
+                          <Typography
+                            variant="body1"
+                            sx={{
                               fontWeight: 600,
                               whiteSpace: 'nowrap',
                               overflow: 'hidden',
@@ -1188,8 +1187,8 @@ function VirtualNumberPage() {
                           >
                             {option?.name}
                           </Typography>
-                          <Typography 
-                            variant="body2" 
+                          <Typography
+                            variant="body2"
                             color="text.secondary"
                             sx={{
                               fontSize: { xs: '0.75rem', sm: '0.875rem' },
@@ -1206,27 +1205,27 @@ function VirtualNumberPage() {
                   {tabValue === 0 ? (
                     telegramOptions.map((option) => (
                       <MenuItem key={option.id} value={option.id}>
-                        <Box sx={{ 
-                          display: 'flex', 
+                        <Box sx={{
+                          display: 'flex',
                           alignItems: 'flex-start',
                           gap: { xs: 1, sm: 2 },
                           width: '100%'
                         }}>
-                          <TelegramIcon sx={{ 
-                            fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
+                          <TelegramIcon sx={{
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' },
                             color: '#0088cc',
                             mt: { xs: 0.25, sm: 0 }
                           }} />
                           <Box sx={{ flex: 1, minWidth: 0 }}>
-                            <Typography variant="body1" sx={{ 
-                              fontWeight: 600, 
+                            <Typography variant="body1" sx={{
+                              fontWeight: 600,
                               fontSize: { xs: '0.813rem', sm: '1rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 },
                               wordBreak: 'break-word'
                             }}>
                               {option.name}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary" sx={{ 
+                            <Typography variant="body2" color="text.secondary" sx={{
                               fontSize: { xs: '0.75rem', sm: '0.875rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 }
                             }}>
@@ -1239,27 +1238,27 @@ function VirtualNumberPage() {
                   ) : tabValue === 1 ? (
                     whatsappOptions.map((option) => (
                       <MenuItem key={option.id} value={option.id}>
-                        <Box sx={{ 
-                          display: 'flex', 
+                        <Box sx={{
+                          display: 'flex',
                           alignItems: 'flex-start',
                           gap: { xs: 1, sm: 2 },
                           width: '100%'
                         }}>
-                          <WhatsAppIcon sx={{ 
-                            fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
+                          <WhatsAppIcon sx={{
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' },
                             color: '#25D366',
                             mt: { xs: 0.25, sm: 0 }
                           }} />
                           <Box sx={{ flex: 1, minWidth: 0 }}>
-                            <Typography variant="body1" sx={{ 
-                              fontWeight: 600, 
+                            <Typography variant="body1" sx={{
+                              fontWeight: 600,
                               fontSize: { xs: '0.813rem', sm: '1rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 },
                               wordBreak: 'break-word'
                             }}>
                               {option.name}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary" sx={{ 
+                            <Typography variant="body2" color="text.secondary" sx={{
                               fontSize: { xs: '0.75rem', sm: '0.875rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 }
                             }}>
@@ -1272,27 +1271,27 @@ function VirtualNumberPage() {
                   ) : tabValue === 2 ? (
                     instagramOptions.map((option) => (
                       <MenuItem key={option.id} value={option.id}>
-                        <Box sx={{ 
-                          display: 'flex', 
+                        <Box sx={{
+                          display: 'flex',
                           alignItems: 'flex-start',
                           gap: { xs: 1, sm: 2 },
                           width: '100%'
                         }}>
-                          <InstagramIcon sx={{ 
-                            fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
+                          <InstagramIcon sx={{
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' },
                             color: '#E4405F',
                             mt: { xs: 0.25, sm: 0 }
                           }} />
                           <Box sx={{ flex: 1, minWidth: 0 }}>
-                            <Typography variant="body1" sx={{ 
-                              fontWeight: 600, 
+                            <Typography variant="body1" sx={{
+                              fontWeight: 600,
                               fontSize: { xs: '0.813rem', sm: '1rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 },
                               wordBreak: 'break-word'
                             }}>
                               {option.name}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary" sx={{ 
+                            <Typography variant="body2" color="text.secondary" sx={{
                               fontSize: { xs: '0.75rem', sm: '0.875rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 }
                             }}>
@@ -1305,27 +1304,27 @@ function VirtualNumberPage() {
                   ) : tabValue === 3 ? (
                     gmailOptions.map((option) => (
                       <MenuItem key={option.id} value={option.id}>
-                        <Box sx={{ 
-                          display: 'flex', 
+                        <Box sx={{
+                          display: 'flex',
                           alignItems: 'flex-start',
                           gap: { xs: 1, sm: 2 },
                           width: '100%'
                         }}>
-                          <EmailIcon sx={{ 
-                            fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
+                          <EmailIcon sx={{
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' },
                             color: '#EA4335',
                             mt: { xs: 0.25, sm: 0 }
                           }} />
                           <Box sx={{ flex: 1, minWidth: 0 }}>
-                            <Typography variant="body1" sx={{ 
-                              fontWeight: 600, 
+                            <Typography variant="body1" sx={{
+                              fontWeight: 600,
                               fontSize: { xs: '0.813rem', sm: '1rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 },
                               wordBreak: 'break-word'
                             }}>
                               {option.name}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary" sx={{ 
+                            <Typography variant="body2" color="text.secondary" sx={{
                               fontSize: { xs: '0.75rem', sm: '0.875rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 }
                             }}>
@@ -1338,27 +1337,27 @@ function VirtualNumberPage() {
                   ) : tabValue === 4 ? (
                     linkedinOptions.map((option) => (
                       <MenuItem key={option.id} value={option.id}>
-                        <Box sx={{ 
-                          display: 'flex', 
+                        <Box sx={{
+                          display: 'flex',
                           alignItems: 'flex-start',
                           gap: { xs: 1, sm: 2 },
                           width: '100%'
                         }}>
-                          <LinkedInIcon sx={{ 
-                            fontSize: { xs: '1.25rem', sm: '1.5rem' }, 
+                          <LinkedInIcon sx={{
+                            fontSize: { xs: '1.25rem', sm: '1.5rem' },
                             color: '#0077B5',
                             mt: { xs: 0.25, sm: 0 }
                           }} />
                           <Box sx={{ flex: 1, minWidth: 0 }}>
-                            <Typography variant="body1" sx={{ 
-                              fontWeight: 600, 
+                            <Typography variant="body1" sx={{
+                              fontWeight: 600,
                               fontSize: { xs: '0.813rem', sm: '1rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 },
                               wordBreak: 'break-word'
                             }}>
                               {option.name}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary" sx={{ 
+                            <Typography variant="body2" color="text.secondary" sx={{
                               fontSize: { xs: '0.75rem', sm: '0.875rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 }
                             }}>
@@ -1371,31 +1370,31 @@ function VirtualNumberPage() {
                   ) : tabValue === 5 ? (
                     canvaOptions.map((option) => (
                       <MenuItem key={option.id} value={option.id}>
-                        <Box sx={{ 
-                          display: 'flex', 
+                        <Box sx={{
+                          display: 'flex',
                           alignItems: 'flex-start',
                           gap: { xs: 1, sm: 2 },
                           width: '100%'
                         }}>
-                          <img 
-                            src={canvaIcon} 
-                            alt="Canva" 
-                            style={{ 
+                          <img
+                            src={canvaIcon}
+                            alt="Canva"
+                            style={{
                               width: '1.25rem',
                               height: '1.5rem',
                               marginTop: '2px'
-                            }} 
+                            }}
                           />
                           <Box sx={{ flex: 1, minWidth: 0 }}>
-                            <Typography variant="body1" sx={{ 
-                              fontWeight: 600, 
+                            <Typography variant="body1" sx={{
+                              fontWeight: 600,
                               fontSize: { xs: '0.813rem', sm: '1rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 },
                               wordBreak: 'break-word'
                             }}>
                               {option.name}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary" sx={{ 
+                            <Typography variant="body2" color="text.secondary" sx={{
                               fontSize: { xs: '0.75rem', sm: '0.875rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 }
                             }}>
@@ -1408,31 +1407,31 @@ function VirtualNumberPage() {
                   ) : (
                     netflixOptions.map((option) => (
                       <MenuItem key={option.id} value={option.id}>
-                        <Box sx={{ 
-                          display: 'flex', 
+                        <Box sx={{
+                          display: 'flex',
                           alignItems: 'flex-start',
                           gap: { xs: 1, sm: 2 },
                           width: '100%'
                         }}>
-                          <img 
-                            src={netflixIcon} 
-                            alt="Netflix" 
-                            style={{ 
+                          <img
+                            src={netflixIcon}
+                            alt="Netflix"
+                            style={{
                               width: '1.25rem',
                               height: '1.5rem',
                               marginTop: '2px'
-                            }} 
+                            }}
                           />
                           <Box sx={{ flex: 1, minWidth: 0 }}>
-                            <Typography variant="body1" sx={{ 
-                              fontWeight: 600, 
+                            <Typography variant="body1" sx={{
+                              fontWeight: 600,
                               fontSize: { xs: '0.813rem', sm: '1rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 },
                               wordBreak: 'break-word'
                             }}>
                               {option.name}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary" sx={{ 
+                            <Typography variant="body2" color="text.secondary" sx={{
                               fontSize: { xs: '0.75rem', sm: '0.875rem' },
                               lineHeight: { xs: 1.2, sm: 1.5 }
                             }}>
@@ -1447,8 +1446,8 @@ function VirtualNumberPage() {
               </FormControl>
 
               {selectedService && (
-                <Card 
-                  sx={{ 
+                <Card
+                  sx={{
                     mb: 4,
                     background: 'linear-gradient(145deg, #ffffff, #f8f9fa)',
                   }}
@@ -1488,10 +1487,10 @@ function VirtualNumberPage() {
                         <Typography variant="h6" sx={{ fontWeight: 600, fontSize: { xs: '1rem', sm: '1.1rem' } }}>
                           {selectedService.name}
                         </Typography>
-                        <Chip 
-                          label={`${getCurrencySymbol(tabValue)}${selectedService.price}`} 
+                        <Chip
+                          label={`${getCurrencySymbol(tabValue)}${selectedService.price}`}
                           color={tabValue === 0 ? "primary" : tabValue === 1 ? "success" : tabValue === 2 ? "secondary" : tabValue === 3 ? "error" : tabValue === 4 ? "primary" : tabValue === 5 ? "secondary" : "primary"}
-                          sx={{ 
+                          sx={{
                             mt: 1,
                             backgroundColor: tabValue === 5 ? '#00C4CC' : tabValue === 6 ? '#FF0000' : undefined,
                             '&:hover': {
@@ -1509,7 +1508,7 @@ function VirtualNumberPage() {
                       color="primary"
                       onClick={() => handlePaymentMethodSelect('upi')}
                       startIcon={<PaidIcon />}
-                      sx={{ 
+                      sx={{
                         py: 1.5,
                         fontSize: { xs: '0.9rem', sm: '1rem' },
                       }}
@@ -1522,7 +1521,7 @@ function VirtualNumberPage() {
                       color="secondary"
                       onClick={() => handlePaymentMethodSelect('paypal')}
                       startIcon={<PaidIcon />}
-                      sx={{ 
+                      sx={{
                         py: 1.5,
                         fontSize: { xs: '0.9rem', sm: '1rem' },
                       }}
@@ -1535,7 +1534,7 @@ function VirtualNumberPage() {
                       color="info"
                       onClick={() => handlePaymentMethodSelect('crypto')}
                       startIcon={<PaidIcon />}
-                      sx={{ 
+                      sx={{
                         py: 1.5,
                         fontSize: { xs: '0.9rem', sm: '1rem' },
                       }}
@@ -1547,10 +1546,10 @@ function VirtualNumberPage() {
               )}
 
               {showQR && (
-                <Paper 
+                <Paper
                   elevation={0}
-                  sx={{ 
-                    p: { xs: 2, sm: 3, md: 4 }, 
+                  sx={{
+                    p: { xs: 2, sm: 3, md: 4 },
                     borderRadius: 3,
                     background: 'linear-gradient(145deg, #ffffff, #f8f9fa)',
                     boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
@@ -1562,11 +1561,11 @@ function VirtualNumberPage() {
                         Pay ₹{selectedService?.price} via UPI
                       </Typography>
                       <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
-                        <img 
-                          src="https://wertrends.s3.eu-north-1.amazonaws.com/QR.jpg" 
-                          alt="UPI QR Code" 
-                          style={{ 
-                            maxWidth: '100%', 
+                        <img
+                          src="https://wertrends.s3.eu-north-1.amazonaws.com/QR.jpg"
+                          alt="UPI QR Code"
+                          style={{
+                            maxWidth: '100%',
                             height: 'auto',
                             borderRadius: 12,
                             boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
@@ -1589,7 +1588,7 @@ function VirtualNumberPage() {
                           variant="contained"
                           color="primary"
                           onClick={() => window.open('https://paypal.me/BadalPrajapati?country.x=IN&locale.x=en_GB', '_blank')}
-                          sx={{ 
+                          sx={{
                             py: 1.5,
                             px: 4,
                             fontSize: { xs: '0.9rem', sm: '1rem' },
@@ -1636,9 +1635,9 @@ function VirtualNumberPage() {
                           <Typography variant="body2" color="text.secondary" gutterBottom>
                             Send {cryptoOptions.find(opt => opt.id === selectedCrypto)?.name} to:
                           </Typography>
-                          <Paper 
+                          <Paper
                             elevation={0}
-                            sx={{ 
+                            sx={{
                               p: 2,
                               backgroundColor: 'rgba(0,0,0,0.02)',
                               borderRadius: 1,
@@ -1661,7 +1660,7 @@ function VirtualNumberPage() {
                       fullWidth
                       onClick={handlePayment}
                       startIcon={tabValue === 0 ? <TelegramIcon /> : tabValue === 1 ? <WhatsAppIcon /> : tabValue === 2 ? <InstagramIcon /> : tabValue === 3 ? <EmailIcon /> : tabValue === 4 ? <LinkedInIcon /> : tabValue === 5 ? <img src={canvaIcon} alt="Canva" style={{ width: '1.25rem', height: '1.5rem' }} /> : <img src={netflixIcon} alt="Netflix" style={{ width: '1.25rem', height: '1.5rem' }} />}
-                      sx={{ 
+                      sx={{
                         py: 1.5,
                         fontSize: { xs: '0.9rem', sm: '1rem' },
                         backgroundColor: tabValue === 5 ? '#00C4CC' : undefined,
@@ -1686,7 +1685,7 @@ function VirtualNumberPage() {
                   color="secondary"
                   onClick={handleCustomization}
                   startIcon={<BuildIcon />}
-                  sx={{ 
+                  sx={{
                     borderRadius: 2,
                     borderWidth: 2,
                     fontSize: { xs: '0.9rem', sm: '1rem' },
