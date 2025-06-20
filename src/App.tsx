@@ -89,11 +89,12 @@ interface ServiceOption {
   price: number;
   icon?: string;
   duration?: string;
+  oldPrice?: number;
 }
 
 const telegramOptions: ServiceOption[] = [
-  { id: 'fresh', name: 'Fresh Account', price: 500 },
-  { id: '1year', name: '1 Year Old Account', price: 1000 },
+  { id: 'fresh', name: 'Fresh Account', price: 350, oldPrice: 500 },
+  { id: '1year', name: '1 Year Old Account', price: 800, oldPrice: 1000 },
 ];
 
 const whatsappOptions: ServiceOption[] = [
@@ -1242,20 +1243,19 @@ function VirtualNumberPage() {
                             mt: { xs: 0.25, sm: 0 }
                           }} />
                           <Box sx={{ flex: 1, minWidth: 0 }}>
-                            <Typography variant="body1" sx={{
-                              fontWeight: 600,
-                              fontSize: { xs: '0.813rem', sm: '1rem' },
-                              lineHeight: { xs: 1.2, sm: 1.5 },
-                              wordBreak: 'break-word'
-                            }}>
+                            <Typography variant="body1" sx={{ fontWeight: 600, fontSize: { xs: '0.813rem', sm: '1rem' }, lineHeight: { xs: 1.2, sm: 1.5 }, wordBreak: 'break-word' }}>
                               {option.name}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary" sx={{
-                              fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                              lineHeight: { xs: 1.2, sm: 1.5 }
-                            }}>
-                              {getCurrencySymbol(tabValue)}{option.price}
-                            </Typography>
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                              {option.oldPrice && (
+                                <Typography variant="body2" color="text.secondary" sx={{ textDecoration: 'line-through', fontSize: { xs: '0.75rem', sm: '0.875rem' } }}>
+                                  ₹{option.oldPrice}
+                                </Typography>
+                              )}
+                              <Typography variant="body2" color="primary" sx={{ fontWeight: 700, fontSize: { xs: '0.85rem', sm: '1rem' } }}>
+                                ₹{option.price}
+                              </Typography>
+                            </Box>
                           </Box>
                         </Box>
                       </MenuItem>
@@ -1468,6 +1468,13 @@ function VirtualNumberPage() {
                     ))
                   )}
                 </Select>
+                {tabValue === 0 && (
+                  <Box sx={{ mt: 1, mb: 2 }}>
+                    <Typography variant="subtitle2" sx={{ color: 'warning.main', fontWeight: 700, fontSize: '1rem' }}>
+                      Offer valid for 2 days only and limited stock available at this rate
+                    </Typography>
+                  </Box>
+                )}
               </FormControl>
 
               {selectedService && (
