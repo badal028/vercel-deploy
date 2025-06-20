@@ -86,3 +86,8 @@ button:focus-visible {
   font-weight: 700 !important;
   margin-bottom: 2rem !important;
 }
+@media screen and (max-width: 685px) {
+  .buy-button {
+    width: 100%;
+  }
+}

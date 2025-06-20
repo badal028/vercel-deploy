@@ -375,8 +375,9 @@ function LandingPage() {
               >
                 Premium Virtual Numbers for All Your Needs. Fast Delivery, 24/7 Support, and Secure Payment Options.
               </Typography>
-              <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mb: 4 }}>
+              <Box sx={{ display: 'flex', justifyContent: 'center',flexWrap:'wrap', gap: 2, mb: 4 }}>
                 <Button
+                  className='buy-button'
                   variant="contained"
                   size="large"
                   onClick={() => navigate('/buy')}
@@ -397,6 +398,7 @@ function LandingPage() {
                   Buy Virtual Number
                 </Button>
                 <Button
+                  className='buy-button'
                   variant="outlined"
                   size="large"
                   onClick={() => navigate('/recent-payments')}
