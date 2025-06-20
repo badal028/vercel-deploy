@@ -42,6 +42,8 @@ import SendIcon from '@mui/icons-material/Send';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import canvaIcon from './assets/canva-icon.png';
 import netflixIcon from './assets/netflix.png';
+import RecentPayments from './RecentPayments';
+// Add import for RecentPayments
 
 const float = keyframes`
   0% {
@@ -373,26 +375,47 @@ function LandingPage() {
               >
                 Premium Virtual Numbers for All Your Needs. Fast Delivery, 24/7 Support, and Secure Payment Options.
               </Typography>
-              <Button
-                variant="contained"
-                size="large"
-                onClick={() => navigate('/buy')}
-                sx={{
-                  py: 2,
-                  px: 6,
-                  fontSize: '1.2rem',
-                  borderRadius: '30px',
-                  background: 'linear-gradient(45deg, #2563EB 30%, #EC4899 90%)',
-                  boxShadow: '0 4px 12px rgba(37, 99, 235, 0.2)',
-                  '&:hover': {
-                    background: 'linear-gradient(45deg, #1E40AF 30%, #BE185D 90%)',
-                    boxShadow: '0 6px 16px rgba(37, 99, 235, 0.3)',
-                    transform: 'translateY(-2px)',
-                  }
-                }}
-              >
-                Buy Virtual Number
-              </Button>
+              <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mb: 4 }}>
+                <Button
+                  variant="contained"
+                  size="large"
+                  onClick={() => navigate('/buy')}
+                  sx={{
+                    py: 2,
+                    px: 6,
+                    fontSize: '1.2rem',
+                    borderRadius: '30px',
+                    background: 'linear-gradient(45deg, #2563EB 30%, #EC4899 90%)',
+                    boxShadow: '0 4px 12px rgba(37, 99, 235, 0.2)',
+                    '&:hover': {
+                      background: 'linear-gradient(45deg, #1E40AF 30%, #BE185D 90%)',
+                      boxShadow: '0 6px 16px rgba(37, 99, 235, 0.3)',
+                      transform: 'translateY(-2px)',
+                    }
+                  }}
+                >
+                  Buy Virtual Number
+                </Button>
+                <Button
+                  variant="outlined"
+                  size="large"
+                  onClick={() => navigate('/recent-payments')}
+                  sx={{
+                    py: 2,
+                    px: 6,
+                    fontSize: '1.2rem',
+                    borderRadius: '30px',
+                    borderColor: 'primary.main',
+                    color: 'primary.main',
+                    '&:hover': {
+                      background: 'primary.light',
+                      borderColor: 'primary.dark',
+                    }
+                  }}
+                >
+                  See Recent Payments
+                </Button>
+              </Box>
             </Box>
           </motion.div>
 
@@ -1756,6 +1779,7 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/buy" element={<VirtualNumberPage />} />
+            <Route path="/recent-payments" element={<RecentPayments />} />
           </Routes>
           <Analytics />
         </Router>
