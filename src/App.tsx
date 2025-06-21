@@ -43,6 +43,10 @@ import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import canvaIcon from './assets/canva-icon.png';
 import netflixIcon from './assets/netflix.png';
 import RecentPayments from './RecentPayments';
+import About from './About';
+import FAQ from './FAQ';
+import Contact from './Contact';
+import Terms from './Terms';
 // Add import for RecentPayments
 
 const float = keyframes`
@@ -724,6 +728,64 @@ function LandingPage() {
               </motion.div>
             </Box>
           </motion.div>
+        </Container>
+      </Box>
+      {/* Add footer after the main content in LandingPage: */}
+      <Box sx={{ 
+        bgcolor: 'primary.main', 
+        color: 'white', 
+        py: 4, 
+        mt: 8,
+        borderTop: '1px solid rgba(255,255,255,0.1)'
+      }}>
+        <Container maxWidth="lg">
+          <Grid container spacing={4}>
+            <Grid item xs={12} sm={6} md={3}>
+              <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
+                VirtNumbers
+              </Typography>
+              <Typography variant="body2" sx={{ mb: 2, opacity: 0.8 }}>
+                Premium virtual numbers for all your digital needs. Instant delivery, 24/7 support.
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
+                Services
+              </Typography>
+              <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
+                <Typography component="li" sx={{ mb: 1, opacity: 0.8 }}>WhatsApp Numbers</Typography>
+                <Typography component="li" sx={{ mb: 1, opacity: 0.8 }}>Telegram Numbers</Typography>
+                <Typography component="li" sx={{ mb: 1, opacity: 0.8 }}>Social Media Accounts</Typography>
+                <Typography component="li" sx={{ mb: 1, opacity: 0.8 }}>Premium Subscriptions</Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
+                Support
+              </Typography>
+              <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
+                <Typography component="li" sx={{ mb: 1, opacity: 0.8 }}>24/7 WhatsApp Support</Typography>
+                <Typography component="li" sx={{ mb: 1, opacity: 0.8 }}>Email Support</Typography>
+                <Typography component="li" sx={{ mb: 1, opacity: 0.8 }}>FAQ</Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
+                Company
+              </Typography>
+              <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
+                <Typography component="li" sx={{ mb: 1, opacity: 0.8, cursor: 'pointer' }} onClick={() => navigate('/about')}>About Us</Typography>
+                <Typography component="li" sx={{ mb: 1, opacity: 0.8, cursor: 'pointer' }} onClick={() => navigate('/contact')}>Contact</Typography>
+                <Typography component="li" sx={{ mb: 1, opacity: 0.8, cursor: 'pointer' }} onClick={() => navigate('/terms')}>Terms of Service</Typography>
+                <Typography component="li" sx={{ mb: 1, opacity: 0.8, cursor: 'pointer' }} onClick={() => navigate('/faq')}>FAQ</Typography>
+              </Box>
+            </Grid>
+          </Grid>
+          <Box sx={{ mt: 4, pt: 3, borderTop: '1px solid rgba(255,255,255,0.1)', textAlign: 'center' }}>
+            <Typography variant="body2" sx={{ opacity: 0.7 }}>
+              © {new Date().getFullYear()} VirtNumbers. All rights reserved.
+            </Typography>
+          </Box>
         </Container>
       </Box>
     </>
@@ -1789,6 +1851,10 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/buy" element={<VirtualNumberPage />} />
             <Route path="/recent-payments" element={<RecentPayments />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/terms" element={<Terms />} />
           </Routes>
           <Analytics />
         </Router>
