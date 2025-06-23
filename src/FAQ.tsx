@@ -46,12 +46,29 @@ export default function FAQ() {
   ];
 
   return (
-    <Container maxWidth="lg" sx={{ py: 6 }}>
-      <Typography variant="h2" sx={{ mb: 4, textAlign: 'center', fontWeight: 700, color: 'primary.main' }}>
+    <Container maxWidth="lg" sx={{ py: { xs: 3, md: 6 }, px: { xs: 2, md: 3 } }}>
+      <Typography 
+        variant="h2" 
+        sx={{ 
+          mb: { xs: 2, md: 4 }, 
+          textAlign: 'center', 
+          fontWeight: 700, 
+          color: 'primary.main',
+          fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }
+        }}
+      >
         Frequently Asked Questions
       </Typography>
       
-      <Typography variant="h5" sx={{ mb: 4, textAlign: 'center', color: 'text.secondary' }}>
+      <Typography 
+        variant="h5" 
+        sx={{ 
+          mb: { xs: 3, md: 4 }, 
+          textAlign: 'center', 
+          color: 'text.secondary',
+          fontSize: { xs: '1rem', sm: '1.25rem' }
+        }}
+      >
         Everything you need to know about virtual numbers and our services
       </Typography>
 
@@ -63,15 +80,32 @@ export default function FAQ() {
               sx={{
                 '&:hover': {
                   backgroundColor: 'rgba(37, 99, 235, 0.04)',
+                },
+                '& .MuiAccordionSummary-content': {
+                  margin: { xs: '8px 0', md: '12px 0' }
                 }
               }}
             >
-              <Typography variant="h6" sx={{ fontWeight: 600, color: 'primary.main' }}>
+              <Typography 
+                variant="h6" 
+                sx={{ 
+                  fontWeight: 600, 
+                  color: 'primary.main',
+                  fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem' }
+                }}
+              >
                 {faq.question}
               </Typography>
             </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="body1" sx={{ lineHeight: 1.8, color: 'text.secondary' }}>
+            <AccordionDetails sx={{ p: { xs: 2, md: 3 } }}>
+              <Typography 
+                variant="body1" 
+                sx={{ 
+                  lineHeight: 1.8, 
+                  color: 'text.secondary',
+                  fontSize: { xs: '0.9rem', md: '1rem' }
+                }}
+              >
                 {faq.answer}
               </Typography>
             </AccordionDetails>
@@ -79,14 +113,39 @@ export default function FAQ() {
         ))}
       </Box>
 
-      <Box sx={{ mt: 6, textAlign: 'center', p: 4, bgcolor: 'primary.main', color: 'white', borderRadius: 2 }}>
-        <Typography variant="h5" sx={{ mb: 2 }}>
+      <Box sx={{ 
+        mt: { xs: 4, md: 6 }, 
+        textAlign: 'center', 
+        p: { xs: 2, md: 4 }, 
+        bgcolor: 'primary.main', 
+        color: 'white', 
+        borderRadius: 2 
+      }}>
+        <Typography 
+          variant="h5" 
+          sx={{ 
+            mb: { xs: 1, md: 2 },
+            fontSize: { xs: '1.25rem', sm: '1.5rem' }
+          }}
+        >
           Still have questions?
         </Typography>
-        <Typography variant="body1" sx={{ mb: 3 }}>
+        <Typography 
+          variant="body1" 
+          sx={{ 
+            mb: { xs: 2, md: 3 },
+            fontSize: { xs: '0.9rem', md: '1rem' }
+          }}
+        >
           Our 24/7 support team is here to help you with any questions about virtual numbers or our services.
         </Typography>
-        <Typography variant="body1" sx={{ fontWeight: 600 }}>
+        <Typography 
+          variant="body1" 
+          sx={{ 
+            fontWeight: 600,
+            fontSize: { xs: '0.9rem', md: '1rem' }
+          }}
+        >
           Contact us on WhatsApp for instant support!
         </Typography>
       </Box>

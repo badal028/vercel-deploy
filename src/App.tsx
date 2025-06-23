@@ -739,7 +739,7 @@ function LandingPage() {
         borderTop: '1px solid rgba(255,255,255,0.1)'
       }}>
         <Container maxWidth="lg">
-          <Grid container spacing={4}>
+          <Grid container spacing={4} className='footer-grid'>
             <Grid item xs={12} sm={6} md={3}>
               <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
                 VirtNumbers

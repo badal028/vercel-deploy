@@ -43,6 +43,22 @@ const fadeInItem = {
 };
 
 export default function RecentPayments() {
+  const captions = [
+    "Payment from Delhi for Netflix number",
+    "Payment from Spain for Netflix number",
+    "Payment from USA for Netflix account",
+    "Payment from Hyderabad for Netflix account",
+    "Payment from Indonesia for Netflix account",
+    "Payment from Chennai for Netflix subscription",
+    "Payment from Pune for Netflix subscription",
+    "Payment from Jaipur for Netflix number",
+    "Payment from Philippines for Netflix number",
+    "Payment from Surat for Netflix account",
+    "Payment from Indore for Netflix account",
+    "Payment from Bhopal for Telegram account",
+    "Payment from Patna for Telegram subscription"
+  ];
+
   return (
     <motion.div
       initial="hidden"
@@ -51,8 +67,11 @@ export default function RecentPayments() {
       style={{ minHeight: '80vh', background: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)' }}
     >
       <Box sx={{ py: 6, px: { xs: 2, md: 8 } }}>
-        <Typography variant="h3" sx={{ mb: 4, textAlign: 'center', fontWeight: 700, color: 'primary.main', letterSpacing: 1 }}>
-          Recent Payments Gallery <span style={{fontWeight:400, fontSize:'1.5rem'}}>(More proof coming soon!)</span>
+        <Typography variant="h3" sx={{ mb: 2, textAlign: 'center', fontWeight: 700, color: 'primary.main', letterSpacing: 1 }}>
+          Recent Payments from Our Happy Customers
+        </Typography>
+        <Typography variant="body1" sx={{ mb: 4, textAlign: 'center', color: 'text.secondary', maxWidth: 700, mx: 'auto' }}>
+          We value transparency and trust. Below are real payment proofs from our satisfied customers who purchased virtual numbers and digital services. This gallery demonstrates our commitment to instant delivery and genuine service. Join hundreds of happy clients who have chosen VirtNumbers for their digital needs!
         </Typography>
         <Grid container spacing={4} justifyContent="center">
           {paymentImages.map((img, idx) => (
@@ -72,7 +91,7 @@ export default function RecentPayments() {
                 >
                   <img
                     src={img}
-                    alt={`Payment Screenshot ${idx + 1}`}
+                    alt={captions[idx] || `Payment Screenshot ${idx + 1}`}
                     style={{
                       width: '100%',
                       height: 'auto',
@@ -83,13 +102,16 @@ export default function RecentPayments() {
                       margin: '0 auto'
                     }}
                   />
+                  <Typography variant="caption" sx={{ display: 'block', color: 'text.secondary', mt: 1, textAlign: 'center', minHeight: 32 }}>
+                    {captions[idx] || ''}
+                  </Typography>
                 </Paper>
               </motion.div>
             </Grid>
           ))}
         </Grid>
         <Typography variant="caption" sx={{ mt: 4, display: 'block', textAlign: 'center', color: 'text.secondary' }}>
-          *Your privacy is always protected.
+          *Your privacy is always protected. Payment screenshots are shown with customer consent and for demonstration purposes only.
         </Typography>
       </Box>
     </motion.div>
