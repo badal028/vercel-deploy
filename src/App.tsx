@@ -42,7 +42,6 @@ import SendIcon from '@mui/icons-material/Send';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import canvaIcon from './assets/canva-icon.png';
 import netflixIcon from './assets/netflix.png';
-import RecentPayments from './RecentPayments';
 import About from './About';
 import FAQ from './FAQ';
 import Contact from './Contact';
@@ -402,7 +401,7 @@ function LandingPage() {
                 >
                   Buy Virtual Number
                 </Button>
-                <Button
+                {/* <Button
                   className='buy-button'
                   variant="outlined"
                   size="large"
@@ -421,7 +420,7 @@ function LandingPage() {
                   }}
                 >
                   See Recent Payments
-                </Button>
+                </Button> */}
               </Box>
             </Box>
           </motion.div>
@@ -1850,7 +1849,6 @@ function App() {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/buy" element={<VirtualNumberPage />} />
-            <Route path="/recent-payments" element={<RecentPayments />} />
             <Route path="/about" element={<About />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
