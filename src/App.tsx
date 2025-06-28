@@ -1656,7 +1656,7 @@ function VirtualNumberPage() {
                       </Typography>
                       <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
                         <img
-                          src="https://wertrends.s3.eu-north-1.amazonaws.com/QR.jpg"
+                          src="https://wertrends.s3.eu-north-1.amazonaws.com/photo_6269573399781164029_y.jpg"
                           alt="UPI QR Code"
                           style={{
                             maxWidth: '100%',
