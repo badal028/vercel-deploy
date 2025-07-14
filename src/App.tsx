@@ -1099,6 +1099,16 @@ function VirtualNumberPage() {
                 />
               </Tabs>
 
+              {/* Netflix warning message */}
+              {tabValue === 6 && (
+                <Alert severity="warning" sx={{ mb: 2, fontWeight: 600 }}>
+                  <Typography variant="body2" sx={{ fontWeight: 700 }}>
+                    No ID/Password will be given for this purchase. You will receive a direct 3rd party APK only for Android, & for IOS thirdy party trick will be given <br />
+                    <span style={{ color: '#d32f2f', fontWeight: 700 }}>No refund process will be available for this transaction.</span>
+                  </Typography>
+                </Alert>
+              )}
+
               <FormControl fullWidth sx={{ mb: 4 }}>
                 <InputLabel id="service-select-label" sx={{
                   fontSize: { xs: '0.875rem', sm: '1rem' },
