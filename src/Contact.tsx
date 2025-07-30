@@ -3,6 +3,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import AdSense from './AdSense';
 
 export default function Contact() {
   return (
@@ -365,6 +366,11 @@ export default function Contact() {
           </Paper>
         </Grid>
       </Grid>
+      
+      {/* Ad Section */}
+      <Box sx={{ mt: 6 }}>
+        <AdSense adSlot="5467675360" adFormat="auto" />
+      </Box>
     </Container>
   );
 } 

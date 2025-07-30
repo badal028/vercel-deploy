@@ -1,4 +1,5 @@
 import { Box, Typography, Container, Paper } from '@mui/material';
+import AdSense from './AdSense';
 
 export default function Terms() {
   return (
@@ -331,6 +332,11 @@ export default function Terms() {
         >
           Contact our support team for clarification on any part of these terms of service.
         </Typography>
+      </Box>
+      
+      {/* Ad Section */}
+      <Box sx={{ mt: 6 }}>
+        <AdSense adSlot="6625177500" adFormat="auto" />
       </Box>
     </Container>
   );

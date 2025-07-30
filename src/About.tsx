@@ -1,4 +1,5 @@
 import { Box, Typography, Container, Paper, Grid } from '@mui/material';
+import AdSense from './AdSense';
 
 export default function About() {
   return (
@@ -131,6 +132,11 @@ export default function About() {
           </Paper>
         </Grid>
       </Grid>
+      
+      {/* Ad Section */}
+      <Box sx={{ mt: 6 }}>
+        <AdSense adSlot="1720002040" adFormat="auto" />
+      </Box>
     </Container>
   );
 } 

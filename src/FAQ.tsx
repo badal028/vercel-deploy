@@ -1,5 +1,6 @@
 import { Box, Typography, Container, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import AdSense from './AdSense';
 
 export default function FAQ() {
   const faqs = [
@@ -148,6 +149,11 @@ export default function FAQ() {
         >
           Contact us on WhatsApp for instant support!
         </Typography>
+      </Box>
+      
+      {/* Ad Section */}
+      <Box sx={{ mt: 6 }}>
+        <AdSense adSlot="2841512028" adFormat="auto" />
       </Box>
     </Container>
   );

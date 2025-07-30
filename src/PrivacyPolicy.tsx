@@ -1,4 +1,5 @@
-import { Container, Typography, Paper } from '@mui/material';
+import { Container, Typography, Paper, Box } from '@mui/material';
+import AdSense from './AdSense';
 
 export default function PrivacyPolicy() {
   return (
@@ -65,6 +66,11 @@ export default function PrivacyPolicy() {
           If you have any questions or concerns about our privacy practices, please contact us at <a href="mailto:wertrends@gmail.com">wertrends@gmail.com</a>.
         </Typography>
       </Paper>
+      
+      {/* Ad Section */}
+      <Box sx={{ mt: 6 }}>
+        <AdSense adSlot="5934363629" adFormat="auto" />
+      </Box>
     </Container>
   );
 } 

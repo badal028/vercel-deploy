@@ -47,6 +47,7 @@ import FAQ from './FAQ';
 import Contact from './Contact';
 import Terms from './Terms';
 import PrivacyPolicy from './PrivacyPolicy';
+import AdSense from './AdSense';
 // Add import for RecentPayments
 // import RecentPayments from './RecentPayments';
 
@@ -678,6 +679,16 @@ function LandingPage() {
                 </Paper>
               </motion.div>
             </Box>
+          </motion.div>
+
+          {/* Ad Section */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={fadeInUp}
+          >
+            <AdSense adSlot="8540561265" adFormat="auto" />
           </motion.div>
 
           {/* CTA Section */}
@@ -1725,6 +1736,11 @@ function VirtualNumberPage() {
                   )}
                 </Paper>
               )}
+
+              {/* Ad Section */}
+              <Box sx={{ mt: 4, mb: 4 }}>
+                <AdSense adSlot="8540561265" adFormat="auto" />
+              </Box>
 
               <Box sx={{ mt: 4, textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 2 }}>
                 <Button
