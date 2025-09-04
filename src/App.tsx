@@ -48,6 +48,7 @@ import Contact from './Contact';
 import Terms from './Terms';
 import PrivacyPolicy from './PrivacyPolicy';
 import AdSense from './AdSense';
+import BuyPage from './BuyPage';
 // Add import for RecentPayments
 // import RecentPayments from './RecentPayments';
 
@@ -329,7 +330,7 @@ function LandingPage() {
       </Helmet>
       <Box sx={{
         minHeight: '100vh',
-        background: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)',
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         py: { xs: 6, md: 8 },
         position: 'relative'
       }}>
@@ -359,9 +360,9 @@ function LandingPage() {
               <Typography
                 variant="h1"
                 sx={{
-                  color: 'primary.main',
+                  color: 'white',
                   mb: 3,
-                  textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
+                  textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
                   fontSize: { xs: '2.5rem', md: '3.5rem' },
                   fontWeight: 700,
                   lineHeight: 1.2
@@ -372,7 +373,7 @@ function LandingPage() {
               <Typography
                 variant="h5"
                 sx={{
-                  color: 'text.secondary',
+                  color: 'rgba(255,255,255,0.9)',
                   maxWidth: '800px',
                   mx: 'auto',
                   mb: 4,
@@ -440,10 +441,11 @@ function LandingPage() {
               sx={{
                 textAlign: 'center',
                 mb: { xs: 4, sm: 6 },
-                color: 'primary.main',
+                color: 'white',
                 fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' },
                 fontWeight: 600,
-                lineHeight: 1.2
+                lineHeight: 1.2,
+                textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
               }}
             >
               Why Choose Our Service?
@@ -474,7 +476,7 @@ function LandingPage() {
                 >
                   <Typography variant="h4" sx={{
                     mb: { xs: 2, sm: 3 },
-                    color: 'primary.main',
+                    color: '#667eea',
                     fontSize: { xs: '1.25rem', sm: '1.5rem' },
                     fontWeight: 600
                   }}>
@@ -541,7 +543,7 @@ function LandingPage() {
                 >
                   <Typography variant="h4" sx={{
                     mb: { xs: 2, sm: 3 },
-                    color: 'primary.main',
+                    color: '#667eea',
                     fontSize: { xs: '1.25rem', sm: '1.5rem' },
                     fontWeight: 600
                   }}>
@@ -610,8 +612,9 @@ function LandingPage() {
               sx={{
                 textAlign: 'center',
                 mb: { xs: 6, md: 8 },
-                color: 'primary.main',
-                fontSize: { xs: '2rem', md: '2.5rem' }
+                color: 'white',
+                fontSize: { xs: '2rem', md: '2.5rem' },
+                textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
               }}
             >
               Frequently Asked Questions
@@ -640,11 +643,11 @@ function LandingPage() {
                     }
                   }}
                 >
-                  <Typography variant="h6" sx={{ mb: 2, color: 'primary.main', fontSize: '1.1rem' }}>How fast is the delivery?</Typography>
+                  <Typography variant="h6" sx={{ mb: 2, color: '#667eea', fontSize: '1.1rem' }}>How fast is the delivery?</Typography>
                   <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, lineHeight: 1.7 }}>
                     We provide instant delivery of virtual numbers. Once payment is confirmed, you'll receive your number within minutes. Our automated system ensures quick and reliable delivery.
                   </Typography>
-                  <Typography variant="h6" sx={{ mb: 2, color: 'primary.main', fontSize: '1.1rem' }}>What payment methods do you accept?</Typography>
+                  <Typography variant="h6" sx={{ mb: 2, color: '#667eea', fontSize: '1.1rem' }}>What payment methods do you accept?</Typography>
                   <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, lineHeight: 1.7 }}>
                     We accept various payment methods including UPI, bank transfer, and other secure payment options. All transactions are encrypted and secure.
                   </Typography>
@@ -668,11 +671,11 @@ function LandingPage() {
                     }
                   }}
                 >
-                  <Typography variant="h6" sx={{ mb: 2, color: 'primary.main', fontSize: '1.1rem' }}>Is the service secure?</Typography>
+                  <Typography variant="h6" sx={{ mb: 2, color: '#667eea', fontSize: '1.1rem' }}>Is the service secure?</Typography>
                   <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, lineHeight: 1.7 }}>
                     Yes, we use secure payment gateways and follow strict privacy policies to protect your information. Your data is encrypted and never shared with third parties.
                   </Typography>
-                  <Typography variant="h6" sx={{ mb: 2, color: 'primary.main', fontSize: '1.1rem' }}>Do you offer refunds?</Typography>
+                  <Typography variant="h6" sx={{ mb: 2, color: '#667eea', fontSize: '1.1rem' }}>Do you offer refunds?</Typography>
                   <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.7 }}>
                     Yes, we guarantee a full refund if we fail to deliver your number. Our customer satisfaction is our top priority, and we ensure you get what you pay for.
                   </Typography>
@@ -706,8 +709,9 @@ function LandingPage() {
                 variant="h3"
                 sx={{
                   mb: 4,
-                  color: 'primary.main',
-                  fontSize: { xs: '1.75rem', md: '2.25rem' }
+                  color: 'white',
+                  fontSize: { xs: '1.75rem', md: '2.25rem' },
+                  textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
                 }}
               >
                 Ready to Join VirtNum Pro?
@@ -1818,7 +1822,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/buy" element={<VirtualNumberPage />} />
+            <Route path="/buy" element={<BuyPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
@@ -1827,10 +1831,10 @@ function App() {
           </Routes>
           {/* Footer visible on all pages */}
           <Box sx={{ 
-            bgcolor: 'primary.main', 
+            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
             color: 'white', 
             py: 4, 
-            mt: 8,
+            mt: 0,
             borderTop: '1px solid rgba(255,255,255,0.1)'
           }}>
             <Container maxWidth="lg">

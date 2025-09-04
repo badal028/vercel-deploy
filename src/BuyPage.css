@@ -1,0 +1,470 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.buy-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.buy-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.buy-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  padding: 40px 0;
+}
+
+.buy-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.buy-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.buy-main-content {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.buy-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.buy-service-item {
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.buy-service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.buy-service-item.active {
+  border-color: #667eea;
+  background: #f0f2ff;
+}
+
+.buy-service-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 10px;
+  font-size: 24px;
+}
+
+.buy-service-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.buy-options-section {
+  background: #f8f9fa;
+  padding: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.buy-options-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.buy-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.buy-option-item {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.buy-option-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.buy-option-item.active {
+  border-color: #667eea;
+  background: #f0f2ff;
+}
+
+.buy-option-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.buy-option-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 5px;
+}
+
+.buy-option-old-price {
+  font-size: 0.9rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-bottom: 5px;
+}
+
+.buy-option-duration {
+  font-size: 0.8rem;
+  color: #666;
+  background: #e8f5e8;
+  padding: 4px 8px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.buy-purchase-section {
+  padding: 40px;
+}
+
+.buy-product-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.buy-product-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.buy-product-price {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.buy-product-currency {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.buy-product-old-price {
+  font-size: 1rem;
+  opacity: 0.7;
+  text-decoration: line-through;
+  margin-bottom: 10px;
+}
+
+.buy-offer-badge {
+  background: #ff6b6b;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 15px 0;
+  display: inline-block;
+  animation: buy-pulse 2s infinite;
+}
+
+@keyframes buy-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.buy-features-list {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.buy-features-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.buy-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.buy-feature-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.buy-feature-item::before {
+  content: "✅";
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.buy-payment-methods {
+  display: grid;
+  gap: 15px;
+}
+
+.buy-payment-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+}
+
+.buy-payment-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.buy-upi-btn {
+  background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+}
+
+.buy-paypal-btn {
+  background: linear-gradient(135deg, #0070ba 0%, #003087 100%);
+}
+
+.buy-crypto-btn {
+  background: linear-gradient(135deg, #f7931a 0%, #ff6b35 100%);
+}
+
+.buy-payment-icon {
+  margin-right: 12px;
+  font-size: 1.3rem;
+}
+
+.buy-payment-details {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.buy-payment-section {
+  text-align: center;
+}
+
+.buy-payment-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.buy-payment-note {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.buy-qr-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.buy-qr-code {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.buy-crypto-alert {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+
+.buy-crypto-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+.buy-crypto-address {
+  margin: 20px 0;
+}
+
+.buy-crypto-address p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.buy-address-box {
+  background: rgba(0,0,0,0.02);
+  padding: 15px;
+  border-radius: 8px;
+  word-break: break-all;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.buy-payment-confirm-btn {
+  margin-top: 20px;
+}
+
+.buy-payment-alert {
+  background: #e8f5e8;
+  color: #2e7d32;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.buy-trust-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.buy-trust-item {
+  text-align: center;
+  color: #666;
+}
+
+.buy-trust-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #667eea;
+  display: block;
+}
+
+.buy-support-section {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.buy-support-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.buy-support-text {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.buy-support-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buy-support-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 768px) {
+  .buy-header h1 {
+    font-size: 2rem;
+  }
+  
+  .buy-services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .buy-service-item {
+    padding: 15px 5px;
+  }
+  
+  .buy-service-name {
+    font-size: 0.8rem;
+  }
+  
+  .buy-options-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .buy-purchase-section {
+    padding: 20px;
+  }
+  
+  .buy-trust-indicators {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
