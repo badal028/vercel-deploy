@@ -295,37 +295,23 @@ function LandingPage() {
   return (
     <>
       <Helmet>
-        <title>Buy Virtual Numbers, Canva Pro & Netflix Premium | Best Prices | VirtNumbers</title>
-        <meta name="description" content="Premium Virtual Numbers for Telegram & WhatsApp (₹500+) ✓ Canva Pro (₹2500/year) ✓ Netflix Premium 4K UHD (₹4500/year) ✓ Instagram, Gmail & LinkedIn Services ✓ Instant Delivery ✓ 24/7 Support" />
-
-        {/* Primary keyword meta tags */}
-        <meta name="keywords" content="virtual number for telegram, virtual number for whatsapp, telegram virtual number, whatsapp virtual number, buy telegram number, buy whatsapp number, buy canva pro cheap, netflix premium 4k uhd, instagram verification number, gmail verification, linkedin verification" />
-
-        {/* Additional SEO meta tags for main keywords */}
-        <meta property="article:tag" content="virtual number for telegram" />
-        <meta property="article:tag" content="virtual number for whatsapp" />
-        <meta property="article:tag" content="buy canva pro cheap" />
-        <meta property="article:tag" content="buy netflix premium cheap" />
-        <meta property="article:tag" content="instagram verification number" />
-        <meta property="article:tag" content="gmail verification number" />
-        <meta property="article:tag" content="linkedin verification number" />
-
-        {/* Existing meta tags */}
-        <link rel="icon" href="/logo.ico" />
-        <link rel="shortcut icon" href="/logo.ico" type="image/x-icon" />
+        <title>Virtual Numbers & Digital Services | VirtNumbers</title>
+        <meta name="description" content="Get premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, 24/7 support, secure payments." />
+        <meta name="keywords" content="virtual numbers, WhatsApp verification, Telegram numbers, Instagram verification, Canva Pro, Netflix Premium, digital services" />
+        <link rel="canonical" href="https://virtnumbers.com/" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://virtnumbers.com/" />
-        <meta property="og:title" content="Buy Virtual Numbers, Canva Pro & Netflix Premium | VirtNumbers" />
-        <meta property="og:description" content="Premium Virtual Numbers for Telegram & WhatsApp ✓ Canva Pro & Netflix Premium ✓ Instagram, Gmail & LinkedIn Services ✓ Best Prices ✓ Instant Delivery ✓ 24/7 Support" />
+        <meta property="og:title" content="Virtual Numbers & Digital Services | VirtNumbers" />
+        <meta property="og:description" content="Get premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, 24/7 support." />
         <meta property="og:image" content="/logo.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://virtnumbers.com/" />
-        <meta property="twitter:title" content="Buy Virtual Numbers, Canva Pro & Netflix Premium | VirtNumbers" />
-        <meta property="twitter:description" content="Premium Virtual Numbers for Telegram & WhatsApp ✓ Canva Pro & Netflix Premium ✓ Instagram, Gmail & LinkedIn Services ✓ Best Prices ✓ Instant Delivery ✓ 24/7 Support" />
+        <meta property="twitter:title" content="Virtual Numbers & Digital Services | VirtNumbers" />
+        <meta property="twitter:description" content="Get premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, 24/7 support." />
         <meta property="twitter:image" content="/logo.png" />
       </Helmet>
       <Box sx={{
@@ -383,12 +369,12 @@ function LandingPage() {
               >
                 Premium Virtual Numbers for All Your Needs. Fast Delivery, 24/7 Support, and Secure Payment Options.
               </Typography>
-              <Box sx={{ display: 'flex', justifyContent: 'center',flexWrap:'wrap', gap: 2, mb: 4 }}>
+              <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2, mb: 4 }}>
                 <Button
-                  className='buy-button'
+                  component={Link}
+                  to="/buy"
                   variant="contained"
                   size="large"
-                  onClick={() => navigate('/buy')}
                   sx={{
                     py: 2,
                     px: 6,
@@ -403,28 +389,48 @@ function LandingPage() {
                     }
                   }}
                 >
-                  Buy Virtual Number
+                  Buy Virtual Numbers Now
                 </Button>
-                {/* <Button
-                  className='buy-button'
+                <Button
+                  component={Link}
+                  to="/faq"
                   variant="outlined"
                   size="large"
-                  onClick={() => navigate('/recent-payments')}
                   sx={{
                     py: 2,
                     px: 6,
                     fontSize: '1.2rem',
                     borderRadius: '30px',
-                    borderColor: 'primary.main',
-                    color: 'primary.main',
+                    borderColor: 'rgba(255,255,255,0.5)',
+                    color: 'white',
                     '&:hover': {
-                      background: 'primary.light',
-                      borderColor: 'primary.dark',
+                      borderColor: 'white',
+                      backgroundColor: 'rgba(255,255,255,0.1)',
                     }
                   }}
                 >
-                  See Recent Payments
-                </Button> */}
+                  View FAQ
+                </Button>
+                <Button
+                  component={Link}
+                  to="/about"
+                  variant="outlined"
+                  size="large"
+                  sx={{
+                    py: 2,
+                    px: 6,
+                    fontSize: '1.2rem',
+                    borderRadius: '30px',
+                    borderColor: 'rgba(255,255,255,0.5)',
+                    color: 'white',
+                    '&:hover': {
+                      borderColor: 'white',
+                      backgroundColor: 'rgba(255,255,255,0.1)',
+                    }
+                  }}
+                >
+                  About Us
+                </Button>
               </Box>
             </Box>
           </motion.div>
@@ -600,6 +606,104 @@ function LandingPage() {
             </Box>
           </motion.div>
 
+          {/* Services Overview Section */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={staggerContainer}
+          >
+            <Typography
+              variant="h2"
+              sx={{
+                textAlign: 'center',
+                mb: { xs: 6, md: 8 },
+                color: 'white',
+                fontSize: { xs: '2rem', md: '2.5rem' },
+                textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+              }}
+            >
+              Our Premium Services
+            </Typography>
+            <Box sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' },
+              gap: { xs: 4, md: 6 },
+              mb: { xs: 8, md: 12 }
+            }}>
+              <motion.div variants={fadeInUp} style={{ flex: 1 }}>
+                <Paper
+                  elevation={0}
+                  sx={{
+                    p: { xs: 3, md: 4 },
+                    height: '100%',
+                    minHeight: { xs: 'auto', md: '300px' },
+                    borderRadius: 3,
+                    background: 'rgba(255, 255, 255, 0.9)',
+                    backdropFilter: 'blur(10px)',
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      transform: 'translateY(-5px)',
+                      boxShadow: '0 12px 40px rgba(0,0,0,0.15)'
+                    }
+                  }}
+                >
+                  <Typography variant="h4" sx={{ mb: 3, color: '#667eea', fontSize: '1.5rem' }}>Virtual Numbers</Typography>
+                  <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
+                    Get premium virtual numbers for WhatsApp and Telegram verification. Our numbers are tested and guaranteed to work with all major platforms.
+                  </Typography>
+                  <Button
+                    component={Link}
+                    to="/buy"
+                    variant="contained"
+                    sx={{
+                      backgroundColor: '#667eea',
+                      '&:hover': { backgroundColor: '#5a67d8' }
+                    }}
+                  >
+                    Get Virtual Numbers
+                  </Button>
+                </Paper>
+              </motion.div>
+              <motion.div variants={fadeInUp} style={{ flex: 1 }}>
+                <Paper
+                  elevation={0}
+                  sx={{
+                    p: { xs: 3, md: 4 },
+                    height: '100%',
+                    minHeight: { xs: 'auto', md: '300px' },
+                    borderRadius: 3,
+                    background: 'rgba(255, 255, 255, 0.9)',
+                    backdropFilter: 'blur(10px)',
+                    boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      transform: 'translateY(-5px)',
+                      boxShadow: '0 12px 40px rgba(0,0,0,0.15)'
+                    }
+                  }}
+                >
+                  <Typography variant="h4" sx={{ mb: 3, color: '#667eea', fontSize: '1.5rem' }}>Digital Services</Typography>
+                  <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
+                    Access premium accounts including Canva Pro and Netflix Premium. All accounts come with instant delivery and full support.
+                  </Typography>
+                  <Button
+                    component={Link}
+                    to="/buy"
+                    variant="contained"
+                    sx={{
+                      backgroundColor: '#667eea',
+                      '&:hover': { backgroundColor: '#5a67d8' }
+                    }}
+                  >
+                    View Digital Services
+                  </Button>
+                </Paper>
+              </motion.div>
+            </Box>
+          </motion.div>
+
           {/* FAQ Section */}
           <motion.div
             initial="hidden"
@@ -694,6 +798,98 @@ function LandingPage() {
             <AdSense adSlot="8540561265" adFormat="auto" />
           </motion.div>
 
+          {/* Additional Content Section */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={staggerContainer}
+          >
+            <Box sx={{
+              p: { xs: 3, md: 6 },
+              background: 'rgba(255, 255, 255, 0.95)',
+              backdropFilter: 'blur(10px)',
+              borderRadius: 3,
+              boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+              mb: { xs: 6, md: 8 }
+            }}>
+              <Typography
+                variant="h3"
+                sx={{
+                  mb: 4,
+                  color: '#667eea',
+                  fontSize: { xs: '1.75rem', md: '2.25rem' },
+                  textAlign: 'center'
+                }}
+              >
+                Why Choose VirtNumbers?
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  mb: 4,
+                  lineHeight: 1.8,
+                  fontSize: { xs: '1rem', md: '1.1rem' },
+                  textAlign: 'center'
+                }}
+              >
+                We provide the most reliable virtual number services with instant delivery, 24/7 customer support, and secure payment options. Our numbers are tested and guaranteed to work with WhatsApp, Telegram, Instagram, and other platforms.
+              </Typography>
+              <Box sx={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: 2,
+                justifyContent: 'center'
+              }}>
+                <Button
+                  component={Link}
+                  to="/contact"
+                  variant="outlined"
+                  sx={{
+                    borderColor: '#667eea',
+                    color: '#667eea',
+                    '&:hover': {
+                      borderColor: '#5a67d8',
+                      backgroundColor: 'rgba(102, 126, 234, 0.1)'
+                    }
+                  }}
+                >
+                  Contact Support
+                </Button>
+                <Button
+                  component={Link}
+                  to="/terms"
+                  variant="outlined"
+                  sx={{
+                    borderColor: '#667eea',
+                    color: '#667eea',
+                    '&:hover': {
+                      borderColor: '#5a67d8',
+                      backgroundColor: 'rgba(102, 126, 234, 0.1)'
+                    }
+                  }}
+                >
+                  Terms of Service
+                </Button>
+                <Button
+                  component={Link}
+                  to="/privacy-policy"
+                  variant="outlined"
+                  sx={{
+                    borderColor: '#667eea',
+                    color: '#667eea',
+                    '&:hover': {
+                      borderColor: '#5a67d8',
+                      backgroundColor: 'rgba(102, 126, 234, 0.1)'
+                    }
+                  }}
+                >
+                  Privacy Policy
+                </Button>
+              </Box>
+            </Box>
+          </motion.div>
+
           {/* CTA Section */}
           <motion.div
             initial="hidden"
@@ -714,34 +910,72 @@ function LandingPage() {
                   textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
                 }}
               >
-                Ready to Join VirtNum Pro?
+                Ready to Get Started?
               </Typography>
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              <Typography
+                variant="h5"
+                sx={{
+                  mb: 4,
+                  color: 'rgba(255,255,255,0.9)',
+                  fontSize: { xs: '1rem', md: '1.25rem' }
+                }}
               >
+                Join thousands of satisfied customers who trust VirtNumbers for their virtual number needs
+              </Typography>
+              <Box sx={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: 2,
+                justifyContent: 'center'
+              }}>
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
+                  <Button
+                    component={Link}
+                    to="/buy"
+                    variant="contained"
+                    size="large"
+                    sx={{
+                      py: 2,
+                      px: 6,
+                      fontSize: '1.2rem',
+                      borderRadius: '30px',
+                      background: 'linear-gradient(45deg, #2563EB 30%, #EC4899 90%)',
+                      boxShadow: '0 4px 12px rgba(37, 99, 235, 0.2)',
+                      '&:hover': {
+                        background: 'linear-gradient(45deg, #1E40AF 30%, #BE185D 90%)',
+                        boxShadow: '0 6px 16px rgba(37, 99, 235, 0.3)',
+                        transform: 'translateY(-2px)',
+                      }
+                    }}
+                  >
+                    Buy Virtual Numbers Now
+                  </Button>
+                </motion.div>
                 <Button
-                  variant="contained"
+                  component={Link}
+                  to="/faq"
+                  variant="outlined"
                   size="large"
-                  onClick={() => navigate('/buy')}
                   sx={{
                     py: 2,
                     px: 6,
                     fontSize: '1.2rem',
                     borderRadius: '30px',
-                    background: 'linear-gradient(45deg, #2563EB 30%, #EC4899 90%)',
-                    boxShadow: '0 4px 12px rgba(37, 99, 235, 0.2)',
+                    borderColor: 'rgba(255,255,255,0.5)',
+                    color: 'white',
                     '&:hover': {
-                      background: 'linear-gradient(45deg, #1E40AF 30%, #BE185D 90%)',
-                      boxShadow: '0 6px 16px rgba(37, 99, 235, 0.3)',
-                      transform: 'translateY(-2px)',
+                      borderColor: 'white',
+                      backgroundColor: 'rgba(255,255,255,0.1)',
                     }
                   }}
                 >
-                  Get Your Virtual Number
+                  Learn More
                 </Button>
-              </motion.div>
+              </Box>
             </Box>
           </motion.div>
         </Container>

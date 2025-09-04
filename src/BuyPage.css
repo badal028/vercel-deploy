@@ -32,10 +32,47 @@
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
+.buy-header h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
 .buy-subtitle {
   font-size: 1.2rem;
   opacity: 0.9;
   font-weight: 300;
+}
+
+/* Navigation Links */
+.buy-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.buy-nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.buy-nav-link:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: white;
+  transform: translateY(-2px);
+  color: white;
+  text-decoration: none;
 }
 
 .buy-main-content {
@@ -46,13 +83,36 @@
   margin-bottom: 30px;
 }
 
+/* Services Section */
+.buy-services-section {
+  padding: 30px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.buy-services-section h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.buy-services-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .buy-services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 20px;
-  padding: 30px;
-  background: #f8f9fa;
-  border-bottom: 1px solid #eee;
 }
 
 .buy-service-item {
@@ -95,12 +155,23 @@
   border-bottom: 1px solid #eee;
 }
 
-.buy-options-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 20px;
+.buy-options-section h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
   color: #333;
   text-align: center;
+}
+
+.buy-options-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .buy-options-grid {
@@ -223,12 +294,23 @@
   margin-bottom: 30px;
 }
 
-.buy-features-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 20px;
+.buy-features-list h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
   color: #333;
   text-align: center;
+}
+
+.buy-features-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .buy-features-grid {
@@ -253,6 +335,25 @@
 .buy-payment-methods {
   display: grid;
   gap: 15px;
+}
+
+.buy-payment-methods h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.buy-payment-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .buy-payment-btn {
@@ -303,9 +404,9 @@
   text-align: center;
 }
 
-.buy-payment-section h3 {
+.buy-payment-section h4 {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 15px;
   color: #333;
 }
@@ -379,18 +480,42 @@
 }
 
 .buy-trust-indicators {
+  margin-top: 30px;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.buy-trust-indicators h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.buy-trust-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buy-trust-grid {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-top: 30px;
-  padding: 20px;
-  background: #f8f9fa;
-  border-radius: 10px;
+  flex-wrap: wrap;
 }
 
 .buy-trust-item {
   text-align: center;
   color: #666;
+  min-width: 120px;
 }
 
 .buy-trust-number {
@@ -398,6 +523,60 @@
   font-weight: 700;
   color: #667eea;
   display: block;
+}
+
+/* Related Services Section */
+.buy-related-services {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.buy-related-services h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.buy-related-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buy-related-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.buy-related-link {
+  color: #667eea;
+  text-decoration: none;
+  padding: 12px 24px;
+  border: 2px solid #667eea;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.buy-related-link:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  text-decoration: none;
 }
 
 .buy-support-section {
@@ -408,9 +587,9 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.buy-support-title {
-  font-size: 1.3rem;
-  font-weight: 600;
+.buy-support-section h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
   margin-bottom: 15px;
   color: #333;
 }
@@ -418,6 +597,11 @@
 .buy-support-text {
   color: #666;
   margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .buy-support-btn {
@@ -439,6 +623,19 @@
 @media (max-width: 768px) {
   .buy-header h1 {
     font-size: 2rem;
+  }
+  
+  .buy-header h2 {
+    font-size: 1.4rem;
+  }
+  
+  .buy-navigation {
+    gap: 10px;
+  }
+  
+  .buy-nav-link {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
   
   .buy-services-grid {
@@ -463,8 +660,18 @@
     padding: 20px;
   }
   
-  .buy-trust-indicators {
+  .buy-trust-grid {
     flex-direction: column;
     gap: 15px;
+  }
+  
+  .buy-related-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .buy-related-link {
+    width: 100%;
+    text-align: center;
   }
 }

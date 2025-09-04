@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './BuyPage.css';
 
@@ -131,34 +132,72 @@ export default function BuyPage() {
   return (
     <>
       <Helmet>
-        <title>VirtNum Pro Services - Premium Virtual Numbers</title>
-        <meta name="description" content="Get Premium Virtual Numbers with Instant Delivery. Telegram, WhatsApp, Instagram, Gmail, LinkedIn, Canva & Netflix services available." />
+        <title>Buy Virtual Numbers & Digital Services | Premium WhatsApp, Telegram, Instagram | VirtNumbers</title>
+        <meta name="description" content="Buy premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, secure payments, 24/7 support." />
+        <meta name="keywords" content="buy virtual numbers, WhatsApp verification, Telegram numbers, Instagram accounts, Canva Pro, Netflix Premium, digital services, instant delivery" />
+        <link rel="canonical" href="https://virtnumbers.com/buy" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://virtnumbers.com/buy" />
+        <meta property="og:title" content="Buy Virtual Numbers & Digital Services | Premium WhatsApp, Telegram, Instagram | VirtNumbers" />
+        <meta property="og:description" content="Buy premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, secure payments, 24/7 support." />
+        <meta property="og:image" content="/logo.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://virtnumbers.com/buy" />
+        <meta property="twitter:title" content="Buy Virtual Numbers & Digital Services | Premium WhatsApp, Telegram, Instagram | VirtNumbers" />
+        <meta property="twitter:description" content="Buy premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, secure payments, 24/7 support." />
+        <meta property="twitter:image" content="/logo.png" />
       </Helmet>
 
       <div className="buy-page">
         <div className="buy-container">
           <div className="buy-header">
-            <h1>VirtNum Pro Services</h1>
-            <p className="buy-subtitle">Get Premium Virtual Numbers with Instant Delivery</p>
+            <h1>Buy Virtual Numbers & Digital Services</h1>
+            <h2>Premium WhatsApp, Telegram, Instagram Verification</h2>
+            <p className="buy-subtitle">Get Premium Virtual Numbers with Instant Delivery and Secure Payments</p>
+          </div>
+
+          {/* Internal Navigation Links */}
+          <div className="buy-navigation">
+            <Link to="/faq" className="buy-nav-link">View FAQ</Link>
+            <Link to="/contact" className="buy-nav-link">Contact Support</Link>
+            <Link to="/about" className="buy-nav-link">About Us</Link>
+            <Link to="/terms" className="buy-nav-link">Terms of Service</Link>
           </div>
 
           <div className="buy-main-content">
-            <div className="buy-services-grid">
-              {serviceOptions.map((service) => (
-                <div
-                  key={service.id}
-                  className={`buy-service-item ${selectedService === service.id ? 'active' : ''}`}
-                  onClick={() => handleServiceSelect(service.id)}
-                >
-                  <div className="buy-service-icon">{service.icon}</div>
-                  <div className="buy-service-name">{service.name}</div>
-                </div>
-              ))}
+            <div className="buy-services-section">
+              <h3>Choose Your Service</h3>
+              <p className="buy-services-description">
+                Select from our premium virtual number services. All services include instant delivery, 
+                24/7 support, and money-back guarantee. Perfect for WhatsApp verification, Telegram accounts, 
+                Instagram verification, and digital services.
+              </p>
+              
+              <div className="buy-services-grid">
+                {serviceOptions.map((service) => (
+                  <div
+                    key={service.id}
+                    className={`buy-service-item ${selectedService === service.id ? 'active' : ''}`}
+                    onClick={() => handleServiceSelect(service.id)}
+                  >
+                    <div className="buy-service-icon">{service.icon}</div>
+                    <div className="buy-service-name">{service.name}</div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {getCurrentOptions().length > 1 && (
               <div className="buy-options-section">
-                <div className="buy-options-title">Select Option</div>
+                <h4>Select Your Option</h4>
+                <p className="buy-options-description">
+                  Choose the specific option that best fits your needs. Each option includes different 
+                  features and pricing to suit various requirements.
+                </p>
                 <div className="buy-options-grid">
                   {getCurrentOptions().map((option) => (
                     <div
@@ -182,9 +221,9 @@ export default function BuyPage() {
 
             <div className="buy-purchase-section">
               <div className="buy-product-card">
-                <div className="buy-product-title">
+                <h4 className="buy-product-title">
                   {selectedOption?.name} - {getCurrentService()?.name}
-                </div>
+                </h4>
                 <div className="buy-product-price">
                   ₹{selectedOption?.price} <span className="buy-product-currency">INR</span>
                 </div>
@@ -195,7 +234,11 @@ export default function BuyPage() {
               </div>
 
               <div className="buy-features-list">
-                <div className="buy-features-title">What's Included</div>
+                <h4>What's Included</h4>
+                <p className="buy-features-description">
+                  Every purchase includes comprehensive features to ensure you get the best value 
+                  and support for your virtual number needs.
+                </p>
                 <div className="buy-features-grid">
                   <div className="buy-feature-item">Instant delivery within 5 minutes</div>
                   <div className="buy-feature-item">High-quality premium numbers</div>
@@ -208,6 +251,12 @@ export default function BuyPage() {
 
               {!showQR ? (
                 <div className="buy-payment-methods">
+                  <h4>Choose Payment Method</h4>
+                  <p className="buy-payment-description">
+                    Select your preferred payment method. All payments are secure and processed 
+                    instantly to ensure quick delivery of your virtual numbers.
+                  </p>
+                  
                   <button 
                     className="buy-payment-btn buy-upi-btn" 
                     onClick={() => handlePaymentMethodSelect('upi')}
@@ -236,7 +285,11 @@ export default function BuyPage() {
                 <div className="buy-payment-details">
                   {selectedPaymentMethod === 'upi' && (
                     <div className="buy-payment-section">
-                      <h3>Pay ₹{selectedOption?.price} via UPI</h3>
+                      <h4>Pay ₹{selectedOption?.price} via UPI</h4>
+                      <p className="buy-payment-note">
+                        Scan the QR code below to make instant payment via UPI. 
+                        Your virtual number will be delivered immediately after payment confirmation.
+                      </p>
                       <div className="buy-qr-container">
                         <img
                           src="https://wertrends.s3.eu-north-1.amazonaws.com/photo_6269573399781164029_y.jpg"
@@ -249,8 +302,12 @@ export default function BuyPage() {
 
                   {selectedPaymentMethod === 'paypal' && (
                     <div className="buy-payment-section">
-                      <h3>Pay ${convertToUSD(selectedOption?.price || 0, true)} via PayPal</h3>
+                      <h4>Pay ${convertToUSD(selectedOption?.price || 0, true)} via PayPal</h4>
                       <p className="buy-payment-note">(Includes $1 processing fee)</p>
+                      <p className="buy-payment-description">
+                        Click the button below to open PayPal and complete your payment securely. 
+                        International payments are processed instantly.
+                      </p>
                       <button 
                         className="buy-payment-btn buy-paypal-btn"
                         onClick={() => window.open('https://paypal.me/BadalPrajapati?country.x=IN&locale.x=en_GB', '_blank')}
@@ -263,7 +320,7 @@ export default function BuyPage() {
 
                   {selectedPaymentMethod === 'crypto' && (
                     <div className="buy-payment-section">
-                      <h3>Pay via Crypto</h3>
+                      <h4>Pay via Cryptocurrency</h4>
                       <p className="buy-payment-note">
                         Amount: ₹{selectedOption?.price} (≈ ${convertToUSD(selectedOption?.price || 0, true)})
                       </p>
@@ -313,25 +370,50 @@ export default function BuyPage() {
               )}
 
               <div className="buy-trust-indicators">
-                <div className="buy-trust-item">
-                  <span className="buy-trust-number">50,000+</span>
-                  <div>Happy Customers</div>
-                </div>
-                <div className="buy-trust-item">
-                  <span className="buy-trust-number">99.9%</span>
-                  <div>Success Rate</div>
-                </div>
-                <div className="buy-trust-item">
-                  <span className="buy-trust-number">24/7</span>
-                  <div>Support Available</div>
+                <h4>Why Choose VirtNumbers?</h4>
+                <p className="buy-trust-description">
+                  Join thousands of satisfied customers who trust us for their virtual number needs. 
+                  Our commitment to quality and customer satisfaction sets us apart.
+                </p>
+                <div className="buy-trust-grid">
+                  <div className="buy-trust-item">
+                    <span className="buy-trust-number">50,000+</span>
+                    <div>Happy Customers</div>
+                  </div>
+                  <div className="buy-trust-item">
+                    <span className="buy-trust-number">99.9%</span>
+                    <div>Success Rate</div>
+                  </div>
+                  <div className="buy-trust-item">
+                    <span className="buy-trust-number">24/7</span>
+                    <div>Support Available</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
+          {/* Related Services Section */}
+          <div className="buy-related-services">
+            <h3>Explore Our Services</h3>
+            <p className="buy-related-description">
+              Discover our complete range of virtual number and digital services. 
+              Each service is designed to meet specific verification and digital needs.
+            </p>
+            <div className="buy-related-grid">
+              <Link to="/faq" className="buy-related-link">Frequently Asked Questions</Link>
+              <Link to="/contact" className="buy-related-link">Contact Support Team</Link>
+              <Link to="/about" className="buy-related-link">Learn About VirtNumbers</Link>
+              <Link to="/terms" className="buy-related-link">Terms of Service</Link>
+            </div>
+          </div>
+
           <div className="buy-support-section">
-            <div className="buy-support-title">Need Help? We're Here for You!</div>
-            <p className="buy-support-text">Having trouble with payment or have questions about our service? Our support team is ready to assist you.</p>
+            <h3>Need Help? We're Here for You!</h3>
+            <p className="buy-support-text">
+              Having trouble with payment or have questions about our service? Our support team is ready to assist you 
+              with any questions about virtual numbers, payment methods, or service delivery.
+            </p>
             <button 
               className="buy-support-btn" 
               onClick={() => window.open('https://wa.me/918154994406?text=I%20need%20help%20with%20payment', '_blank')}

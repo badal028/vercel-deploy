@@ -1,5 +1,7 @@
-import { Box, Typography, Container, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { Box, Typography, Container, Accordion, AccordionSummary, AccordionDetails, Button } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import AdSense from './AdSense';
 
 export default function FAQ() {
@@ -35,138 +37,372 @@ export default function FAQ() {
     {
       question: "Can I use these numbers for business purposes?",
       answer: "Yes, many of our customers use virtual numbers for business communications, customer support, and marketing purposes. They provide a professional way to maintain communication without revealing your personal number."
+    },
+    {
+      question: "What services do you offer besides virtual numbers?",
+      answer: "We offer a comprehensive range of digital services including Canva Pro accounts, Netflix Premium subscriptions, Instagram verification, Gmail accounts, and LinkedIn services. All our services come with instant delivery and 24/7 support."
+    },
+    {
+      question: "How secure is your payment system?",
+      answer: "Our payment system uses industry-standard encryption and security protocols. We never store your payment information, and all transactions are processed through secure payment gateways. Your privacy and security are our top priorities."
     }
   ];
 
   return (
-    <Box sx={{
-      minHeight: '100vh',
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      py: { xs: 3, md: 6 },
-      position: 'relative'
-    }}>
-      <Container maxWidth="lg" sx={{ px: { xs: 2, md: 3 } }}>
-        <Typography 
-          variant="h2" 
-          sx={{ 
-            mb: { xs: 2, md: 4 }, 
-            textAlign: 'center', 
-            fontWeight: 700, 
-            color: 'white',
-            fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
-            textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
-          }}
-        >
-          Frequently Asked Questions
-        </Typography>
+    <>
+      <Helmet>
+        <title>FAQ - Virtual Numbers & Digital Services | VirtNumbers</title>
+        <meta name="description" content="Get answers to frequently asked questions about virtual numbers, WhatsApp verification, Telegram numbers, Canva Pro, Netflix Premium, and our digital services. 24/7 support available." />
+        <meta name="keywords" content="virtual numbers FAQ, WhatsApp verification questions, Telegram number help, Canva Pro support, Netflix Premium FAQ, digital services questions" />
+        <link rel="canonical" href="https://virtnumbers.com/faq" />
         
-        <Typography 
-          variant="h5" 
-          sx={{ 
-            mb: { xs: 3, md: 6 }, 
-            textAlign: 'center', 
-            color: 'rgba(255,255,255,0.9)',
-            fontSize: { xs: '1rem', sm: '1.25rem' }
-          }}
-        >
-          Find answers to common questions about our virtual number services
-        </Typography>
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://virtnumbers.com/faq" />
+        <meta property="og:title" content="FAQ - Virtual Numbers & Digital Services | VirtNumbers" />
+        <meta property="og:description" content="Get answers to frequently asked questions about virtual numbers, WhatsApp verification, Telegram numbers, Canva Pro, Netflix Premium, and our digital services." />
+        <meta property="og:image" content="/logo.png" />
 
-        <Box sx={{ mb: { xs: 4, md: 6 } }}>
-          {faqs.map((faq, index) => (
-            <Accordion 
-              key={index}
-              sx={{ 
-                mb: 2,
-                background: 'rgba(255, 255, 255, 0.95)',
-                backdropFilter: 'blur(10px)',
-                borderRadius: 3,
-                boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
-                '&:before': { display: 'none' },
-                '&.Mui-expanded': {
-                  margin: '16px 0'
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://virtnumbers.com/faq" />
+        <meta property="twitter:title" content="FAQ - Virtual Numbers & Digital Services | VirtNumbers" />
+        <meta property="twitter:description" content="Get answers to frequently asked questions about virtual numbers, WhatsApp verification, Telegram numbers, Canva Pro, Netflix Premium, and our digital services." />
+        <meta property="twitter:image" content="/logo.png" />
+      </Helmet>
+
+      <Box sx={{
+        minHeight: '100vh',
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        py: { xs: 3, md: 6 },
+        position: 'relative'
+      }}>
+        <Container maxWidth="lg" sx={{ px: { xs: 2, md: 3 } }}>
+          {/* Main H1 Heading */}
+          <Typography 
+            variant="h1" 
+            sx={{ 
+              mb: { xs: 2, md: 4 }, 
+              textAlign: 'center', 
+              fontWeight: 700, 
+              color: 'white',
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+            }}
+          >
+            Frequently Asked Questions
+          </Typography>
+          
+          <Typography 
+            variant="h2" 
+            sx={{ 
+              mb: { xs: 3, md: 6 }, 
+              textAlign: 'center', 
+              color: 'rgba(255,255,255,0.9)',
+              fontSize: { xs: '1rem', sm: '1.25rem' },
+              fontWeight: 400
+            }}
+          >
+            Find answers to common questions about our virtual number services and digital solutions
+          </Typography>
+
+          {/* Internal Navigation Links */}
+          <Box sx={{ 
+            mb: { xs: 4, md: 6 },
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: 2,
+            justifyContent: 'center'
+          }}>
+            <Button
+              component={Link}
+              to="/buy"
+              variant="outlined"
+              sx={{
+                color: 'white',
+                borderColor: 'rgba(255,255,255,0.5)',
+                '&:hover': {
+                  borderColor: 'white',
+                  backgroundColor: 'rgba(255,255,255,0.1)'
                 }
               }}
             >
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon sx={{ color: '#667eea' }} />}
-                sx={{
-                  '& .MuiAccordionSummary-content': {
+              Buy Virtual Numbers
+            </Button>
+            <Button
+              component={Link}
+              to="/about"
+              variant="outlined"
+              sx={{
+                color: 'white',
+                borderColor: 'rgba(255,255,255,0.5)',
+                '&:hover': {
+                  borderColor: 'white',
+                  backgroundColor: 'rgba(255,255,255,0.1)'
+                }
+              }}
+            >
+              About Our Services
+            </Button>
+            <Button
+              component={Link}
+              to="/contact"
+              variant="outlined"
+              sx={{
+                color: 'white',
+                borderColor: 'rgba(255,255,255,0.5)',
+                '&:hover': {
+                  borderColor: 'white',
+                  backgroundColor: 'rgba(255,255,255,0.1)'
+                }
+              }}
+            >
+              Contact Support
+            </Button>
+          </Box>
+
+          {/* FAQ Categories */}
+          <Box sx={{ mb: { xs: 4, md: 6 } }}>
+            <Typography 
+              variant="h3" 
+              sx={{ 
+                mb: 3,
+                color: 'white',
+                fontSize: { xs: '1.5rem', md: '2rem' },
+                textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+              }}
+            >
+              Virtual Number Services
+            </Typography>
+            
+            {faqs.slice(0, 5).map((faq, index) => (
+              <Accordion 
+                key={index}
+                sx={{ 
+                  mb: 2,
+                  background: 'rgba(255, 255, 255, 0.95)',
+                  backdropFilter: 'blur(10px)',
+                  borderRadius: 3,
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+                  '&:before': { display: 'none' },
+                  '&.Mui-expanded': {
                     margin: '16px 0'
                   }
                 }}
               >
-                <Typography 
-                  variant="h6" 
-                  sx={{ 
-                    fontWeight: 600,
-                    color: '#667eea',
-                    fontSize: { xs: '1rem', md: '1.1rem' }
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon sx={{ color: '#667eea' }} />}
+                  sx={{
+                    '& .MuiAccordionSummary-content': {
+                      margin: '16px 0'
+                    }
                   }}
                 >
-                  {faq.question}
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography 
-                  variant="body1" 
-                  sx={{ 
-                    lineHeight: 1.7,
-                    fontSize: { xs: '0.9rem', md: '1rem' }
-                  }}
-                >
-                  {faq.answer}
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          ))}
-        </Box>
+                  <Typography 
+                    variant="h4" 
+                    sx={{ 
+                      fontWeight: 600,
+                      color: '#667eea',
+                      fontSize: { xs: '1rem', md: '1.1rem' }
+                    }}
+                  >
+                    {faq.question}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography 
+                    variant="body1" 
+                    sx={{ 
+                      lineHeight: 1.7,
+                      fontSize: { xs: '0.9rem', md: '1rem' }
+                    }}
+                  >
+                    {faq.answer}
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            ))}
+          </Box>
 
-        <Box sx={{ 
-          mt: { xs: 4, md: 6 }, 
-          textAlign: 'center', 
-          p: { xs: 2, md: 4 }, 
-          background: 'rgba(255, 255, 255, 0.95)',
-          backdropFilter: 'blur(10px)',
-          borderRadius: 3,
-          boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
-        }}>
-          <Typography 
-            variant="h5" 
-            sx={{ 
-              mb: { xs: 1, md: 2 },
-              fontSize: { xs: '1.25rem', sm: '1.5rem' },
-              color: '#667eea'
-            }}
-          >
-            Still have questions?
-          </Typography>
-          <Typography 
-            variant="body1" 
-            sx={{ 
-              mb: { xs: 2, md: 3 },
-              fontSize: { xs: '0.9rem', md: '1rem' }
-            }}
-          >
-            Our 24/7 support team is here to help you with any questions about virtual numbers or our services.
-          </Typography>
-          <Typography 
-            variant="body1" 
-            sx={{ 
-              fontWeight: 600,
-              fontSize: { xs: '0.9rem', md: '1rem' },
-              color: '#667eea'
-            }}
-          >
-            Contact us on WhatsApp for instant support!
-          </Typography>
-        </Box>
-        
-        {/* Ad Section */}
-        <Box sx={{ mt: 6 }}>
-          <AdSense adSlot="2841512028" adFormat="auto" />
-        </Box>
-      </Container>
-    </Box>
+          <Box sx={{ mb: { xs: 4, md: 6 } }}>
+            <Typography 
+              variant="h3" 
+              sx={{ 
+                mb: 3,
+                color: 'white',
+                fontSize: { xs: '1.5rem', md: '2rem' },
+                textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+              }}
+            >
+              Payment & Support
+            </Typography>
+            
+            {faqs.slice(5).map((faq, index) => (
+              <Accordion 
+                key={index + 5}
+                sx={{ 
+                  mb: 2,
+                  background: 'rgba(255, 255, 255, 0.95)',
+                  backdropFilter: 'blur(10px)',
+                  borderRadius: 3,
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+                  '&:before': { display: 'none' },
+                  '&.Mui-expanded': {
+                    margin: '16px 0'
+                  }
+                }}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon sx={{ color: '#667eea' }} />}
+                  sx={{
+                    '& .MuiAccordionSummary-content': {
+                      margin: '16px 0'
+                    }
+                  }}
+                >
+                  <Typography 
+                    variant="h4" 
+                    sx={{ 
+                      fontWeight: 600,
+                      color: '#667eea',
+                      fontSize: { xs: '1rem', md: '1.1rem' }
+                    }}
+                  >
+                    {faq.question}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography 
+                    variant="body1" 
+                    sx={{ 
+                      lineHeight: 1.7,
+                      fontSize: { xs: '0.9rem', md: '1rem' }
+                    }}
+                  >
+                    {faq.answer}
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            ))}
+          </Box>
+
+          {/* Related Services Section */}
+          <Box sx={{ 
+            mb: { xs: 4, md: 6 },
+            p: { xs: 2, md: 4 },
+            background: 'rgba(255, 255, 255, 0.95)',
+            backdropFilter: 'blur(10px)',
+            borderRadius: 3,
+            boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
+          }}>
+            <Typography 
+              variant="h3" 
+              sx={{ 
+                mb: 3,
+                fontSize: { xs: '1.5rem', md: '2rem' },
+                color: '#667eea',
+                textAlign: 'center'
+              }}
+            >
+              Explore Our Services
+            </Typography>
+            <Box sx={{ 
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: 2,
+              justifyContent: 'center'
+            }}>
+              <Button
+                component={Link}
+                to="/buy"
+                variant="contained"
+                sx={{
+                  backgroundColor: '#667eea',
+                  '&:hover': {
+                    backgroundColor: '#5a67d8'
+                  }
+                }}
+              >
+                Virtual Numbers
+              </Button>
+              <Button
+                component={Link}
+                to="/buy"
+                variant="contained"
+                sx={{
+                  backgroundColor: '#667eea',
+                  '&:hover': {
+                    backgroundColor: '#5a67d8'
+                  }
+                }}
+              >
+                Canva Pro
+              </Button>
+              <Button
+                component={Link}
+                to="/buy"
+                variant="contained"
+                sx={{
+                  backgroundColor: '#667eea',
+                  '&:hover': {
+                    backgroundColor: '#5a67d8'
+                  }
+                }}
+              >
+                Netflix Premium
+              </Button>
+            </Box>
+          </Box>
+
+          <Box sx={{ 
+            mt: { xs: 4, md: 6 }, 
+            textAlign: 'center', 
+            p: { xs: 2, md: 4 }, 
+            background: 'rgba(255, 255, 255, 0.95)',
+            backdropFilter: 'blur(10px)',
+            borderRadius: 3,
+            boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
+          }}>
+            <Typography 
+              variant="h4" 
+              sx={{ 
+                mb: { xs: 1, md: 2 },
+                fontSize: { xs: '1.25rem', sm: '1.5rem' },
+                color: '#667eea'
+              }}
+            >
+              Still have questions?
+            </Typography>
+            <Typography 
+              variant="body1" 
+              sx={{ 
+                mb: { xs: 2, md: 3 },
+                fontSize: { xs: '0.9rem', md: '1rem' }
+              }}
+            >
+              Our 24/7 support team is here to help you with any questions about virtual numbers or our services.
+            </Typography>
+            <Button
+              component={Link}
+              to="/contact"
+              variant="contained"
+              sx={{
+                backgroundColor: '#667eea',
+                '&:hover': {
+                  backgroundColor: '#5a67d8'
+                }
+              }}
+            >
+              Contact Support
+            </Button>
+          </Box>
+          
+          {/* Ad Section */}
+          <Box sx={{ mt: 6 }}>
+            <AdSense adSlot="2841512028" adFormat="auto" />
+          </Box>
+        </Container>
+      </Box>
+    </>
   );
 } 
