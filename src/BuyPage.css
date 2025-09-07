@@ -269,23 +269,6 @@
   margin-bottom: 10px;
 }
 
-.buy-offer-badge {
-  background: #ff6b6b;
-  color: white;
-  padding: 8px 20px;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin: 15px 0;
-  display: inline-block;
-  animation: buy-pulse 2s infinite;
-}
-
-@keyframes buy-pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
 
 .buy-features-list {
   background: #f8f9fa;
@@ -620,44 +603,271 @@
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
 }
 
-@media (max-width: 768px) {
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .buy-container {
+    padding: 15px;
+  }
+  
+  .buy-header {
+    padding: 30px 0;
+    margin-bottom: 30px;
+  }
+  
   .buy-header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   
   .buy-header h2 {
-    font-size: 1.4rem;
-  }
-  
-  .buy-navigation {
-    gap: 10px;
-  }
-  
-  .buy-nav-link {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+    font-size: 1.6rem;
   }
   
   .buy-services-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .buy-options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .buy-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .buy-trust-grid {
+    gap: 20px;
+  }
+  
+  .buy-related-grid {
+    gap: 15px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .buy-container {
+    padding: 10px;
+  }
+  
+  .buy-header {
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+  
+  .buy-header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  .buy-header h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .buy-subtitle {
+    font-size: 1rem;
+  }
+  
+  .buy-navigation {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .buy-nav-link {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .buy-main-content {
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .buy-services-section {
     padding: 20px;
   }
   
+  .buy-services-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  
+  .buy-services-description {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .buy-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
   .buy-service-item {
-    padding: 15px 5px;
+    padding: 15px 8px;
+  }
+  
+  .buy-service-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    margin-bottom: 8px;
   }
   
   .buy-service-name {
     font-size: 0.8rem;
   }
   
+  .buy-options-section {
+    padding: 20px;
+  }
+  
+  .buy-options-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  
+  .buy-options-description {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
   .buy-options-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .buy-option-item {
+    padding: 15px;
+  }
+  
+  .buy-option-name {
+    font-size: 1rem;
+  }
+  
+  .buy-option-price {
+    font-size: 1.2rem;
   }
   
   .buy-purchase-section {
     padding: 20px;
+  }
+  
+  .buy-product-card {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .buy-product-title {
+    font-size: 1.5rem;
+  }
+  
+  .buy-product-price {
+    font-size: 2.5rem;
+  }
+  
+  
+  .buy-features-list {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .buy-features-list h4 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  
+  .buy-features-description {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .buy-features-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .buy-feature-item {
+    font-size: 0.9rem;
+  }
+  
+  .buy-payment-methods h4 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  
+  .buy-payment-description {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .buy-payment-btn {
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+  
+  .buy-payment-icon {
+    margin-right: 8px;
+    font-size: 1.1rem;
+  }
+  
+  .buy-payment-details {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .buy-payment-section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  
+  .buy-payment-note {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+  }
+  
+  .buy-qr-container {
+    margin: 15px 0;
+  }
+  
+  .buy-qr-code {
+    max-width: 250px;
+  }
+  
+  .buy-crypto-alert {
+    padding: 12px;
+    font-size: 0.85rem;
+    margin: 15px 0;
+  }
+  
+  .buy-crypto-select {
+    padding: 10px;
+    font-size: 0.9rem;
+    margin: 15px 0;
+  }
+  
+  .buy-crypto-address {
+    margin: 15px 0;
+  }
+  
+  .buy-address-box {
+    padding: 12px;
+    font-size: 0.8rem;
+  }
+  
+  .buy-trust-indicators {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .buy-trust-indicators h4 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  
+  .buy-trust-description {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
   }
   
   .buy-trust-grid {
@@ -665,13 +875,179 @@
     gap: 15px;
   }
   
+  .buy-trust-item {
+    min-width: auto;
+  }
+  
+  .buy-trust-number {
+    font-size: 1.3rem;
+  }
+  
+  .buy-related-services {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .buy-related-services h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  
+  .buy-related-description {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
   .buy-related-grid {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
   }
   
   .buy-related-link {
     width: 100%;
     text-align: center;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .buy-support-section {
+    padding: 20px;
+  }
+  
+  .buy-support-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  
+  .buy-support-text {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .buy-support-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .buy-container {
+    padding: 8px;
+  }
+  
+  .buy-header {
+    padding: 15px 0;
+  }
+  
+  .buy-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .buy-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .buy-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .buy-navigation {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .buy-nav-link {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  .buy-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .buy-service-item {
+    padding: 12px 5px;
+  }
+  
+  .buy-service-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+  
+  .buy-service-name {
+    font-size: 0.75rem;
+  }
+  
+  .buy-options-section,
+  .buy-services-section,
+  .buy-features-list,
+  .buy-payment-details,
+  .buy-trust-indicators,
+  .buy-related-services,
+  .buy-support-section {
+    padding: 15px;
+  }
+  
+  .buy-purchase-section {
+    padding: 15px;
+  }
+  
+  .buy-product-card {
+    padding: 15px;
+  }
+  
+  .buy-product-title {
+    font-size: 1.3rem;
+  }
+  
+  .buy-product-price {
+    font-size: 2rem;
+  }
+  
+  .buy-payment-btn {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .buy-qr-code {
+    max-width: 200px;
+  }
+  
+  .buy-trust-number {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra Small Mobile Styles */
+@media (max-width: 360px) {
+  .buy-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .buy-header h2 {
+    font-size: 1.1rem;
+  }
+  
+  .buy-services-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .buy-service-item {
+    padding: 10px;
+  }
+  
+  .buy-product-price {
+    font-size: 1.8rem;
+  }
+  
+  .buy-payment-btn {
+    padding: 10px 12px;
+    font-size: 0.85rem;
   }
 }

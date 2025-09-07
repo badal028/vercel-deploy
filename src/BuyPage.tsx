@@ -14,8 +14,8 @@ interface ServiceOption {
 }
 
 const telegramOptions: ServiceOption[] = [
-  { id: 'fresh', name: 'Fresh Account', price: 350, oldPrice: 500 },
-  { id: '1year', name: '1 Year Old Account', price: 800, oldPrice: 1000 },
+  { id: 'fresh', name: 'Fresh Account', price: 500 },
+  { id: '1year', name: '1 Year Old Account', price: 1000 },
 ];
 
 const whatsappOptions: ServiceOption[] = [
@@ -230,7 +230,6 @@ export default function BuyPage() {
                 {selectedOption?.oldPrice && (
                   <div className="buy-product-old-price">₹{selectedOption.oldPrice}</div>
                 )}
-                <div className="buy-offer-badge">⚡ Limited Time Offer - Only 2 Days Left!</div>
               </div>
 
               <div className="buy-features-list">
