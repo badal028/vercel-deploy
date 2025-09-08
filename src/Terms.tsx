@@ -7,23 +7,23 @@ export default function Terms() {
   return (
     <>
       <Helmet>
-        <title>Terms of Service - Virtual Numbers & Digital Services | VirtNumbers</title>
-        <meta name="description" content="Read our terms of service for virtual numbers, WhatsApp verification, Telegram numbers, Canva Pro, Netflix Premium, and digital services. Clear policies on payments, delivery, and refunds." />
+        <title>Terms of Service - Virtual Numbers Policy | VirtNumbers</title>
+        <meta name="description" content="Read our terms of service for virtual numbers and digital services. Clear policies on payments, delivery, and refunds." />
         <meta name="keywords" content="terms of service, virtual numbers terms, WhatsApp verification policy, Telegram number terms, digital services agreement, payment terms, refund policy" />
         <link rel="canonical" href="https://virtnumbers.com/terms" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://virtnumbers.com/terms" />
-        <meta property="og:title" content="Terms of Service - Virtual Numbers & Digital Services | VirtNumbers" />
-        <meta property="og:description" content="Read our terms of service for virtual numbers, WhatsApp verification, Telegram numbers, Canva Pro, Netflix Premium, and digital services." />
+        <meta property="og:title" content="Terms of Service - Virtual Numbers Policy | VirtNumbers" />
+        <meta property="og:description" content="Read our terms of service for virtual numbers and digital services. Clear policies on payments, delivery, and refunds." />
         <meta property="og:image" content="/logo.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://virtnumbers.com/terms" />
-        <meta property="twitter:title" content="Terms of Service - Virtual Numbers & Digital Services | VirtNumbers" />
-        <meta property="twitter:description" content="Read our terms of service for virtual numbers, WhatsApp verification, Telegram numbers, Canva Pro, Netflix Premium, and digital services." />
+        <meta property="twitter:title" content="Terms of Service - Virtual Numbers Policy | VirtNumbers" />
+        <meta property="twitter:description" content="Read our terms of service for virtual numbers and digital services. Clear policies on payments, delivery, and refunds." />
         <meta property="twitter:image" content="/logo.png" />
       </Helmet>
 
@@ -59,7 +59,7 @@ export default function Terms() {
               fontWeight: 400
             }}
           >
-            Please read these terms carefully before using our virtual number and digital services
+            Please read these <strong>terms carefully</strong> before using our <strong>virtual number and digital services</strong>
           </Typography>
 
           {/* Internal Navigation Links */}
@@ -83,7 +83,7 @@ export default function Terms() {
                 }
               }}
             >
-              Buy Virtual Numbers
+              Purchase Virtual Numbers
             </Button>
             <Button
               component={Link}
@@ -98,7 +98,7 @@ export default function Terms() {
                 }
               }}
             >
-              Frequently Asked Questions
+              Browse FAQ Section
             </Button>
             <Button
               component={Link}
@@ -113,7 +113,7 @@ export default function Terms() {
                 }
               }}
             >
-              Contact Support
+              Get Customer Support
             </Button>
           </Box>
 
@@ -188,7 +188,7 @@ export default function Terms() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                By accessing and using VirtNumbers services, you accept and agree to be bound by the terms and provision of this agreement. 
+                By accessing and using <strong>VirtNumbers services</strong>, you accept and agree to be bound by the <strong>terms and provision of this agreement</strong>. 
                 If you do not agree to abide by the above, please do not use this service.
               </Typography>
             </Paper>
@@ -221,8 +221,8 @@ export default function Terms() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                VirtNumbers provides virtual phone numbers for various purposes including but not limited to WhatsApp verification, 
-                Telegram verification, social media account creation, and business communications. Our services are delivered digitally 
+                VirtNumbers provides <strong>virtual phone numbers</strong> for various purposes including but not limited to <strong>WhatsApp verification</strong>, 
+                <strong>Telegram verification</strong>, <strong>social media account creation</strong>, and <strong>business communications</strong>. Our services are <strong>delivered digitally</strong> 
                 and are subject to availability.
               </Typography>
               <Typography 
@@ -236,11 +236,11 @@ export default function Terms() {
                 Our Services Include:
               </Typography>
               <Box component="ul" sx={{ pl: { xs: 2, md: 3 } }}>
-                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>Virtual Numbers for WhatsApp Verification</Typography>
-                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>Telegram Number Services</Typography>
-                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>Canva Pro Accounts</Typography>
-                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>Netflix Premium Subscriptions</Typography>
-                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>Instagram Verification Services</Typography>
+                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}><strong>Virtual Numbers for WhatsApp Verification</strong></Typography>
+                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}><strong>Telegram Number Services</strong></Typography>
+                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}><strong>Canva Pro Accounts</strong></Typography>
+                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}><strong>Netflix Premium Subscriptions</strong></Typography>
+                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}><strong>Instagram Verification Services</strong></Typography>
               </Box>
             </Paper>
           </Box>
@@ -272,8 +272,8 @@ export default function Terms() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                All payments must be made in advance before service delivery. We accept various payment methods including UPI, 
-                digital wallets, and other secure payment options. Prices are subject to change without prior notice.
+                All payments must be made <strong>in advance before service delivery</strong>. We accept various <strong>payment methods</strong> including <strong>UPI</strong>, 
+                <strong>digital wallets</strong>, and other <strong>secure payment options</strong>. Prices are subject to change without prior notice.
               </Typography>
             </Paper>
           </Box>
@@ -305,9 +305,9 @@ export default function Terms() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                We strive to deliver virtual numbers within minutes of payment confirmation. However, delivery times may vary 
-                depending on service type and current demand. We are not responsible for delays caused by third-party services 
-                or technical issues beyond our control.
+                We strive to deliver <strong>virtual numbers within minutes</strong> of payment confirmation. However, <strong>delivery times may vary</strong> 
+                depending on <strong>service type and current demand</strong>. We are not responsible for delays caused by <strong>third-party services</strong> 
+                or <strong>technical issues beyond our control</strong>.
               </Typography>
             </Paper>
           </Box>
@@ -339,8 +339,8 @@ export default function Terms() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                We offer refunds only in cases where we are unable to deliver the service as promised. Once a virtual number 
-                has been delivered and is working, no refunds will be provided. Refund requests must be made within 24 hours 
+                We offer <strong>refunds only in cases where we are unable to deliver the service as promised</strong>. Once a <strong>virtual number 
+                has been delivered and is working</strong>, no refunds will be provided. <strong>Refund requests must be made within 24 hours</strong> 
                 of purchase.
               </Typography>
             </Paper>
@@ -373,9 +373,9 @@ export default function Terms() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                We are committed to protecting your privacy. Your personal information is collected, used, and protected 
-                in accordance with our Privacy Policy. We do not share your information with third parties without 
-                your explicit consent.
+                We are <strong>committed to protecting your privacy</strong>. Your <strong>personal information is collected, used, and protected</strong> 
+                in accordance with our <strong>Privacy Policy</strong>. We do not share your information with <strong>third parties without 
+                your explicit consent</strong>.
               </Typography>
               <Button
                 component={Link}
@@ -389,7 +389,7 @@ export default function Terms() {
                   }
                 }}
               >
-                Read Our Privacy Policy
+                Review Our Privacy Policy
               </Button>
             </Paper>
           </Box>
@@ -421,9 +421,9 @@ export default function Terms() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                VirtNumbers shall not be liable for any indirect, incidental, special, consequential, or punitive damages 
-                resulting from your use of our services. Our total liability shall not exceed the amount paid for the 
-                specific service in question.
+                VirtNumbers shall not be liable for any <strong>indirect, incidental, special, consequential, or punitive damages</strong> 
+                resulting from your use of our services. Our <strong>total liability shall not exceed the amount paid</strong> for the 
+                <strong>specific service in question</strong>.
               </Typography>
             </Paper>
           </Box>
@@ -521,7 +521,7 @@ export default function Terms() {
                 fontSize: { xs: '0.9rem', md: '1rem' }
               }}
             >
-              Contact our support team for clarification on any part of these terms of service.
+              Contact our <strong>support team</strong> for clarification on any part of these <strong>terms of service</strong>.
             </Typography>
             <Button
               component={Link}
@@ -534,7 +534,7 @@ export default function Terms() {
                 }
               }}
             >
-              Contact Support
+              Get Customer Support
             </Button>
           </Box>
           

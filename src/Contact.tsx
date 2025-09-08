@@ -11,23 +11,23 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Virtual Numbers & Digital Services | VirtNumbers</title>
-        <meta name="description" content="Get 24/7 support for virtual numbers, WhatsApp verification, Telegram numbers, and digital services. Contact our expert team via WhatsApp or email for instant assistance." />
+        <title>Contact Support - Virtual Numbers Help | VirtNumbers</title>
+        <meta name="description" content="Get 24/7 support for virtual numbers and digital services. Contact our expert team via WhatsApp or email for instant assistance." />
         <meta name="keywords" content="contact support, virtual numbers help, WhatsApp verification support, Telegram number assistance, digital services contact, 24/7 customer support" />
         <link rel="canonical" href="https://virtnumbers.com/contact" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://virtnumbers.com/contact" />
-        <meta property="og:title" content="Contact Us - Virtual Numbers & Digital Services | VirtNumbers" />
-        <meta property="og:description" content="Get 24/7 support for virtual numbers, WhatsApp verification, Telegram numbers, and digital services. Contact our expert team via WhatsApp or email for instant assistance." />
+        <meta property="og:title" content="Contact Support - Virtual Numbers Help | VirtNumbers" />
+        <meta property="og:description" content="Get 24/7 support for virtual numbers and digital services. Contact our expert team via WhatsApp or email for instant assistance." />
         <meta property="og:image" content="/logo.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://virtnumbers.com/contact" />
-        <meta property="twitter:title" content="Contact Us - Virtual Numbers & Digital Services | VirtNumbers" />
-        <meta property="twitter:description" content="Get 24/7 support for virtual numbers, WhatsApp verification, Telegram numbers, and digital services. Contact our expert team via WhatsApp or email for instant assistance." />
+        <meta property="twitter:title" content="Contact Support - Virtual Numbers Help | VirtNumbers" />
+        <meta property="twitter:description" content="Get 24/7 support for virtual numbers and digital services. Contact our expert team via WhatsApp or email for instant assistance." />
         <meta property="twitter:image" content="/logo.png" />
       </Helmet>
 
@@ -99,7 +99,7 @@ export default function Contact() {
                 }
               }}
             >
-              Buy Virtual Numbers
+              Purchase Virtual Numbers
             </Button>
             <Button
               component={Link}
@@ -122,7 +122,7 @@ export default function Contact() {
                 }
               }}
             >
-              View FAQ
+              Browse FAQ Section
             </Button>
             <Button
               component={Link}
@@ -145,7 +145,7 @@ export default function Contact() {
                 }
               }}
             >
-              About Us
+              Learn About VirtNumbers
             </Button>
           </Box>
 
@@ -182,8 +182,8 @@ export default function Contact() {
                     fontWeight: 400
                   }}
                 >
-                  Our dedicated support team is available 24/7 to help you with any questions about our virtual number services. 
-                  Whether you need help with payment, delivery, or technical issues, we're here to assist you.
+                  Our <strong>dedicated support team</strong> is available <strong>24/7</strong> to help you with any questions about our virtual number services. 
+                  Whether you need help with <strong>payment</strong>, <strong>delivery</strong>, or <strong>technical issues</strong>, we're here to assist you.
                 </Typography>
                 <Typography 
                   variant="body1" 
@@ -195,9 +195,9 @@ export default function Contact() {
                     fontWeight: 400
                   }}
                 >
-                  We provide support for all our services including WhatsApp verification numbers, Telegram numbers, Instagram accounts, 
-                  Canva Pro subscriptions, and Netflix Premium accounts. Our team is trained to handle all types of inquiries 
-                  and technical issues you may encounter.
+                  We provide <strong>comprehensive support</strong> for all our services including <strong>WhatsApp verification numbers</strong>, <strong>Telegram numbers</strong>, <strong>Instagram accounts</strong>, 
+                  <strong>Canva Pro subscriptions</strong>, and <strong>Netflix Premium accounts</strong>. Our team is <strong>trained to handle all types of inquiries</strong> 
+                  and <strong>technical issues</strong> you may encounter.
                 </Typography>
 
                 <Box sx={{ 
@@ -428,8 +428,8 @@ export default function Contact() {
                     fontWeight: 400
                   }}
                 >
-                  Our support team is trained to help you with all our services. Whether you need assistance with virtual numbers, 
-                  digital services, or account management, we're here to help.
+                  Our <strong>support team is trained</strong> to help you with all our services. Whether you need assistance with <strong>virtual numbers</strong>, 
+                  <strong>digital services</strong>, or <strong>account management</strong>, we're here to help.
                 </Typography>
                 <Box sx={{ 
                   display: 'flex',
@@ -737,7 +737,7 @@ export default function Contact() {
                 mx: 'auto'
               }}
             >
-              Browse our services and get the virtual numbers or digital services you need. Our team is ready to help you every step of the way.
+              Browse our <strong>services</strong> and get the <strong>virtual numbers</strong> or <strong>digital services</strong> you need. Our <strong>team is ready to help you</strong> every step of the way.
             </Typography>
             <Box sx={{ 
               display: 'flex',
@@ -765,7 +765,7 @@ export default function Contact() {
                   }
                 }}
               >
-                Browse Services
+                Explore Our Services
               </Button>
               <Button
                 component={Link}
@@ -789,7 +789,7 @@ export default function Contact() {
                   }
                 }}
               >
-                View FAQ
+                Find Answers in FAQ
               </Button>
             </Box>
           </Box>

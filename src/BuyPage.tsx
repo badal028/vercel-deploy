@@ -132,23 +132,23 @@ export default function BuyPage() {
   return (
     <>
       <Helmet>
-        <title>Buy Virtual Numbers & Digital Services | Premium WhatsApp, Telegram, Instagram | VirtNumbers</title>
-        <meta name="description" content="Buy premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, secure payments, 24/7 support." />
+        <title>Buy Virtual Numbers - WhatsApp, Telegram, Instagram | VirtNumbers</title>
+        <meta name="description" content="Buy premium virtual numbers for WhatsApp, Telegram, Instagram verification. Instant delivery, secure payments, 24/7 support." />
         <meta name="keywords" content="buy virtual numbers, WhatsApp verification, Telegram numbers, Instagram accounts, Canva Pro, Netflix Premium, digital services, instant delivery" />
         <link rel="canonical" href="https://virtnumbers.com/buy" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://virtnumbers.com/buy" />
-        <meta property="og:title" content="Buy Virtual Numbers & Digital Services | Premium WhatsApp, Telegram, Instagram | VirtNumbers" />
-        <meta property="og:description" content="Buy premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, secure payments, 24/7 support." />
+        <meta property="og:title" content="Buy Virtual Numbers - WhatsApp, Telegram, Instagram | VirtNumbers" />
+        <meta property="og:description" content="Buy premium virtual numbers for WhatsApp, Telegram, Instagram verification. Instant delivery, secure payments, 24/7 support." />
         <meta property="og:image" content="/logo.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://virtnumbers.com/buy" />
-        <meta property="twitter:title" content="Buy Virtual Numbers & Digital Services | Premium WhatsApp, Telegram, Instagram | VirtNumbers" />
-        <meta property="twitter:description" content="Buy premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, secure payments, 24/7 support." />
+        <meta property="twitter:title" content="Buy Virtual Numbers - WhatsApp, Telegram, Instagram | VirtNumbers" />
+        <meta property="twitter:description" content="Buy premium virtual numbers for WhatsApp, Telegram, Instagram verification. Instant delivery, secure payments, 24/7 support." />
         <meta property="twitter:image" content="/logo.png" />
       </Helmet>
 
@@ -162,18 +162,18 @@ export default function BuyPage() {
 
           {/* Internal Navigation Links */}
           <div className="buy-navigation">
-            <Link to="/faq" className="buy-nav-link">View FAQ</Link>
-            <Link to="/contact" className="buy-nav-link">Contact Support</Link>
-            <Link to="/about" className="buy-nav-link">About Us</Link>
-            <Link to="/terms" className="buy-nav-link">Terms of Service</Link>
+            <Link to="/faq" className="buy-nav-link">Frequently Asked Questions</Link>
+            <Link to="/contact" className="buy-nav-link">Get Customer Support</Link>
+            <Link to="/about" className="buy-nav-link">Learn About VirtNumbers</Link>
+            <Link to="/terms" className="buy-nav-link">Read Terms of Service</Link>
           </div>
 
           <div className="buy-main-content">
             <div className="buy-services-section">
               <h3>Choose Your Service</h3>
               <p className="buy-services-description">
-                Select from our premium virtual number services. All services include instant delivery, 
-                24/7 support, and money-back guarantee. Perfect for WhatsApp verification, Telegram accounts, 
+                Select from our <strong>premium virtual number services</strong>. All services include <strong>instant delivery</strong>, 
+                <strong>24/7 support</strong>, and <strong>money-back guarantee</strong>. Perfect for WhatsApp verification, Telegram accounts, 
                 Instagram verification, and digital services.
               </p>
               
@@ -235,8 +235,8 @@ export default function BuyPage() {
               <div className="buy-features-list">
                 <h4>What's Included</h4>
                 <p className="buy-features-description">
-                  Every purchase includes comprehensive features to ensure you get the best value 
-                  and support for your virtual number needs.
+                  Every purchase includes <strong>comprehensive features</strong> to ensure you get the <strong>best value</strong> 
+                  and <strong>premium support</strong> for your virtual number needs.
                 </p>
                 <div className="buy-features-grid">
                   <div className="buy-feature-item">Instant delivery within 5 minutes</div>
@@ -371,8 +371,8 @@ export default function BuyPage() {
               <div className="buy-trust-indicators">
                 <h4>Why Choose VirtNumbers?</h4>
                 <p className="buy-trust-description">
-                  Join thousands of satisfied customers who trust us for their virtual number needs. 
-                  Our commitment to quality and customer satisfaction sets us apart.
+                  Join <strong>thousands of satisfied customers</strong> who trust us for their virtual number needs. 
+                  Our <strong>commitment to quality</strong> and <strong>customer satisfaction</strong> sets us apart.
                 </p>
                 <div className="buy-trust-grid">
                   <div className="buy-trust-item">
@@ -400,10 +400,10 @@ export default function BuyPage() {
               Each service is designed to meet specific verification and digital needs.
             </p>
             <div className="buy-related-grid">
-              <Link to="/faq" className="buy-related-link">Frequently Asked Questions</Link>
-              <Link to="/contact" className="buy-related-link">Contact Support Team</Link>
-              <Link to="/about" className="buy-related-link">Learn About VirtNumbers</Link>
-              <Link to="/terms" className="buy-related-link">Terms of Service</Link>
+              <Link to="/faq" className="buy-related-link">Browse FAQ Section</Link>
+              <Link to="/contact" className="buy-related-link">Contact Our Support Team</Link>
+              <Link to="/about" className="buy-related-link">Discover VirtNumbers Story</Link>
+              <Link to="/terms" className="buy-related-link">Review Service Terms</Link>
             </div>
           </div>
 

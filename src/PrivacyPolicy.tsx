@@ -7,23 +7,23 @@ export default function PrivacyPolicy() {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - Virtual Numbers & Digital Services | VirtNumbers</title>
-        <meta name="description" content="Read our privacy policy to understand how VirtNumbers collects, uses, and protects your personal information when using our virtual number and digital services." />
+        <title>Privacy Policy - Virtual Numbers Data Protection | VirtNumbers</title>
+        <meta name="description" content="Read our privacy policy to understand how VirtNumbers collects, uses, and protects your personal information when using virtual number services." />
         <meta name="keywords" content="privacy policy, data protection, virtual numbers privacy, personal information security, data collection policy" />
         <link rel="canonical" href="https://virtnumbers.com/privacy-policy" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://virtnumbers.com/privacy-policy" />
-        <meta property="og:title" content="Privacy Policy - Virtual Numbers & Digital Services | VirtNumbers" />
-        <meta property="og:description" content="Read our privacy policy to understand how VirtNumbers collects, uses, and protects your personal information when using our virtual number and digital services." />
+        <meta property="og:title" content="Privacy Policy - Virtual Numbers Data Protection | VirtNumbers" />
+        <meta property="og:description" content="Read our privacy policy to understand how VirtNumbers collects, uses, and protects your personal information when using virtual number services." />
         <meta property="og:image" content="/logo.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://virtnumbers.com/privacy-policy" />
-        <meta property="twitter:title" content="Privacy Policy - Virtual Numbers & Digital Services | VirtNumbers" />
-        <meta property="twitter:description" content="Read our privacy policy to understand how VirtNumbers collects, uses, and protects your personal information when using our virtual number and digital services." />
+        <meta property="twitter:title" content="Privacy Policy - Virtual Numbers Data Protection | VirtNumbers" />
+        <meta property="twitter:description" content="Read our privacy policy to understand how VirtNumbers collects, uses, and protects your personal information when using virtual number services." />
         <meta property="twitter:image" content="/logo.png" />
       </Helmet>
 
@@ -46,8 +46,8 @@ export default function PrivacyPolicy() {
               textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
             }}
           >
-            Privacy Policy
-          </Typography>
+        Privacy Policy
+      </Typography>
           
           <Typography 
             variant="h2" 
@@ -59,7 +59,7 @@ export default function PrivacyPolicy() {
               fontWeight: 400
             }}
           >
-            How we collect, use, and protect your personal information
+            How we <strong>collect, use, and protect</strong> your <strong>personal information</strong>
           </Typography>
 
           {/* Internal Navigation Links */}
@@ -83,7 +83,7 @@ export default function PrivacyPolicy() {
                 }
               }}
             >
-              Buy Virtual Numbers
+              Purchase Virtual Numbers
             </Button>
             <Button
               component={Link}
@@ -98,7 +98,7 @@ export default function PrivacyPolicy() {
                 }
               }}
             >
-              Terms of Service
+              Review Terms of Service
             </Button>
             <Button
               component={Link}
@@ -113,7 +113,7 @@ export default function PrivacyPolicy() {
                 }
               }}
             >
-              Contact Support
+              Get Customer Support
             </Button>
           </Box>
 
@@ -175,8 +175,8 @@ export default function PrivacyPolicy() {
                   fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' }
                 }}
               >
-                1. Introduction
-              </Typography>
+          1. Introduction
+        </Typography>
               <Typography 
                 variant="body1" 
                 sx={{ 
@@ -185,7 +185,7 @@ export default function PrivacyPolicy() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                At VirtNumbers, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use our website and services.
+                At <strong>VirtNumbers</strong>, we value your <strong>privacy</strong> and are <strong>committed to protecting your personal information</strong>. This <strong>Privacy Policy</strong> explains how we <strong>collect, use, and safeguard your data</strong> when you use our website and services.
               </Typography>
               <Typography 
                 variant="body1" 
@@ -194,9 +194,9 @@ export default function PrivacyPolicy() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                This policy applies to all users of our virtual number services, including WhatsApp verification, Telegram numbers, Instagram accounts, and other digital services we provide.
+                This policy applies to all users of our <strong>virtual number services</strong>, including <strong>WhatsApp verification</strong>, <strong>Telegram numbers</strong>, <strong>Instagram accounts</strong>, and other <strong>digital services</strong> we provide.
               </Typography>
-            </Paper>
+      </Paper>
           </Box>
 
           <Box id="collection">
@@ -216,8 +216,8 @@ export default function PrivacyPolicy() {
                   fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' }
                 }}
               >
-                2. Information We Collect
-              </Typography>
+          2. Information We Collect
+        </Typography>
               <Typography 
                 variant="body1" 
                 sx={{ 
@@ -226,7 +226,7 @@ export default function PrivacyPolicy() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                We may collect personal information such as your name, email address, phone number, and payment details when you place an order or contact our support team. We also collect non-personal information such as browser type, device information, and IP address for analytics and security purposes.
+                We may collect <strong>personal information</strong> such as your <strong>name, email address, phone number, and payment details</strong> when you place an order or contact our support team. We also collect <strong>non-personal information</strong> such as <strong>browser type, device information, and IP address</strong> for <strong>analytics and security purposes</strong>.
               </Typography>
               <Typography 
                 variant="h4" 
@@ -239,12 +239,12 @@ export default function PrivacyPolicy() {
                 Types of Information We Collect:
               </Typography>
               <Box component="ul" sx={{ pl: { xs: 2, md: 3 } }}>
-                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>Contact information (name, email, phone number)</Typography>
-                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>Payment information (processed securely)</Typography>
-                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>Usage data and analytics</Typography>
-                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>Device and browser information</Typography>
+                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}><strong>Contact information</strong> (name, email, phone number)</Typography>
+                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}><strong>Payment information</strong> (processed securely)</Typography>
+                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}><strong>Usage data and analytics</strong></Typography>
+                <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}><strong>Device and browser information</strong></Typography>
               </Box>
-            </Paper>
+      </Paper>
           </Box>
 
           <Box id="usage">
@@ -265,7 +265,7 @@ export default function PrivacyPolicy() {
                 }}
               >
                 3. How We Use Your Information
-              </Typography>
+        </Typography>
               <Typography 
                 variant="body1" 
                 sx={{ 
@@ -274,9 +274,9 @@ export default function PrivacyPolicy() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                We use the information we collect to process your orders, provide customer support, improve our services, and communicate with you about your account and our services. We do not sell, trade, or otherwise transfer your personal information to third parties without your consent.
+                We use the information we collect to <strong>process your orders</strong>, provide <strong>customer support</strong>, <strong>improve our services</strong>, and <strong>communicate with you</strong> about your account and our services. We do not <strong>sell, trade, or otherwise transfer your personal information</strong> to third parties without your consent.
               </Typography>
-            </Paper>
+      </Paper>
           </Box>
 
           <Box id="security">
@@ -297,7 +297,7 @@ export default function PrivacyPolicy() {
                 }}
               >
                 4. Data Security
-              </Typography>
+        </Typography>
               <Typography 
                 variant="body1" 
                 sx={{ 
@@ -306,9 +306,9 @@ export default function PrivacyPolicy() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. We use secure payment processing methods and encrypt sensitive data during transmission.
+                We implement <strong>appropriate security measures</strong> to protect your <strong>personal information</strong> against <strong>unauthorized access, alteration, disclosure, or destruction</strong>. We use <strong>secure payment processing methods</strong> and <strong>encrypt sensitive data</strong> during transmission.
               </Typography>
-            </Paper>
+      </Paper>
           </Box>
 
           <Box id="cookies">
@@ -329,7 +329,7 @@ export default function PrivacyPolicy() {
                 }}
               >
                 5. Cookies and Tracking
-              </Typography>
+        </Typography>
               <Typography 
                 variant="body1" 
                 sx={{ 
@@ -338,9 +338,9 @@ export default function PrivacyPolicy() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                We use cookies and similar tracking technologies to enhance your browsing experience, analyze website traffic, and understand where our visitors are coming from. You can control cookie settings through your browser preferences.
+                We use <strong>cookies and similar tracking technologies</strong> to <strong>enhance your browsing experience</strong>, <strong>analyze website traffic</strong>, and <strong>understand where our visitors are coming from</strong>. You can <strong>control cookie settings</strong> through your browser preferences.
               </Typography>
-            </Paper>
+      </Paper>
           </Box>
 
           <Box id="rights">
@@ -361,7 +361,7 @@ export default function PrivacyPolicy() {
                 }}
               >
                 6. Your Privacy Rights
-              </Typography>
+        </Typography>
               <Typography 
                 variant="body1" 
                 sx={{ 
@@ -370,7 +370,7 @@ export default function PrivacyPolicy() {
                   fontSize: { xs: '0.9rem', md: '1rem' }
                 }}
               >
-                You have the right to access, update, or delete your personal information. You can also opt out of marketing communications at any time. To exercise these rights, please contact us through our support channels.
+                You have the right to <strong>access, update, or delete your personal information</strong>. You can also <strong>opt out of marketing communications</strong> at any time. To <strong>exercise these rights</strong>, please contact us through our support channels.
               </Typography>
               <Button
                 component={Link}
@@ -381,9 +381,9 @@ export default function PrivacyPolicy() {
                   '&:hover': { backgroundColor: '#5a67d8' }
                 }}
               >
-                Contact Support
+                Get Customer Support
               </Button>
-            </Paper>
+      </Paper>
           </Box>
 
           {/* Related Services Section */}
@@ -405,7 +405,7 @@ export default function PrivacyPolicy() {
               }}
             >
               Our Services
-            </Typography>
+        </Typography>
             <Box sx={{ 
               display: 'flex',
               flexWrap: 'wrap',
@@ -465,7 +465,7 @@ export default function PrivacyPolicy() {
               }}
             >
               Questions About Privacy?
-            </Typography>
+        </Typography>
             <Typography 
               variant="body1"
               sx={{ 
@@ -473,7 +473,7 @@ export default function PrivacyPolicy() {
                 fontSize: { xs: '0.9rem', md: '1rem' }
               }}
             >
-              Contact our support team for any questions about our privacy practices or to exercise your privacy rights.
+              Contact our <strong>support team</strong> for any questions about our <strong>privacy practices</strong> or to <strong>exercise your privacy rights</strong>.
             </Typography>
             <Button
               component={Link}
@@ -484,12 +484,12 @@ export default function PrivacyPolicy() {
                 '&:hover': { backgroundColor: '#5a67d8' }
               }}
             >
-              Contact Support Team
+              Get Customer Support
             </Button>
           </Box>
-        
-          {/* Ad Section */}
-          <Box sx={{ mt: 6 }}>
+      
+      {/* Ad Section */}
+      <Box sx={{ mt: 6 }}>
             <AdSense adSlot="1720002040" adFormat="auto" />
           </Box>
         </Container>

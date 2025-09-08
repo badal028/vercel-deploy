@@ -7,23 +7,23 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <title>About Us - Virtual Numbers & Digital Services | VirtNumbers</title>
-        <meta name="description" content="Learn about VirtNumbers - your trusted provider of virtual numbers for WhatsApp, Telegram, Instagram verification. Premium digital services with instant delivery and 24/7 support." />
+        <title>About VirtNumbers - Virtual Numbers Provider | VirtNumbers</title>
+        <meta name="description" content="Learn about VirtNumbers - trusted provider of virtual numbers for WhatsApp, Telegram, Instagram verification. Premium digital services with instant delivery." />
         <meta name="keywords" content="about VirtNumbers, virtual numbers company, WhatsApp verification service, Telegram numbers provider, digital services company" />
         <link rel="canonical" href="https://virtnumbers.com/about" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://virtnumbers.com/about" />
-        <meta property="og:title" content="About Us - Virtual Numbers & Digital Services | VirtNumbers" />
-        <meta property="og:description" content="Learn about VirtNumbers - your trusted provider of virtual numbers for WhatsApp, Telegram, Instagram verification. Premium digital services with instant delivery and 24/7 support." />
+        <meta property="og:title" content="About VirtNumbers - Virtual Numbers Provider | VirtNumbers" />
+        <meta property="og:description" content="Learn about VirtNumbers - trusted provider of virtual numbers for WhatsApp, Telegram, Instagram verification. Premium digital services with instant delivery." />
         <meta property="og:image" content="/logo.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://virtnumbers.com/about" />
-        <meta property="twitter:title" content="About Us - Virtual Numbers & Digital Services | VirtNumbers" />
-        <meta property="twitter:description" content="Learn about VirtNumbers - your trusted provider of virtual numbers for WhatsApp, Telegram, Instagram verification. Premium digital services with instant delivery and 24/7 support." />
+        <meta property="twitter:title" content="About VirtNumbers - Virtual Numbers Provider | VirtNumbers" />
+        <meta property="twitter:description" content="Learn about VirtNumbers - trusted provider of virtual numbers for WhatsApp, Telegram, Instagram verification. Premium digital services with instant delivery." />
         <meta property="twitter:image" content="/logo.png" />
       </Helmet>
 
@@ -35,19 +35,19 @@ export default function About() {
       }}>
         <Container maxWidth="lg" sx={{ px: { xs: 2, md: 3 } }}>
           {/* Main H1 Heading */}
-          <Typography 
+      <Typography 
             variant="h1" 
-            sx={{ 
-              mb: { xs: 2, md: 4 }, 
-              textAlign: 'center', 
-              fontWeight: 700, 
+        sx={{ 
+          mb: { xs: 2, md: 4 }, 
+          textAlign: 'center', 
+          fontWeight: 700, 
               color: 'white',
               fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
               textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
-            }}
-          >
-            About VirtNumbers
-          </Typography>
+        }}
+      >
+        About VirtNumbers
+      </Typography>
           
           <Typography 
             variant="h2" 
@@ -59,7 +59,7 @@ export default function About() {
               fontWeight: 400
             }}
           >
-            Your trusted provider of premium virtual numbers and digital services
+            Your <strong>trusted provider</strong> of <strong>premium virtual numbers</strong> and <strong>digital services</strong>
           </Typography>
 
           {/* Internal Navigation Links */}
@@ -83,7 +83,7 @@ export default function About() {
                 }
               }}
             >
-              Buy Virtual Numbers
+              Purchase Virtual Numbers
             </Button>
             <Button
               component={Link}
@@ -98,7 +98,7 @@ export default function About() {
                 }
               }}
             >
-              Frequently Asked Questions
+              Browse FAQ Section
             </Button>
             <Button
               component={Link}
@@ -113,12 +113,12 @@ export default function About() {
                 }
               }}
             >
-              Contact Support
+              Get Customer Support
             </Button>
           </Box>
-        
-          <Grid container spacing={{ xs: 2, md: 4 }}>
-            <Grid item xs={12} md={8}>
+      
+      <Grid container spacing={{ xs: 2, md: 4 }}>
+        <Grid item xs={12} md={8}>
               <Paper sx={{ 
                 p: { xs: 2, md: 4 }, 
                 mb: { xs: 2, md: 4 },
@@ -127,34 +127,34 @@ export default function About() {
                 borderRadius: 3,
                 boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
               }}>
-                <Typography 
+            <Typography 
                   variant="h3" 
-                  sx={{ 
-                    mb: { xs: 2, md: 3 }, 
+              sx={{ 
+                mb: { xs: 2, md: 3 }, 
                     color: '#667eea',
-                    fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' }
-                  }}
-                >
-                  What Are Virtual Numbers?
-                </Typography>
-                <Typography 
-                  variant="body1" 
-                  sx={{ 
-                    mb: { xs: 2, md: 3 }, 
-                    lineHeight: 1.8,
-                    fontSize: { xs: '0.9rem', md: '1rem' }
-                  }}
-                >
-                  Virtual numbers are phone numbers that aren't tied to a specific physical phone line. 
-                  They work over the internet and can be used for various purposes like:
-                </Typography>
-                <Box component="ul" sx={{ pl: { xs: 2, md: 3 }, mb: { xs: 2, md: 3 } }}>
-                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>WhatsApp and Telegram verification</Typography>
-                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>Business communications</Typography>
-                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>Privacy protection</Typography>
-                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>International calling</Typography>
-                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>Account verification for various services</Typography>
-                </Box>
+                fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' }
+              }}
+            >
+              What Are Virtual Numbers?
+            </Typography>
+            <Typography 
+              variant="body1" 
+              sx={{ 
+                mb: { xs: 2, md: 3 }, 
+                lineHeight: 1.8,
+                fontSize: { xs: '0.9rem', md: '1rem' }
+              }}
+            >
+                  <strong>Virtual numbers</strong> are phone numbers that aren't tied to a specific <strong>physical phone line</strong>. 
+                  They work over the <strong>internet</strong> and can be used for various purposes like:
+            </Typography>
+            <Box sx={{ pl: { xs: 2, md: 3 }, mb: { xs: 2, md: 3 } }}>
+              <Typography sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>• <strong>WhatsApp and Telegram verification</strong></Typography>
+              <Typography sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>• <strong>Business communications</strong></Typography>
+              <Typography sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>• <strong>Privacy protection</strong></Typography>
+              <Typography sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>• <strong>International calling</strong></Typography>
+              <Typography sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>• <strong>Account verification for various services</strong></Typography>
+            </Box>
                 <Button
                   component={Link}
                   to="/buy"
@@ -164,9 +164,9 @@ export default function About() {
                     '&:hover': { backgroundColor: '#5a67d8' }
                   }}
                 >
-                  Get Virtual Numbers
+                  Purchase Virtual Numbers
                 </Button>
-              </Paper>
+          </Paper>
 
               <Paper sx={{ 
                 p: { xs: 2, md: 4 }, 
@@ -176,27 +176,27 @@ export default function About() {
                 borderRadius: 3,
                 boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
               }}>
-                <Typography 
+            <Typography 
                   variant="h3" 
-                  sx={{ 
-                    mb: { xs: 2, md: 3 }, 
+              sx={{ 
+                mb: { xs: 2, md: 3 }, 
                     color: '#667eea',
-                    fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' }
-                  }}
-                >
-                  Our Mission
-                </Typography>
-                <Typography 
-                  variant="body1" 
-                  sx={{ 
-                    mb: { xs: 2, md: 3 }, 
-                    lineHeight: 1.8,
-                    fontSize: { xs: '0.9rem', md: '1rem' }
-                  }}
-                >
-                  At VirtNumbers, we believe everyone deserves access to reliable, affordable virtual numbers. 
-                  Our mission is to provide premium virtual numbers with instant delivery, 24/7 support, 
-                  and competitive pricing to meet all your digital communication needs.
+                fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' }
+              }}
+            >
+              Our Mission
+            </Typography>
+            <Typography 
+              variant="body1" 
+              sx={{ 
+                mb: { xs: 2, md: 3 }, 
+                lineHeight: 1.8,
+                fontSize: { xs: '0.9rem', md: '1rem' }
+              }}
+            >
+                  At <strong>VirtNumbers</strong>, we believe everyone deserves access to <strong>reliable, affordable virtual numbers</strong>. 
+                  Our mission is to provide <strong>premium virtual numbers</strong> with <strong>instant delivery</strong>, <strong>24/7 support</strong>, 
+                  and <strong>competitive pricing</strong> to meet all your <strong>digital communication needs</strong>.
                 </Typography>
                 <Typography 
                   variant="body1" 
@@ -206,9 +206,9 @@ export default function About() {
                     fontSize: { xs: '0.9rem', md: '1rem' }
                   }}
                 >
-                  Whether you need a number for social media verification, business purposes, or privacy protection, 
-                  we've got you covered with our wide range of services including WhatsApp, Telegram, Instagram, 
-                  Gmail, LinkedIn, Netflix, and Canva Pro accounts.
+                  Whether you need a number for <strong>social media verification</strong>, <strong>business purposes</strong>, or <strong>privacy protection</strong>, 
+                  we've got you covered with our <strong>wide range of services</strong> including <strong>WhatsApp</strong>, <strong>Telegram</strong>, <strong>Instagram</strong>, 
+                  <strong>Gmail</strong>, <strong>LinkedIn</strong>, <strong>Netflix</strong>, and <strong>Canva Pro accounts</strong>.
                 </Typography>
                 <Typography 
                   variant="h4" 
@@ -219,19 +219,19 @@ export default function About() {
                   }}
                 >
                   Our Commitment to Quality
-                </Typography>
-                <Typography 
-                  variant="body1" 
-                  sx={{ 
-                    lineHeight: 1.8,
-                    fontSize: { xs: '0.9rem', md: '1rem' }
-                  }}
-                >
-                  We are committed to providing the highest quality virtual numbers and digital services. 
-                  Our team works tirelessly to ensure every customer receives reliable, tested numbers 
-                  that work perfectly with their intended platforms.
-                </Typography>
-              </Paper>
+            </Typography>
+            <Typography 
+              variant="body1" 
+              sx={{ 
+                lineHeight: 1.8,
+                fontSize: { xs: '0.9rem', md: '1rem' }
+              }}
+            >
+                  We are <strong>committed to providing the highest quality virtual numbers</strong> and <strong>digital services</strong>. 
+                  Our <strong>team works tirelessly</strong> to ensure every customer receives <strong>reliable, tested numbers</strong> 
+                  that work perfectly with their <strong>intended platforms</strong>.
+            </Typography>
+          </Paper>
 
               <Paper sx={{ 
                 p: { xs: 2, md: 4 }, 
@@ -259,9 +259,9 @@ export default function About() {
                     fontSize: { xs: '0.9rem', md: '1rem' }
                   }}
                 >
-                  Our dedicated support team is available 24/7 to assist you with any questions or issues. 
-                  We believe in providing exceptional customer service and ensuring your complete satisfaction 
-                  with our virtual number services.
+                  Our <strong>dedicated support team</strong> is available <strong>24/7</strong> to assist you with any questions or issues. 
+                  We believe in providing <strong>exceptional customer service</strong> and ensuring your <strong>complete satisfaction</strong> 
+                  with our <strong>virtual number services</strong>.
                 </Typography>
                 <Button
                   component={Link}
@@ -272,12 +272,12 @@ export default function About() {
                     '&:hover': { backgroundColor: '#5a67d8' }
                   }}
                 >
-                  Contact Support Team
+                  Get Customer Support
                 </Button>
               </Paper>
-            </Grid>
+        </Grid>
 
-            <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4}>
               <Paper sx={{ 
                 p: { xs: 2, md: 4 }, 
                 mb: { xs: 2, md: 4 },
@@ -286,25 +286,25 @@ export default function About() {
                 borderRadius: 3,
                 boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
               }}>
-                <Typography 
+            <Typography 
                   variant="h4" 
-                  sx={{ 
-                    mb: { xs: 2, md: 3 }, 
+              sx={{ 
+                mb: { xs: 2, md: 3 }, 
                     color: '#667eea',
-                    fontSize: { xs: '1.25rem', md: '1.5rem' }
-                  }}
-                >
-                  Why Choose VirtNumbers?
-                </Typography>
-                <Box component="ul" sx={{ pl: { xs: 1.5, md: 2 } }}>
-                  <Typography component="li" sx={{ mb: 2, fontSize: { xs: '0.9rem', md: '1rem' } }}>✅ Instant delivery within minutes</Typography>
-                  <Typography component="li" sx={{ mb: 2, fontSize: { xs: '0.9rem', md: '1rem' } }}>✅ 24/7 customer support</Typography>
-                  <Typography component="li" sx={{ mb: 2, fontSize: { xs: '0.9rem', md: '1rem' } }}>✅ Secure payment options</Typography>
-                  <Typography component="li" sx={{ mb: 2, fontSize: { xs: '0.9rem', md: '1rem' } }}>✅ Premium quality numbers</Typography>
-                  <Typography component="li" sx={{ mb: 2, fontSize: { xs: '0.9rem', md: '1rem' } }}>✅ No registration required</Typography>
-                  <Typography component="li" sx={{ mb: 2, fontSize: { xs: '0.9rem', md: '1rem' } }}>✅ Competitive pricing</Typography>
-                </Box>
-              </Paper>
+                fontSize: { xs: '1.25rem', md: '1.5rem' }
+              }}
+            >
+              Why Choose VirtNumbers?
+            </Typography>
+            <Box component="ul" sx={{ pl: { xs: 1.5, md: 2 } }}>
+                  <Typography component="li" sx={{ mb: 2, fontSize: { xs: '0.9rem', md: '1rem' } }}>✅ <strong>Instant delivery within minutes</strong></Typography>
+                  <Typography component="li" sx={{ mb: 2, fontSize: { xs: '0.9rem', md: '1rem' } }}>✅ <strong>24/7 customer support</strong></Typography>
+                  <Typography component="li" sx={{ mb: 2, fontSize: { xs: '0.9rem', md: '1rem' } }}>✅ <strong>Secure payment options</strong></Typography>
+                  <Typography component="li" sx={{ mb: 2, fontSize: { xs: '0.9rem', md: '1rem' } }}>✅ <strong>Premium quality numbers</strong></Typography>
+                  <Typography component="li" sx={{ mb: 2, fontSize: { xs: '0.9rem', md: '1rem' } }}>✅ <strong>No registration required</strong></Typography>
+                  <Typography component="li" sx={{ mb: 2, fontSize: { xs: '0.9rem', md: '1rem' } }}>✅ <strong>Competitive pricing</strong></Typography>
+            </Box>
+          </Paper>
 
               <Paper sx={{ 
                 p: { xs: 2, md: 4 },
@@ -314,24 +314,24 @@ export default function About() {
                 borderRadius: 3,
                 boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
               }}>
-                <Typography 
+            <Typography 
                   variant="h4" 
-                  sx={{ 
-                    mb: { xs: 2, md: 3 }, 
+              sx={{ 
+                mb: { xs: 2, md: 3 }, 
                     color: '#667eea',
-                    fontSize: { xs: '1.25rem', md: '1.5rem' }
-                  }}
-                >
-                  Our Services
-                </Typography>
-                <Box component="ul" sx={{ pl: { xs: 1.5, md: 2 } }}>
-                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>📱 WhatsApp Virtual Numbers</Typography>
-                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>📱 Telegram Virtual Numbers</Typography>
-                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>📸 Instagram Accounts</Typography>
-                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>📧 Gmail Accounts</Typography>
-                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>💼 LinkedIn Accounts</Typography>
-                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>🎬 Netflix Premium</Typography>
-                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>🎨 Canva Pro</Typography>
+                fontSize: { xs: '1.25rem', md: '1.5rem' }
+              }}
+            >
+              Our Services
+            </Typography>
+            <Box component="ul" sx={{ pl: { xs: 1.5, md: 2 } }}>
+                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>📱 <strong>WhatsApp Virtual Numbers</strong></Typography>
+                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>📱 <strong>Telegram Virtual Numbers</strong></Typography>
+                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>📸 <strong>Instagram Accounts</strong></Typography>
+                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>📧 <strong>Gmail Accounts</strong></Typography>
+                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>💼 <strong>LinkedIn Accounts</strong></Typography>
+                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>🎬 <strong>Netflix Premium</strong></Typography>
+                  <Typography component="li" sx={{ mb: 1, fontSize: { xs: '0.9rem', md: '1rem' } }}>🎨 <strong>Canva Pro</strong></Typography>
                 </Box>
                 <Button
                   component={Link}
@@ -343,7 +343,7 @@ export default function About() {
                     '&:hover': { backgroundColor: '#5a67d8' }
                   }}
                 >
-                  View All Services
+                  Explore All Services
                 </Button>
               </Paper>
 
@@ -375,7 +375,7 @@ export default function About() {
                       '&:hover': { backgroundColor: 'rgba(102, 126, 234, 0.1)' }
                     }}
                   >
-                    Frequently Asked Questions
+                    Browse FAQ Section
                   </Button>
                   <Button
                     component={Link}
@@ -387,7 +387,7 @@ export default function About() {
                       '&:hover': { backgroundColor: 'rgba(102, 126, 234, 0.1)' }
                     }}
                   >
-                    Terms of Service
+                    Review Terms of Service
                   </Button>
                   <Button
                     component={Link}
@@ -399,12 +399,12 @@ export default function About() {
                       '&:hover': { backgroundColor: 'rgba(102, 126, 234, 0.1)' }
                     }}
                   >
-                    Privacy Policy
+                    Read Privacy Policy
                   </Button>
-                </Box>
-              </Paper>
-            </Grid>
-          </Grid>
+            </Box>
+          </Paper>
+        </Grid>
+      </Grid>
 
           {/* Call to Action Section */}
           <Box sx={{ 
@@ -434,8 +434,8 @@ export default function About() {
                 fontSize: { xs: '0.9rem', md: '1rem' }
               }}
             >
-              Join thousands of satisfied customers who trust VirtNumbers for their virtual number needs. 
-              Get started today with instant delivery and 24/7 support.
+              Join <strong>thousands of satisfied customers</strong> who trust <strong>VirtNumbers</strong> for their <strong>virtual number needs</strong>. 
+              Get started today with <strong>instant delivery</strong> and <strong>24/7 support</strong>.
             </Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, justifyContent: 'center' }}>
               <Button
@@ -448,7 +448,7 @@ export default function About() {
                   '&:hover': { backgroundColor: '#5a67d8' }
                 }}
               >
-                Buy Virtual Numbers Now
+                Purchase Virtual Numbers Now
               </Button>
               <Button
                 component={Link}
@@ -464,16 +464,16 @@ export default function About() {
                   }
                 }}
               >
-                Contact Support
+                Get Customer Support
               </Button>
             </Box>
           </Box>
-        
-          {/* Ad Section */}
-          <Box sx={{ mt: 6 }}>
-            <AdSense adSlot="1720002040" adFormat="auto" />
-          </Box>
-        </Container>
+      
+      {/* Ad Section */}
+      <Box sx={{ mt: 6 }}>
+        <AdSense adSlot="1720002040" adFormat="auto" />
+      </Box>
+    </Container>
       </Box>
     </>
   );

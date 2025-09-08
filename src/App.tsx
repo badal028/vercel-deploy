@@ -295,23 +295,23 @@ function LandingPage() {
   return (
     <>
       <Helmet>
-        <title>Virtual Numbers & Digital Services | VirtNumbers</title>
-        <meta name="description" content="Get premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, 24/7 support, secure payments." />
+        <title>Virtual Numbers Provider - WhatsApp, Telegram, Instagram | VirtNumbers</title>
+        <meta name="description" content="Premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, 24/7 support." />
         <meta name="keywords" content="virtual numbers, WhatsApp verification, Telegram numbers, Instagram verification, Canva Pro, Netflix Premium, digital services" />
         <link rel="canonical" href="https://virtnumbers.com/" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://virtnumbers.com/" />
-        <meta property="og:title" content="Virtual Numbers & Digital Services | VirtNumbers" />
-        <meta property="og:description" content="Get premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, 24/7 support." />
+        <meta property="og:title" content="Virtual Numbers Provider - WhatsApp, Telegram, Instagram | VirtNumbers" />
+        <meta property="og:description" content="Premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, 24/7 support." />
         <meta property="og:image" content="/logo.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://virtnumbers.com/" />
-        <meta property="twitter:title" content="Virtual Numbers & Digital Services | VirtNumbers" />
-        <meta property="twitter:description" content="Get premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, 24/7 support." />
+        <meta property="twitter:title" content="Virtual Numbers Provider - WhatsApp, Telegram, Instagram | VirtNumbers" />
+        <meta property="twitter:description" content="Premium virtual numbers for WhatsApp, Telegram, Instagram verification. Canva Pro and Netflix Premium accounts. Instant delivery, 24/7 support." />
         <meta property="twitter:image" content="/logo.png" />
       </Helmet>
       <Box sx={{
@@ -367,7 +367,7 @@ function LandingPage() {
                   lineHeight: 1.6
                 }}
               >
-                Premium Virtual Numbers for All Your Needs. Fast Delivery, 24/7 Support, and Secure Payment Options.
+                <strong>Premium Virtual Numbers</strong> for All Your Needs. <strong>Fast Delivery</strong>, <strong>24/7 Support</strong>, and <strong>Secure Payment Options</strong>.
               </Typography>
               <Box sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2, mb: 4 }}>
                 <Button
@@ -389,7 +389,7 @@ function LandingPage() {
                     }
                   }}
                 >
-                  Buy Virtual Numbers Now
+                  Purchase Virtual Numbers Now
                 </Button>
                 <Button
                   component={Link}
@@ -409,7 +409,7 @@ function LandingPage() {
                     }
                   }}
                 >
-                  View FAQ
+                  Browse FAQ Section
                 </Button>
                 <Button
                   component={Link}
@@ -429,7 +429,7 @@ function LandingPage() {
                     }
                   }}
                 >
-                  About Us
+                  Learn About VirtNumbers
                 </Button>
               </Box>
             </Box>
@@ -493,36 +493,36 @@ function LandingPage() {
                       <Box component="li" sx={{ mb: { xs: 2, sm: 3 }, display: 'flex', alignItems: 'flex-start' }}>
                         <PaidIcon sx={{ color: 'success.main', mr: 1.5, fontSize: { xs: '1.25rem', sm: '1.5rem' }, mt: 0.25 }} />
                         <Box>
-                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}>Instant Delivery</Typography>
-                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>Get your virtual number within minutes of payment</Typography>
+                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}><strong>Instant Delivery</strong></Typography>
+                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>Get your <strong>virtual number within minutes</strong> of payment</Typography>
                         </Box>
                       </Box>
                       <Box component="li" sx={{ mb: { xs: 2, sm: 3 }, display: 'flex', alignItems: 'flex-start' }}>
                         <BuildIcon sx={{ color: 'primary.main', mr: 1.5, fontSize: { xs: '1.25rem', sm: '1.5rem' }, mt: 0.25 }} />
                         <Box>
-                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}>Premium Quality</Typography>
-                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>High-quality numbers with guaranteed reliability</Typography>
+                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}><strong>Premium Quality</strong></Typography>
+                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}><strong>High-quality numbers</strong> with <strong>guaranteed reliability</strong></Typography>
                         </Box>
                       </Box>
                       <Box component="li" sx={{ mb: { xs: 2, sm: 3 }, display: 'flex', alignItems: 'flex-start' }}>
                         <WhatsAppIcon sx={{ color: '#25D366', mr: 1.5, fontSize: { xs: '1.25rem', sm: '1.5rem' }, mt: 0.25 }} />
                         <Box>
-                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}>24/7 Support</Typography>
-                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>Round-the-clock customer support via WhatsApp</Typography>
+                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}><strong>24/7 Support</strong></Typography>
+                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}><strong>Round-the-clock customer support</strong> via <strong>WhatsApp</strong></Typography>
                         </Box>
                       </Box>
                       <Box component="li" sx={{ mb: { xs: 2, sm: 3 }, display: 'flex', alignItems: 'flex-start' }}>
                         <TelegramIcon sx={{ color: '#0088cc', mr: 1.5, fontSize: { xs: '1.25rem', sm: '1.5rem' }, mt: 0.25 }} />
                         <Box>
-                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}>Secure Payments</Typography>
-                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>Multiple secure payment options available</Typography>
+                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}><strong>Secure Payments</strong></Typography>
+                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}><strong>Multiple secure payment options</strong> available</Typography>
                         </Box>
                       </Box>
                       <Box component="li" sx={{ display: 'flex', alignItems: 'flex-start' }}>
                         <LockOpenIcon sx={{ color: 'secondary.main', mr: 1.5, fontSize: { xs: '1.25rem', sm: '1.5rem' }, mt: 0.25 }} />
                         <Box>
-                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}>No Login Required</Typography>
-                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>Get your number instantly without any registration</Typography>
+                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}><strong>No Login Required</strong></Typography>
+                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>Get your number <strong>instantly without any registration</strong></Typography>
                         </Box>
                       </Box>
                     </Box>
@@ -560,43 +560,43 @@ function LandingPage() {
                       <Box component="li" sx={{ mb: { xs: 2, sm: 3 }, display: 'flex', alignItems: 'flex-start' }}>
                         <TelegramIcon sx={{ color: '#0088cc', mr: 1.5, fontSize: { xs: '1.25rem', sm: '1.5rem' }, mt: 0.25 }} />
                         <Box>
-                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}>Telegram Numbers</Typography>
-                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>Premium numbers for Telegram verification</Typography>
+                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}><strong>Telegram Numbers</strong></Typography>
+                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}><strong>Premium numbers</strong> for <strong>Telegram verification</strong></Typography>
                         </Box>
                       </Box>
                       <Box component="li" sx={{ mb: { xs: 2, sm: 3 }, display: 'flex', alignItems: 'flex-start' }}>
                         <WhatsAppIcon sx={{ color: '#25D366', mr: 1.5, fontSize: { xs: '1.25rem', sm: '1.5rem' }, mt: 0.25 }} />
                         <Box>
-                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}>WhatsApp Numbers</Typography>
-                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>Global numbers for WhatsApp verification</Typography>
+                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}><strong>WhatsApp Numbers</strong></Typography>
+                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}><strong>Global numbers</strong> for <strong>WhatsApp verification</strong></Typography>
                         </Box>
                       </Box>
                       <Box component="li" sx={{ mb: { xs: 2, sm: 3 }, display: 'flex', alignItems: 'flex-start' }}>
                         <InstagramIcon sx={{ color: '#E4405F', mr: 1.5, fontSize: { xs: '1.25rem', sm: '1.5rem' }, mt: 0.25 }} />
                         <Box>
-                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}>Instagram Accounts</Typography>
-                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>Verified Instagram accounts with numbers</Typography>
+                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}><strong>Instagram Accounts</strong></Typography>
+                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}><strong>Verified Instagram accounts</strong> with numbers</Typography>
                         </Box>
                       </Box>
                       <Box component="li" sx={{ mb: { xs: 2, sm: 3 }, display: 'flex', alignItems: 'flex-start' }}>
                         <EmailIcon sx={{ color: '#EA4335', mr: 1.5, fontSize: { xs: '1.25rem', sm: '1.5rem' }, mt: 0.25 }} />
                         <Box>
-                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}>Gmail Accounts</Typography>
-                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>Secure Gmail accounts with verification</Typography>
+                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}><strong>Gmail Accounts</strong></Typography>
+                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}><strong>Secure Gmail accounts</strong> with verification</Typography>
                         </Box>
                       </Box>
                       <Box component="li" sx={{ mb: { xs: 2, sm: 3 }, display: 'flex', alignItems: 'flex-start' }}>
                         <LinkedInIcon sx={{ color: '#0077B5', mr: 1.5, fontSize: { xs: '1.25rem', sm: '1.5rem' }, mt: 0.25 }} />
                         <Box>
-                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}>LinkedIn Services</Typography>
-                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>Professional LinkedIn account setup</Typography>
+                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}><strong>LinkedIn Services</strong></Typography>
+                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}><strong>Professional LinkedIn account</strong> setup</Typography>
                         </Box>
                       </Box>
                       <Box component="li" sx={{ display: 'flex', alignItems: 'flex-start' }}>
                         <BuildIcon sx={{ color: 'primary.main', mr: 1.5, fontSize: { xs: '1.25rem', sm: '1.5rem' }, mt: 0.25 }} />
                         <Box>
-                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}>Custom Services</Typography>
-                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>Ask for any specific service you need</Typography>
+                          <Typography variant="h6" sx={{ mb: 0.5, fontSize: { xs: '0.9rem', sm: '1.1rem' }, fontWeight: 600 }}><strong>Custom Services</strong></Typography>
+                          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.8rem', sm: '0.875rem' }, lineHeight: 1.5 }}>Ask for any <strong>specific service</strong> you need</Typography>
                         </Box>
                       </Box>
                     </Box>
@@ -651,7 +651,7 @@ function LandingPage() {
                 >
                   <Typography variant="h4" sx={{ mb: 3, color: '#667eea', fontSize: '1.5rem' }}>Virtual Numbers</Typography>
                   <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
-                    Get premium virtual numbers for WhatsApp and Telegram verification. Our numbers are tested and guaranteed to work with all major platforms.
+                    Get <strong>premium virtual numbers</strong> for <strong>WhatsApp and Telegram verification</strong>. Our numbers are <strong>tested and guaranteed</strong> to work with all major platforms.
                   </Typography>
                   <Button
                     component={Link}
@@ -662,7 +662,7 @@ function LandingPage() {
                       '&:hover': { backgroundColor: '#5a67d8' }
                     }}
                   >
-                    Get Virtual Numbers
+                    Purchase Virtual Numbers
                   </Button>
                 </Paper>
               </motion.div>
@@ -686,7 +686,7 @@ function LandingPage() {
                 >
                   <Typography variant="h4" sx={{ mb: 3, color: '#667eea', fontSize: '1.5rem' }}>Digital Services</Typography>
                   <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.7 }}>
-                    Access premium accounts including Canva Pro and Netflix Premium. All accounts come with instant delivery and full support.
+                    Access <strong>premium accounts</strong> including <strong>Canva Pro and Netflix Premium</strong>. All accounts come with <strong>instant delivery and full support</strong>.
                   </Typography>
                   <Button
                     component={Link}
@@ -697,7 +697,7 @@ function LandingPage() {
                       '&:hover': { backgroundColor: '#5a67d8' }
                     }}
                   >
-                    View Digital Services
+                    Explore Digital Services
                   </Button>
                 </Paper>
               </motion.div>
@@ -749,11 +749,11 @@ function LandingPage() {
                 >
                   <Typography variant="h6" sx={{ mb: 2, color: '#667eea', fontSize: '1.1rem' }}>How fast is the delivery?</Typography>
                   <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, lineHeight: 1.7 }}>
-                    We provide instant delivery of virtual numbers. Once payment is confirmed, you'll receive your number within minutes. Our automated system ensures quick and reliable delivery.
+                    We provide <strong>instant delivery of virtual numbers</strong>. Once payment is confirmed, you'll receive your number <strong>within minutes</strong>. Our <strong>automated system</strong> ensures <strong>quick and reliable delivery</strong>.
                   </Typography>
                   <Typography variant="h6" sx={{ mb: 2, color: '#667eea', fontSize: '1.1rem' }}>What payment methods do you accept?</Typography>
                   <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, lineHeight: 1.7 }}>
-                    We accept various payment methods including UPI, bank transfer, and other secure payment options. All transactions are encrypted and secure.
+                    We accept <strong>various payment methods</strong> including <strong>UPI, bank transfer, and other secure payment options</strong>. All transactions are <strong>encrypted and secure</strong>.
                   </Typography>
                 </Paper>
               </motion.div>
@@ -777,11 +777,11 @@ function LandingPage() {
                 >
                   <Typography variant="h6" sx={{ mb: 2, color: '#667eea', fontSize: '1.1rem' }}>Is the service secure?</Typography>
                   <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, lineHeight: 1.7 }}>
-                    Yes, we use secure payment gateways and follow strict privacy policies to protect your information. Your data is encrypted and never shared with third parties.
+                    Yes, we use <strong>secure payment gateways</strong> and follow <strong>strict privacy policies</strong> to protect your information. Your data is <strong>encrypted and never shared</strong> with third parties.
                   </Typography>
                   <Typography variant="h6" sx={{ mb: 2, color: '#667eea', fontSize: '1.1rem' }}>Do you offer refunds?</Typography>
                   <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.7 }}>
-                    Yes, we guarantee a full refund if we fail to deliver your number. Our customer satisfaction is our top priority, and we ensure you get what you pay for.
+                    Yes, we guarantee a <strong>full refund</strong> if we fail to deliver your number. Our <strong>customer satisfaction</strong> is our top priority, and we ensure you <strong>get what you pay for</strong>.
                   </Typography>
                 </Paper>
               </motion.div>
@@ -833,7 +833,7 @@ function LandingPage() {
                   textAlign: 'center'
                 }}
               >
-                We provide the most reliable virtual number services with instant delivery, 24/7 customer support, and secure payment options. Our numbers are tested and guaranteed to work with WhatsApp, Telegram, Instagram, and other platforms.
+                We provide the most <strong>reliable virtual number services</strong> with <strong>instant delivery</strong>, <strong>24/7 customer support</strong>, and <strong>secure payment options</strong>. Our numbers are <strong>tested and guaranteed</strong> to work with <strong>WhatsApp, Telegram, Instagram, and other platforms</strong>.
               </Typography>
               <Box sx={{
                 display: 'flex',
@@ -854,7 +854,7 @@ function LandingPage() {
                     }
                   }}
                 >
-                  Contact Support
+                  Get Customer Support
                 </Button>
                 <Button
                   component={Link}
@@ -869,7 +869,7 @@ function LandingPage() {
                     }
                   }}
                 >
-                  Terms of Service
+                  Review Terms of Service
                 </Button>
                 <Button
                   component={Link}
@@ -884,7 +884,7 @@ function LandingPage() {
                     }
                   }}
                 >
-                  Privacy Policy
+                  Read Privacy Policy
                 </Button>
               </Box>
             </Box>
@@ -920,7 +920,7 @@ function LandingPage() {
                   fontSize: { xs: '1rem', md: '1.25rem' }
                 }}
               >
-                Join thousands of satisfied customers who trust VirtNumbers for their virtual number needs
+                Join <strong>thousands of satisfied customers</strong> who trust <strong>VirtNumbers</strong> for their <strong>virtual number needs</strong>
               </Typography>
               <Box sx={{
                 display: 'flex',
@@ -952,7 +952,7 @@ function LandingPage() {
                       }
                     }}
                   >
-                    Buy Virtual Numbers Now
+                    Purchase Virtual Numbers Now
                   </Button>
                 </motion.div>
                 <Button
@@ -973,7 +973,7 @@ function LandingPage() {
                     }
                   }}
                 >
-                  Learn More
+                  Browse FAQ Section
                 </Button>
               </Box>
             </Box>
@@ -2108,19 +2108,19 @@ function App() {
                   </Typography>
                   <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
                     <Typography component="li" sx={{ mb: 1, opacity: 0.8 }}>
-                      <Link to="/about" style={{ color: 'inherit', textDecoration: 'none' }}>About Us</Link>
+                      <Link to="/about" style={{ color: 'inherit', textDecoration: 'none' }}>Learn About VirtNumbers</Link>
                     </Typography>
                     <Typography component="li" sx={{ mb: 1, opacity: 0.8 }}>
-                      <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>Contact</Link>
+                      <Link to="/contact" style={{ color: 'inherit', textDecoration: 'none' }}>Get Customer Support</Link>
                     </Typography>
                     <Typography component="li" sx={{ mb: 1, opacity: 0.8 }}>
-                      <Link to="/terms" style={{ color: 'inherit', textDecoration: 'none' }}>Terms of Service</Link>
+                      <Link to="/terms" style={{ color: 'inherit', textDecoration: 'none' }}>Review Terms of Service</Link>
                     </Typography>
                     <Typography component="li" sx={{ mb: 1, opacity: 0.8 }}>
-                      <Link to="/faq" style={{ color: 'inherit', textDecoration: 'none' }}>FAQ</Link>
+                      <Link to="/faq" style={{ color: 'inherit', textDecoration: 'none' }}>Browse FAQ Section</Link>
                     </Typography>
                     <Typography component="li" sx={{ mb: 1, opacity: 0.8 }}>
-                      <Link to="/privacy-policy" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy Policy</Link>
+                      <Link to="/privacy-policy" style={{ color: 'inherit', textDecoration: 'none' }}>Read Privacy Policy</Link>
                     </Typography>
                   </Box>
                 </Grid>

@@ -8,66 +8,66 @@ export default function FAQ() {
   const faqs = [
     {
       question: "What are virtual numbers and how do they work?",
-      answer: "Virtual numbers are phone numbers that work over the internet instead of being tied to a physical phone line. They can receive SMS messages and calls, making them perfect for verification purposes, business communications, or maintaining privacy. Our virtual numbers work with popular messaging apps like WhatsApp and Telegram."
+      answer: "Virtual numbers are <strong>phone numbers that work over the internet</strong> instead of being tied to a physical phone line. They can receive <strong>SMS messages and calls</strong>, making them perfect for <strong>verification purposes</strong>, <strong>business communications</strong>, or <strong>maintaining privacy</strong>. Our virtual numbers work with popular messaging apps like <strong>WhatsApp and Telegram</strong>."
     },
     {
       question: "How quickly will I receive my virtual number after payment?",
-      answer: "We provide instant delivery! Once your payment is confirmed, you'll receive your virtual number within minutes. Our automated system ensures fast processing, and our 24/7 support team is always ready to help if you need assistance."
+      answer: "We provide <strong>instant delivery</strong>! Once your payment is confirmed, you'll receive your virtual number <strong>within minutes</strong>. Our <strong>automated system</strong> ensures <strong>fast processing</strong>, and our <strong>24/7 support team</strong> is always ready to help if you need assistance."
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept various secure payment methods including UPI, Google Pay, PhonePe, Paytm, and other digital payment options. All payments are processed securely, and we provide payment confirmation immediately after successful transactions."
+      answer: "We accept various <strong>secure payment methods</strong> including <strong>UPI</strong>, <strong>Google Pay</strong>, <strong>PhonePe</strong>, <strong>Paytm</strong>, and other <strong>digital payment options</strong>. All payments are <strong>processed securely</strong>, and we provide <strong>payment confirmation immediately</strong> after successful transactions."
     },
     {
       question: "Are your virtual numbers guaranteed to work?",
-      answer: "Yes! We only provide premium quality virtual numbers that are tested and verified. If you encounter any issues with your virtual number, our 24/7 support team will help you resolve it or provide a replacement at no extra cost."
+      answer: "Yes! We only provide <strong>premium quality virtual numbers</strong> that are <strong>tested and verified</strong>. If you encounter any issues with your virtual number, our <strong>24/7 support team</strong> will help you resolve it or provide a <strong>replacement at no extra cost</strong>."
     },
     {
       question: "Can I use these numbers for WhatsApp and Telegram verification?",
-      answer: "Absolutely! Our virtual numbers are specifically designed to work with WhatsApp and Telegram verification. They are tested and guaranteed to work with these platforms. You can use them for creating new accounts or verifying existing ones."
+      answer: "Absolutely! Our virtual numbers are <strong>specifically designed to work with WhatsApp and Telegram verification</strong>. They are <strong>tested and guaranteed to work</strong> with these platforms. You can use them for <strong>creating new accounts</strong> or <strong>verifying existing ones</strong>."
     },
     {
       question: "Do you offer refunds if the number doesn't work?",
-      answer: "Yes, we offer a full refund guarantee. If your virtual number doesn't work as expected, we'll either provide you with a replacement number or give you a full refund. Your satisfaction is our top priority."
+      answer: "Yes, we offer a <strong>full refund guarantee</strong>. If your virtual number doesn't work as expected, we'll either provide you with a <strong>replacement number</strong> or give you a <strong>full refund</strong>. Your <strong>satisfaction is our top priority</strong>."
     },
     {
       question: "How long do these virtual numbers remain active?",
-      answer: "Our virtual numbers are designed to remain active for extended periods. However, we recommend using them within 24-48 hours of purchase for optimal results. Our support team can help you with any activation issues."
+      answer: "Our virtual numbers are <strong>designed to remain active for extended periods</strong>. However, we recommend using them <strong>within 24-48 hours of purchase</strong> for <strong>optimal results</strong>. Our <strong>support team</strong> can help you with any <strong>activation issues</strong>."
     },
     {
       question: "Can I use these numbers for business purposes?",
-      answer: "Yes, many of our customers use virtual numbers for business communications, customer support, and marketing purposes. They provide a professional way to maintain communication without revealing your personal number."
+      answer: "Yes, many of our customers use virtual numbers for <strong>business communications</strong>, <strong>customer support</strong>, and <strong>marketing purposes</strong>. They provide a <strong>professional way to maintain communication</strong> without revealing your <strong>personal number</strong>."
     },
     {
       question: "What services do you offer besides virtual numbers?",
-      answer: "We offer a comprehensive range of digital services including Canva Pro accounts, Netflix Premium subscriptions, Instagram verification, Gmail accounts, and LinkedIn services. All our services come with instant delivery and 24/7 support."
+      answer: "We offer a <strong>comprehensive range of digital services</strong> including <strong>Canva Pro accounts</strong>, <strong>Netflix Premium subscriptions</strong>, <strong>Instagram verification</strong>, <strong>Gmail accounts</strong>, and <strong>LinkedIn services</strong>. All our services come with <strong>instant delivery</strong> and <strong>24/7 support</strong>."
     },
     {
       question: "How secure is your payment system?",
-      answer: "Our payment system uses industry-standard encryption and security protocols. We never store your payment information, and all transactions are processed through secure payment gateways. Your privacy and security are our top priorities."
+      answer: "Our payment system uses <strong>industry-standard encryption</strong> and <strong>security protocols</strong>. We <strong>never store your payment information</strong>, and all transactions are <strong>processed through secure payment gateways</strong>. Your <strong>privacy and security are our top priorities</strong>."
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>FAQ - Virtual Numbers & Digital Services | VirtNumbers</title>
-        <meta name="description" content="Get answers to frequently asked questions about virtual numbers, WhatsApp verification, Telegram numbers, Canva Pro, Netflix Premium, and our digital services. 24/7 support available." />
+        <title>FAQ - Virtual Numbers Help & Support | VirtNumbers</title>
+        <meta name="description" content="Get answers to frequently asked questions about virtual numbers, WhatsApp verification, and digital services. 24/7 support available." />
         <meta name="keywords" content="virtual numbers FAQ, WhatsApp verification questions, Telegram number help, Canva Pro support, Netflix Premium FAQ, digital services questions" />
         <link rel="canonical" href="https://virtnumbers.com/faq" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://virtnumbers.com/faq" />
-        <meta property="og:title" content="FAQ - Virtual Numbers & Digital Services | VirtNumbers" />
-        <meta property="og:description" content="Get answers to frequently asked questions about virtual numbers, WhatsApp verification, Telegram numbers, Canva Pro, Netflix Premium, and our digital services." />
+        <meta property="og:title" content="FAQ - Virtual Numbers Help & Support | VirtNumbers" />
+        <meta property="og:description" content="Get answers to frequently asked questions about virtual numbers, WhatsApp verification, and digital services. 24/7 support available." />
         <meta property="og:image" content="/logo.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://virtnumbers.com/faq" />
-        <meta property="twitter:title" content="FAQ - Virtual Numbers & Digital Services | VirtNumbers" />
-        <meta property="twitter:description" content="Get answers to frequently asked questions about virtual numbers, WhatsApp verification, Telegram numbers, Canva Pro, Netflix Premium, and our digital services." />
+        <meta property="twitter:title" content="FAQ - Virtual Numbers Help & Support | VirtNumbers" />
+        <meta property="twitter:description" content="Get answers to frequently asked questions about virtual numbers, WhatsApp verification, and digital services. 24/7 support available." />
         <meta property="twitter:image" content="/logo.png" />
       </Helmet>
 
@@ -103,7 +103,7 @@ export default function FAQ() {
               fontWeight: 400
             }}
           >
-            Find answers to common questions about our virtual number services and digital solutions
+            Find answers to <strong>common questions</strong> about our <strong>virtual number services</strong> and <strong>digital solutions</strong>
           </Typography>
 
           {/* Internal Navigation Links */}
@@ -127,7 +127,7 @@ export default function FAQ() {
                 }
               }}
             >
-              Buy Virtual Numbers
+              Purchase Virtual Numbers
             </Button>
             <Button
               component={Link}
@@ -142,7 +142,7 @@ export default function FAQ() {
                 }
               }}
             >
-              About Our Services
+              Learn About VirtNumbers
             </Button>
             <Button
               component={Link}
@@ -157,7 +157,7 @@ export default function FAQ() {
                 }
               }}
             >
-              Contact Support
+              Get Customer Support
             </Button>
           </Box>
 
@@ -380,7 +380,7 @@ export default function FAQ() {
                 fontSize: { xs: '0.9rem', md: '1rem' }
               }}
             >
-              Our 24/7 support team is here to help you with any questions about virtual numbers or our services.
+              Our <strong>24/7 support team</strong> is here to help you with any questions about <strong>virtual numbers</strong> or our <strong>services</strong>.
             </Typography>
             <Button
               component={Link}
@@ -393,7 +393,7 @@ export default function FAQ() {
                 }
               }}
             >
-              Contact Support
+              Get Customer Support
             </Button>
           </Box>
           
