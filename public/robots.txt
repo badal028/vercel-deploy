@@ -1,3 +1,11 @@
 User-agent: *
 Allow: /
-Sitemap: https://virtnumbers.com/sitemap.xml 
+
+# AdSense and ads.txt reference
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://virtnumbers.com/sitemap.xml
+
+# Ads.txt file location
+# The ads.txt file should be accessible at: https://virtnumbers.com/ads.txt 

@@ -1,0 +1,16 @@
+# ads.txt file for virtnumbers.com
+# This file lists the authorized digital sellers for this domain
+# Generated for Google AdSense approval
+
+# Google AdSense - Direct relationship
+google.com, pub-7330358024378491, DIRECT, f08c47fec0942fa0
+
+# Google Ad Manager - Reseller relationship (if using)
+google.com, pub-7330358024378491, RESELLER, f08c47fec0942fa0
+
+# Additional Google services
+googleadservices.com, pub-7330358024378491, DIRECT, f08c47fec0942fa0
+googleadservices.com, pub-7330358024378491, RESELLER, f08c47fec0942fa0
+
+# Note: Add other ad networks as needed
+# Format: domain, publisher_id, relationship, certification_authority_id
